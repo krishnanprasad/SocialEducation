@@ -1,0 +1,42 @@
+ul {
+  margin-bottom: 10px;
+  list-style: none;
+  margin-left: -25px;
+}
+.LeftSideCard {
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+.headingsuggestion {
+  text-align: left;
+  padding: 5px 0px 5px 10px;
+  color: #424242;
+}
+a.AddMemmber {
+  color: #808080;
+}
+.AddMemmber {
+  float: right;
+  font-size: 12px;
+  background-color: #dcdcdc;
+  border: 1px solid #dcdcdc;
+  padding: 1px 10px;
+  color: #808080;
+  border-radius: 5px;
+}
+.TotalDiv {
+  padding: 10px 20px 0px 15px;;
+  color: #424242;
+  border-bottom: 1px solid #dedede;
+}
+.TotalHeading {
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.RightSideCard {
+  font-size: 14px;
+  float: right;
+  padding-right: 5px;
+}

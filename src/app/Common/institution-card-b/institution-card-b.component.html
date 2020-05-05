@@ -1,0 +1,37 @@
+<div class=""  style="margin-bottom:5px">
+  <input type="text" placeholder="Search Followers" class="form-control" [(ngModel)]="SearchFollowers">
+</div>
+<div class="row">
+  <div class="col-md-6" *ngFor="let PremInstList of Institution | search:'InstitutionName':SearchFollowers" style="margin-bottom:5px">
+    <div class="card boxshadowcard">
+      <div class='container2' >
+        <!-- <div>
+          <img src="{{PremInstList.InstitutionImage}}" class="iconDetails" alt="Inst Img" style=" border-radius: 50%;">
+        </div> -->
+        <div>
+        <!-- <div style='margin-left:60px;'> -->
+          
+          <div>
+              <span>Topic Name</span>
+          </div>
+          <div>
+            <span class="postfrom LightBlack F14">{{PremInstList.InstitutionName}} <span class="Color F12 ">  [ {{PremInstList.InstitutionType}} ]</span></span>
+          </div>
+          <div style="float:right;"></div>
+          <div style="font-size:.7em">
+            <span class="posttime"> Users: {{PremInstList.UsersCount}}</span>
+          </div>
+          <div style="font-size:.7em">
+            <span class="posttime"> Rating: 3.4</span>
+          </div>
+          <div style="font-size:.7em">
+            <span class="posttime"> Total Test: {{PremInstList.UsersCount}}</span>
+          </div>
+          <div>
+            <input type="button" value="Follow" class="btn"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

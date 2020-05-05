@@ -1,0 +1,75 @@
+<div class="container" style="margin-top:20px;">
+  <h3>Profile</h3>
+  <div class="col-md-12" style="text-align:center;margin-top: 15px;margin-bottom: 25px;">
+    <div>
+      <img src="assets/Image/employee1.jpg" height="160px" width="160px" style="border-radius:50%">
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-md-3">
+      <div class="card" style="padding:10px">
+        <div style="text-align:center;margin: 10px 0px;">
+          <span style="font-size:32px;">48</span>
+        </div>
+        <div style="text-align:center">
+          <span style="font-size:16px;color:#8a8a8a">Points Available</span>
+        </div>
+      </div>
+      <div style="margin-top: 20px;margin-bottom: 10px;">
+        
+        <button class="btn btn-success" type="button" style="width: 100%;">Add Points</button>
+      </div>
+
+      <div class="bottom" style="margin-top: 20px;margin-bottom: 10px;padding: 10px 30px">  
+        <img src="assets/Image/Icons/institution.png" height="32px" width="32px">
+        <a style="color:#636363">Create Institution</a>
+      </div>
+      <div  class="bottom" style="margin-top: 20px;margin-bottom: 10px;padding: 10px 30px">
+        <img src="assets/Image/Icons/tutor.png" height="32px" width="32px">
+        <a style="color:#636363">Create Tutor</a>
+      </div>
+
+
+    </div>
+    <div class="col-md-9">
+
+      <div class="form-group">
+        <label for="usr">Name:</label>
+        <input type="text" class="form-control" value="KRISHNAN RA" id="usr"
+          style="padding: 30px 20px;font-size: 20px;">
+      </div>
+      <div>
+        <app-page-owner></app-page-owner>
+      </div>
+      <div style="margin-top: 30px;">
+        <div class="d-flex">
+          <div class="p-2 mr-auto">
+            <h5 style="margin-bottom: 10px;">Your Interest</h5>
+          </div>
+          <div class="p-2">
+            <img src="assets/Image/Icons/add.png" height="18px" width="18px" style="margin-right: 20px;">
+            <img src="assets/Image/Icons/edit.png" height="18px" width="18px" style="margin-right: 20px;">
+          </div>
+        </div>
+        <div class="card" style="margin-top:10px;margin-bottom: 5px;">
+          <div style="padding: 20px 25px;">
+            <span class="InterestedSpan">CBSC</span>
+            <span class="InterestedSpan">CBSC</span>
+            <span class="InterestedSpan">CBSC</span>
+            <span class="InterestedSpan">CBSC</span>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top:5px;">
+
+        <!-- <app-courses-detail [Edit]="Editable"></app-courses-detail> -->
+        <app-institutions [Edit]="Editable"></app-institutions>
+        <app-projects [Edit]="Editable"></app-projects>
+        <app-awards [Edit]="Editable"></app-awards>
+      </div>
+
+    </div>
+  </div>
+</div>

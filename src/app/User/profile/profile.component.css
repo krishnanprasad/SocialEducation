@@ -1,0 +1,95 @@
+div.circletag {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #b7b7b7;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+div.circletag>img {
+   max-height: 100%;
+   max-width: 100%;
+   margin-top: 10px;
+   margin-bottom: 15px;
+}
+ div.circletag.Active{
+    background: #ff854c;
+}
+.IconSpan{
+    text-align: center;
+    margin-left: -5px;
+    font-size: 14px;
+}
+.IconSpan.Active{
+    color: #ff854c;
+    font-weight: 500;
+}
+
+.form-control {
+    box-shadow: none;
+    border-color: #ddd;
+}
+
+.form-control {
+    border-bottom: 1px solid #ced4da;
+    border-right: 0px;
+    border-left: 0px;
+    border-top: 0px;
+    border-radius: 0px;
+}
+
+/* FOR INSTITUTION LIST */
+.container2 {
+    width: 100%;
+    height: auto;
+    padding: 1%;
+}
+
+.postfrom {
+    font-family: PostMessageFont1;
+}
+
+.posttime {
+    color: #8a8a8a;
+}
+
+.postsubject {
+    border-bottom: 1px solid #999999;
+    color: #8a8a8a;
+    float: right;
+    font-size: x-small;
+    margin-right: 5px;
+}
+
+.iconDetails {
+    margin-left: 2%;
+    float: left;
+    height: 40px;
+    width: 40px;
+}
+.bottom > * {
+    vertical-align: bottom;
+  }
+  .bottom a{
+    display: inline-block;
+    margin: 0;
+    text-align: left;
+    margin-left: 10px;
+  }
+.card{
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 0px;
+}
+
+.InterestedSpan{
+    padding: 5px 15px;
+    border: 1px solid #484848;
+    border-radius: 20px;
+    margin-right: 10px;
+}

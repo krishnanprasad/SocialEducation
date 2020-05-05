@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-md navbar-light navbar-right fixed-top"
+  style="z-index:1;background-color: #ff854c;color: white;">
+  <div class="container-fluid">
+
+    <a style="font-family: 'Pacifico', cursive;color:white;text-decoration:none" href="/User/Wall">Socedu</a>
+    <input type="text" class="form-control" placeholder="Search.."
+      style="margin-left:10px; width: 40%;border-radius: 0.01rem;border:none" />
+     <button class="navbar-toggler" type="button"
+          (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent"  [ngClass]="{ 'show': navbarOpen }">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+          <!-- <a class="nav-link" id="addpost" (click)="openVerticallyCentered(content)"  data-target=".bd-example-modal-sm" style="color:white;background-color:#d24200" data-toggle="modal" >ADD Post</a> -->
+          <span class="nav-link boxshadowcard" id="addpost" (click)="GoToPage('AddPost')"
+            style="color:white;background-color:#ff6b28">ADD Post</span>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActive]="['YesActive']" style="line-height: 35px;"
+            routerLink="/User/Wall">Wall</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActive]="['YesActive']" style="line-height: 35px;"
+            routerLink="/User/Activity">Activity</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActive]="['YesActive']" style="line-height: 35px;"
+            routerLink="/User/Follow">Follow</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActive]="['YesActive']" style="line-height: 35px;"
+            routerLink="/User/Notification">Notification</a>
+        </li>
+
+        <!-- <li class="nav-item">
+                  <div ngbDropdown class="d-inline-block">
+                    <img src="assets/Image/elonmusk1.jpg" id="dropdownBasic1"  ngbDropdownToggle style="height:40px;width:40px;border-radius:50%">
+                    <button class="btn btn-outline-primary">Name</button> 
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" x-placement="right-bottom">
+                      <button class="dropdown-item">Profile</button>
+                      <button class="dropdown-item">Settings</button>
+                      <button class="dropdown-item">Sign Out</button>
+                    </div>
+                  </div>
+              </li> -->
+        <li class="nav-item">
+          <img src="assets/Image/elonmusk1.jpg" id="dropdownBasic1" style="height:40px;width:40px;border-radius:50%">
+          <ul class="dropdown">
+            <li class="dropname"><a href="/User/Profile" style="color:#e86928">Name</a></li>
+            <li><a style="color:#6b6b6b" href="#">Manage</a>
+              <ul class="managedropdown">
+                <li style="color:#6b6b6b">Krishnan Hr Sec School</li>
+                <li style="color:#6b6b6b">Krishnan 2 Hr Sec School</li>
+              </ul>
+            </li>
+            <li style="color:#6b6b6b"><a style="color:#6b6b6b" href="#">Sign Out</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- <ng-template #popContent let-greeting="greeting">
+  <li>Name</li>
+  <li>Settings</li>
+  <li>SignOut</li>
+
+</ng-template>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>One fine body&hellip;</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template> -->

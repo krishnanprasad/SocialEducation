@@ -1,0 +1,34 @@
+<div style="margin-top: 30px;">
+  <div class="d-flex">
+    <div class="p-2 mr-auto">
+      <h5 style="margin-bottom: 10px;">Institutions</h5>
+    </div>
+    <div class="p-2">
+      <img src="assets/Image/Icons/add.png" height="18px" width="18px" style="margin-right: 20px;">
+      <img src="assets/Image/Icons/edit.png" height="18px" width="18px" style="margin-right: 20px;">
+    </div>
+  </div>
+  <div class="card" style="margin-top:10px;margin-bottom: 5px;" *ngFor="let InstList of InstitutionsList">
+    <!-- <div class="HeaderDiv">
+    <span class="Bold" style="color: #424242"></span>
+  </div> -->
+
+    <div class="ListTypeNone" style="padding:8px 20px;">
+      <div class="" style="justify-content: space-between;width: 100%;">
+        <div style="width:90%">
+          <li class="F16 LightBlack Bold lineHeight30">{{InstList.FromTimeLine}} - {{InstList.ToTimeLine}} [
+            {{InstList.TotalTimeLine}} ]
+          </li>
+        </div>
+        <div style="width:10%" *ngIf="Editable">
+          <img src="assets/Image/Icons/edit.png" style="height:14px;width:14px;margin:0px 5px;">
+          <img src="assets/Image/Icons/delete.png" style="height:14px;width:14px;margin:0px 5px;">
+        </div>
+      </div>
+
+      <li class="F14 LightBlack lineHeight30">{{InstList.InstitutionName}}</li>
+      <li class="F14 LightBlack lineHeight30">{{InstList.CourseName}}</li>
+      <li class="F14 LightBlack lineHeight30">{{InstList.Description}}</li>
+    </div>
+  </div>
+</div>

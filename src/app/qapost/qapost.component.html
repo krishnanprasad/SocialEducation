@@ -1,0 +1,31 @@
+<div class="d-flex" >
+  <div class="p-2 mr-auto">
+    <button class="btn" style="background-color: white;border-color: #d20a2d;border-radius: 25px;padding: 5px 10px;" (click)="ShowQuestion()" value="Show"><span style="color:#d20a2d">Show at 2</span> <img src="assets/Image/Icons/diamond.png" height="24px" width="24px" style="float: right;;margin-left:0.5em"></button>
+  </div>
+  <div class="p-2"><span><img src="assets/Image/Icons/attempted.png" height="18px" width="18px"> 4800</span></div>
+  <div class="p-2"><span><img src="assets/Image/Icons/rightanswered.png" height="18px" width="18px">60%</span></div>
+</div>
+
+<div class="col-md-12 align-items-stretch" [style.display]="!IsLoading? 'none' : 'block'">
+  <div style="margin:0px 0px 10px 0px">
+    <span class="MessageSpan">{{Ques.Question}}</span>
+  </div>
+
+  <div class="radio-toolbar" *ngFor="let opt of Ques.Options" style="  padding: 2px;  margin-bottom: 0px;">
+    <label class="form-check-inline">
+      <input class="form-check-input" [disabled]="Ansred==undefined ? false : true"
+        (click)="ChosenOption(opt.value,Ques.QuestionId)" type="radio" id="{{opt.value+Ques.QuestionId}}"
+        name="{{Ques.QuestionId}}" [value]="true">
+      <label for="{{opt.value+Ques.QuestionId}}">[{{opt.value}}] {{opt.detail}}</label>
+    </label>
+  </div>
+  <div style="text-align:right">
+    <input type="button" class="btn" value="submit" style="border-radius: 25px;color: white;background-color: #00b700;">
+  </div>
+  <div *ngIf="Ansred!=undefined" style="margin-bottom:10px;">
+    <li class="ListNone"><span [className]="Ansred.Answered" class="F14 LightBlack">{{Ansred.Answered}}</span></li>
+    <li class="ListNone"><span class="F14 LightBlack">| Your : [ {{Ansred.SelectedAnswer}} ] | </span></li>
+    <li class="ListNone"><span class="F14 LightBlack">Actual : [ {{Ansred.CorrectAnswer}} ]</span></li>
+  </div>
+
+</div>

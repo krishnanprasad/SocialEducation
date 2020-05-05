@@ -1,0 +1,52 @@
+.FontColor{
+    color: red;
+}
+
+.boxshadowcard {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+}
+
+.MessageSpan{
+    font-size: 14px;
+    color: #4a4a4a;
+    font-family: PostMessageFont1;
+}
+
+.PostTypeTag{
+    text-align: center; 
+    display: block; 
+
+    width: 20%;  
+    float: right;
+    border-left:1px solid white; 
+}
+.PostTypeTagSpan{
+    font-size:12px;
+    text-align: center;
+    color: #fff;
+    font-family: PostMessageFont1;
+}
+.card-bodyAltered{
+    flex: 1 1 auto;
+    padding: 5px 10px;
+}
+.FromTimeImg{
+    height: 18px;
+    width: 18px;
+}
+.FromTimeSpan{
+    font-size: 12px;
+    font-weight: 400;
+    padding-left: 5px;
+}
+
+.SubjectSpan{
+    font-family: PostMessageFont1;
+    font-size:14px;
+}
+
+.OptionMessage{
+    font-size: 12px;
+}
+

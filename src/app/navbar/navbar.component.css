@@ -1,0 +1,65 @@
+.dropdown-menu{
+    left: -100px !important;
+}
+
+.nav-item{
+    margin:0px 5px;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+    line-height: 21px;
+    text-align: left;
+}
+
+ul li a {
+    display: block;
+    padding: 3px 15px;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background: white;
+}
+
+ul li ul.dropdown {
+    min-width: 200px;
+    /* Set width of the dropdown */
+    background: white;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    right: 0px;
+    top:40px;
+    padding: 0;
+    list-style-type: none;
+    font-size: 14px;
+    text-align: center;
+   box-shadow: 0px 1px 2px 2px rgb(191, 191, 191);
+}
+
+.YesActive {
+    color: white !important;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+    /* Display the dropdown */
+}
+
+ul li ul.dropdown li {
+    display: block;
+    margin: 10px 0px 10px 0px ;
+}
+
+ul.managedropdown {
+    padding: 0;
+    list-style-type: none;
+    padding: 3px 15px;
+    font-size: 14px
+}
+
+a.dropname{
+    color:white !important;
+}

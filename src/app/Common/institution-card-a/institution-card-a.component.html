@@ -1,0 +1,19 @@
+<div class="card" style="margin:10px 0px;" (click)="GoToInstitution()">
+  <div class="HeaderDiv">
+    <span class="Bold Color F14">{{InstitutionType}} Institution List</span>
+  </div>
+  <div *ngFor="let PremInstList of Institution" class="BorderBottomLight" style="padding: 5px;">
+    <div class='container2 '>
+      <div>
+        <img src="{{PremInstList.InstitutionImage}}" class="iconDetails" alt="Inst Img" style=" border-radius: 50%;">
+      </div>
+      <div style='margin-left:60px;'>
+        <span class="postfrom LightBlack F14">{{PremInstList.InstitutionName}}</span>
+        <div style="float:right;"></div>
+        <div style="font-size:.7em">
+          <span class="posttime"> Users: {{PremInstList.UsersCount}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

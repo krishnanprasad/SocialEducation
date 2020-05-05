@@ -1,0 +1,84 @@
+<div class="container"  style="margin-top: 85px;">
+  <h4 class="Color">Follow</h4>
+  <div class="d-flex">
+      <div class="p-2 flex-fill card boxshadowcard" style="text-align:center">
+        <span class="F30"> 2011 </span>
+        <span class="F14 Color Bold"> Total Followers </span>
+      </div>
+      <div class="p-2 flex-fill card boxshadowcard" style="text-align:center">
+        <span class="F30"> 12 </span>
+        <span class="F14 Color Bold"> Paid Class Rooms </span>
+      </div>
+      <div class="p-2 flex-fill card boxshadowcard" style="text-align:center">
+        <span class="F30"> 161 </span>
+        <span class="F14 Color Bold"> Class Rooms </span>
+      </div>  
+         
+    </div>
+  <div class="row">
+    
+    <div class="col-md-9">
+      <div class="card boxshadowcard" style="padding:10px;">
+        <div class="d-flex">
+          <div class="p-2 flex-fill" style="text-align:center">
+            <button
+              class="NavButtons"
+              [ngClass]="value === 'Institution' ? 'Active' : ''"
+              (click)="value = 'Institution'"
+            >
+            Class Rooms
+            </button>
+          </div>
+          <div class="p-2  flex-fill" style="text-align:center">
+            <button
+              class="NavButtons"
+              [ngClass]="value === 'Friends' ? 'Active' : ''"
+              (click)="value = 'Friends'"
+            >
+              Friends
+            </button>
+          </div>
+          <div class="p-2 flex-fill" style="text-align:center">
+            <button
+              class="NavButtons"
+              [ngClass]="value === 'Followers' ? 'Active' : ''"
+              (click)="value = 'Followers'"
+            >
+              Tutors
+            </button>
+          </div>
+        </div>
+        <div [ngSwitch]="value">
+          <div *ngSwitchCase="'Friends'">
+            <app-user-detail-a
+              [UserFriendList]="UserFriendList"
+            ></app-user-detail-a>
+          </div>
+          <div *ngSwitchCase="'Institution'">
+            <app-institution-card-b
+              [dataInstitution]="UserPremiumInstitutionList"
+            ></app-institution-card-b>
+          </div>
+          <div *ngSwitchCase="'Followers'">
+            <app-user-detail-a
+              [UserFriendList]="UserFriendList"
+            ></app-user-detail-a>
+          </div>
+          <div *ngSwitchDefault>Default Template</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <p>Suggestions</p>
+      <div class="">
+      <div *ngFor="let FriendsData of MutualFriendDataList">
+        <app-user-recommendation-card
+          [MutualFriendData]="FriendsData"
+        ></app-user-recommendation-card>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Tab panes -->
+</div>

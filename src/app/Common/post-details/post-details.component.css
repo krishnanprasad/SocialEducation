@@ -1,0 +1,63 @@
+.PostDescription{
+    font-size: 14px;
+    color:#7a7a7a; 
+    font-family: PostMessageFont1;
+ 
+ }
+ .PostDescriptionDiv{
+     text-indent: 50px;
+     font-family: PostMessageFont1;
+ }
+ 
+ .PostHeading{
+ font-size:14px;
+ color:#484848;
+ font-family: PostMessageFont1;
+ }
+ 
+ .PostDetailImageSize{
+     max-height: 300px;
+     font-family: PostMessageFont1;
+ }
+ 
+ .PostHeadingDiv{
+     padding-Top:12px;
+     font-family: PostMessageFont1;
+ }
+ 
+ .PDTimeHeader{
+     font-size: 14px;
+     display: block;
+     font-family: PostMessageFont1;
+ }
+ .PDTimeDetail{
+     font-size: 12px;
+     display: block;
+     font-family: PostMessageFont1;
+ }
+
+ 
+
+
+.FromTimeImg{
+    height: 18px;
+    width: 18px;
+}
+.FromTimeSpan{
+    font-size: 12px;
+    font-weight: 400;
+    padding-left: 5px;
+    font-family: PostMessageFont1;
+}
+
+.notifyfrom{
+    font-size: 13px;
+    color:#303030;
+    font-weight: 500;
+    font-family: PostMessageFont1;
+}
+.notifymessage{
+    font-size: 13px;
+    color: #5f5f5f;
+    font-family: PostMessageFont1;
+}

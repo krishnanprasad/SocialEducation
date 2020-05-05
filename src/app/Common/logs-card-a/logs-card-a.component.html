@@ -1,0 +1,13 @@
+<div class="card">
+    <div *ngFor="let loglist of LogsList" style="padding:5px;">   
+          <div class="d-flex BorderBottomLight">
+              <div class="p-2">
+                  <img src="{{loglist.Icon}}" alt="like icon" style="height: 24px;width: 24px;" />
+              </div>           
+              <div class="p-2 flex-grow-1">
+                  <span class="F14">{{ loglist.Message }}</span> <span class="F12 LightBlack" style="float:right">{{ loglist.Time }}</span>
+              </div>
+            </div>     
+    </div>
+  </div>
+  

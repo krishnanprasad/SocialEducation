@@ -1,0 +1,12 @@
+<div class="card">
+  <div *ngFor="let notifylist of NotificationList" style="padding:5px;">   
+        <div class="d-flex BorderBottomLight">
+            <div class="p-2">
+                <img src="{{notifylist.Icon}}" alt="like icon" />
+            </div>           
+            <div class="p-2 flex-grow-1">
+                <span class="F14">{{ notifylist.Message }}</span> <span class="F12 LightBlack" style="float:right">{{ notifylist.Time }}</span>
+            </div>
+          </div>     
+  </div>
+</div>

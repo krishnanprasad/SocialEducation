@@ -1,0 +1,6 @@
+<div class="col-md-12 MT20 MB20">
+  <button class="SpanSelector"  *ngFor="let Filteritems of FilterItems" [class.Active]="Filteritems.selected">{{Filteritems.Item}}</button>
+</div>
+<div *ngFor="let members of PostDetails">
+    <app-ipost [data]="members"></app-ipost>
+  </div>

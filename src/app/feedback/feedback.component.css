@@ -1,0 +1,20 @@
+.RowButton {
+    flex: 1;
+    flex-direction:row;
+    justify-Content: space-around;
+    margin-Top: -10px;
+  }
+
+  .feedbackgeneraldiv{
+    text-align:center;margin-bottom: 2px;
+    border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  }
+
+  .GeneralFeedbackImageIcon{
+    height: 16px; width: 16px;
+  }
+  .GeneralFeedbackImageSpan{
+    font-size: 12px;
+    padding: 0px 2px;
+  }

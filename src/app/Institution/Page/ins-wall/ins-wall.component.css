@@ -1,0 +1,35 @@
+div.circletag {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #b7b7b7;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+div.circletag>img {
+   max-height: 100%;
+   max-width: 100%;
+   margin-top: 10px;
+   margin-bottom: 15px;
+}
+ div.circletag.Active{
+    background: #ff854c;
+}
+.IconSpan{
+    text-align: center;
+    margin-left: -5px;
+    font-size: 14px;
+}
+.IconSpan.Active{
+    color: #ff854c;
+    font-weight: 500;
+}
+
+.NavImages{
+    height: 24px;
+    width: 24px;
+}

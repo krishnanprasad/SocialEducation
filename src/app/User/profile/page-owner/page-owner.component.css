@@ -1,0 +1,29 @@
+/* FOR INSTITUTION LIST */
+.container2 {
+    width: 100%;
+    height: auto;
+    padding: 1%;
+}
+
+.postfrom {
+    font-family: PostMessageFont1;
+}
+
+.posttime {
+    color: #8a8a8a;
+}
+
+.postsubject {
+    border-bottom: 1px solid #999999;
+    color: #8a8a8a;
+    float: right;
+    font-size: x-small;
+    margin-right: 5px;
+}
+
+.iconDetails {
+    margin-left: 2%;
+    float: left;
+    height: 40px;
+    width: 40px;
+}

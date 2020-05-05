@@ -1,0 +1,57 @@
+
+<div class="row">
+    <div class="col-md-4"  *ngFor="let Request of RequestData">
+      <div style="margin-bottom:5px" *ngIf="Request.Type==='Friends'">
+        <div class="card boxshadowcard">     
+        <div class="d-flex ">
+            <div class="" style="width:100%">
+                <div class='container2'>
+                    <div>
+                      <img src="{{Request.UserImage}}" class="iconDetails" alt="Cinque Terre" style=" border-radius: 50%;">
+                    </div>
+                    <div style='margin-left:60px;'>
+                      <span class="postfrom">{{Request.Username}} wants to be friend with you</span>
+                      <div style="float:right;"></div>
+                    </div>
+                  </div>
+                  <div class="F12" style="font-size:.75em;padding: 5px;margin-top: 10px;">
+                    <span class="posttime">{{Request.UserAbout}}</span>
+                  </div>
+                  <div class="F12" style="font-size:.75em;padding: 0px 5px;">
+                      <span class="Black">{{Request.MutualFriendCount}}102  Mutual Friends</span>
+                    </div>
+            </div>                           
+          </div>
+          <div class="" style="text-align: center">
+              <span class="F14 Color Bold" style="">Connect</span>
+          </div>        
+        </div>
+      </div>
+      <div style="margin-bottom:5px" *ngIf="Request.Type==='Institution'">
+        <div class="card boxshadowcard">     
+          <div class="d-flex ">
+              <div class="" style="width:100%">
+                  <div class='container2'>
+                      <div>
+                        <img src="{{Request.InstitutionImage}}" class="iconDetails" alt="Cinque Terre" style=" border-radius: 50%;">
+                      </div>
+                      <div style='margin-left:60px;'>
+                        <span class="postfrom">{{Request.InstitutionName}} requesting to join their class</span>
+                        <div style="float:right;"></div>
+                      </div>
+                    </div>
+                    <div class="F12" style="font-size:.75em;padding: 5px;margin-top: 10px;">
+                      <span class="posttime">{{Request.InstitutionAbout}}</span>
+                    </div>
+                    <div class="F12" style="font-size:.75em;padding:0px 5px;">
+                        <span class="Black">{{Request.InstitutionMutualFriendCount}}102  Mutual Friends</span>
+                      </div>
+              </div>                           
+            </div>
+            <div class="" style="text-align: center">
+                <span class="F14 Color Bold" style="">Connect</span>
+            </div>        
+       </div>
+       </div>
+      </div>
+</div>

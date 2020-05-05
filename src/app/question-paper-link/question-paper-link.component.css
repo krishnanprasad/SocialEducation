@@ -1,0 +1,27 @@
+tr.tabletd td{
+    padding: 0.45rem !important;
+    vertical-align: top;
+    border-top:none;
+    font-size: 14px;
+}
+.boldtd{
+    font-weight: 600;
+}
+.QuesLinkSubject{
+    color: #424242;
+    font-weight: 500;
+}
+.QuesLinkDescription{
+    color: #8a8a8a;
+    font-size: 12px;
+}
+.QuesLinkBrief{
+    color: #8a8a8a;
+    font-size: 12px;
+}
+.boxshadowcard{
+    -webkit-box-shadow: 0px 0px 9px 1px rgba(237,237,237,1);
+    -moz-box-shadow: 0px 0px 9px 1px rgba(237,237,237,1);
+    box-shadow: 0px 0px 9px 1px rgba(237,237,237,1);
+    margin-bottom: 5px;
+}

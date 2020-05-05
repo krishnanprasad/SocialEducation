@@ -1,0 +1,35 @@
+.container2 {
+    width: 100%;
+    height: auto;
+    padding: 1%;
+}
+
+.Commentfrom {
+    font-size: 13px;
+    color: #404040;
+    font-weight: 400;
+    font-family: PostMessageFont1;
+}
+
+
+.CommentMessage{
+    color: #8a8a8a;
+    font-size: 12px;
+    font-family: PostMessageFont1;
+}
+
+.postsubject {
+    font-family: PostMessageFont1;
+    border-bottom: 1px solid #999999;
+    color: #8a8a8a;
+    float: right;
+    font-size: xx-small;
+    margin-right: 5px;
+}
+
+.iconDetails {
+    margin-left: 2%;
+    float: left;
+    height: 40px;
+    width: 40px;
+}

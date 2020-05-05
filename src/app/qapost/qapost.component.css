@@ -1,0 +1,52 @@
+
+.radio-toolbar input[type="radio"] {
+    display: none; 
+  }
+  
+  .radio-toolbar label {
+    display: inline-block;
+    font-family: Arial;
+    font-size: 14px;
+    cursor: pointer;
+    color: #8a8a8a;
+  }
+  
+  .radio-toolbar input[type="radio"]:checked+label {
+    border:1px solid #ff854c;
+    color:#ff854c;
+    padding: 2px 5px;
+  }
+
+  .MessageSpan{
+    font-size: 14px;
+    color: #4a4a4a
+  }
+
+
+  .ListNone{
+    list-style-type: none;
+    display: inline-block;
+    padding-right:5px; 
+  }
+
+  .F14{
+    font-size: 14px;
+  }
+
+  .CGray{
+    color: #8a8a8a
+  }
+
+  .Right{
+    color: white;
+    background-color: #05b505;
+    padding: 3px 12px;
+    border-radius: 10px;
+  }
+  
+  .Wrong{
+    color: white;
+    background-color: #b50531;
+    padding: 3px 12px;
+    border-radius: 10px;
+  }

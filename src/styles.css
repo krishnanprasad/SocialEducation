@@ -1,0 +1,152 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+.F6 {
+  font-size: 6px;
+}
+.F8 {
+  font-size: 8px;
+}
+.F9 {
+  font-size: 9px;
+}
+
+.F10 {
+  font-size: 10px;
+}
+.F11 {
+  font-size: 11px;
+}
+.F12 {
+  font-size: 12px;
+}
+.F13 {
+  font-size: 13px;
+}
+.F14 {
+  font-size: 14px;
+}
+.F15 {
+  font-size: 15px;
+}
+.F16 {
+  font-size: 16px;
+}
+
+.F18 {
+  font-size: 18px;
+}
+
+.F20 {
+  font-size: 20px;
+}
+
+.F24 {
+  font-size: 24px;
+}
+.F26 {
+  font-size: 26x;
+}
+.F28 {
+  font-size: 28px;
+}
+.F30 {
+  font-size: 30px;
+}
+.Black {
+  color: #404040;
+}
+.DarkBlack {
+  color: #000000;
+}
+
+.LightBlack {
+  color: #636363;
+}
+
+.Bold {
+  font-weight: 600;
+}
+
+.Color {
+  color: #424242;
+}
+
+.HeaderDiv {
+  border-bottom: 1px solid #dedede;
+  text-align: left;
+  padding: 5px 0px 5px 10px;
+}
+
+.LIndent50 {
+  text-indent: 30px;
+}
+
+.BorderBottomLight {
+  border-bottom: 1px solid #d4d4d4;
+}
+.ListTypeNone {
+  list-style-type: none;
+}
+
+.TotalDiv {
+  padding: 10px 20px 0px 15px;;
+  color: #424242;
+}
+
+.boxshadowcard {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+}
+.MT10{
+  margin-top: 10px;
+}
+.MB10{
+  margin-bottom: 10px;
+}
+.ML10{
+  margin-left: 10px;
+}
+.MR10{
+  margin-right: 10px;
+}
+
+
+.MT20{
+  margin-top: 20px;
+}
+.MB20{
+  margin-bottom: 20px;
+}
+.ML20{
+  margin-left: 20px;
+}
+.MR20{
+  margin-right: 20px;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+  width: 0px; /* remove scrollbar space /
+  background: transparent; / optional: just make scrollbar invisible /
+  }
+  / optional: show position indicator in red */
+}
+  ::-webkit-scrollbar-thumb {
+  background: #FF0000;
+  }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #e2e2e2;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #e2e2e2;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #e2e2e2;
+  }

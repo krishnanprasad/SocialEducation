@@ -1,0 +1,13 @@
+.SpanSelector {
+  padding: 10px 20px;
+  border: 1px solid #ff854c;
+  background-color: white;
+  border-radius: 20px;
+  margin-left: 5px;
+  color:#ff854c;
+}
+
+.SpanSelector.Active{
+    background-color: #ff854c;
+    color:white;
+}

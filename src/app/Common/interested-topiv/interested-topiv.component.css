@@ -1,0 +1,15 @@
+ul {
+    margin-bottom: 10px;
+    list-style: none;
+    margin-left: -25px;
+  }
+  .InterestTopicSpan {
+    font-size: 14px;
+    color: #8a8a8a;
+  }
+  
+  .headingsuggestion {
+    text-align: left;
+    padding: 5px 0px 5px 10px;
+    color: #424242;
+  }
