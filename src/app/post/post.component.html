@@ -1,6 +1,6 @@
 <div>
 
-  <div class="card boxshadowcard">
+  <div class="card boxshadowcard card-noborder">
     <!-- <div style="float:right">
       <div [style.border-left-color]=getType(CardList.PostType)  class="PostTypeTag">
         <span [style.color]=getType(CardList.PostType)  class="PostTypeTagSpan">{{(CardList.PostType)}}:{{CardList.Subject}}</span>
@@ -32,6 +32,7 @@
       
       <div *ngIf="CardList.QuestionPaperLink!= undefined ">
           <app-question-paper-link [QuestionPaperLink]="CardList.QuestionPaperLink"></app-question-paper-link>
+         
         </div>
       <div style="padding-left:10px" *ngIf="CardList.FromTime!='' && CardList.FromTime!=undefined">
         <img class="FromTimeImg" src="assets/Image/Icons/clock0.png" />

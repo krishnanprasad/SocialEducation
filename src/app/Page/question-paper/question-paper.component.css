@@ -1,14 +1,16 @@
-.QuesLinkSubject{
-    color: #424242;
+.QuesLinkSubject {
+    color: #3d3d3d;
     font-weight: 500;
 }
-.QuesLinkDescription{
-    color: #8a8a8a;
+
+.QuesLinkDescription {
+    color: #5c5c5c;
     font-size: 12px;
 }
-.boxshadowcard{
-    -webkit-box-shadow: 0px 0px 9px 1px rgba(237,237,237,1);
-    -moz-box-shadow: 0px 0px 9px 1px rgba(237,237,237,1);
-    box-shadow: 0px 0px 9px 1px rgba(237,237,237,1);
+
+.boxshadowcard {
+    -webkit-box-shadow: 0px 0px 9px 1px rgba(237, 237, 237, 1);
+    -moz-box-shadow: 0px 0px 9px 1px rgba(237, 237, 237, 1);
+    box-shadow: 0px 0px 9px 1px rgba(237, 237, 237, 1);
     margin-bottom: 5px;
 }

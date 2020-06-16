@@ -16,11 +16,20 @@ import { FollowPageComponent } from './Institution/Page/follow-page/follow-page.
 import { NotificationComponent } from './User/notification/notification.component';
 import { UserMainPageComponent } from './Page/user-main-page/user-main-page.component';
 import { ActivityComponent } from './User/activity/activity.component';
+import { DetailsComponent } from './Institution/Page/details/details.component';
+import { InstitutionMainPageComponent } from './Institution/Page/institution-main-page/institution-main-page.component';
+import { OnlineClassDetailsAComponent } from './Page/online-class-details-a/online-class-details-a.component';
+import { SearchPageComponent } from './User/search-page/search-page.component';
+import { OnlineClassDetailsBComponent } from './Common/online-class-details-b/online-class-details-b.component';
 
 const routes: Routes = [
   {
     path: 'Login',
     component : LoginPageComponent,
+  },
+  {
+    path: 'Search',
+    component: SearchPageComponent
   },
   {
     path: 'User',
@@ -51,13 +60,18 @@ const routes: Routes = [
         component: QuestionPaperComponent
       },
       {
+        path: 'CourseDetails/:CourseID',
+        component: OnlineClassDetailsAComponent
+      },
+      {
         path: 'Profile/EditProfile',
         component: EditProfileComponent
       },
       {
         path: 'Profile',
         component: ProfileComponent
-      }
+      },
+     
     ]
   },
   {
@@ -74,6 +88,7 @@ const routes: Routes = [
   },
   {
     path: 'Institution',
+    component:InstitutionMainPageComponent,
     children: [
       {
         path: 'Wall',
@@ -92,6 +107,15 @@ const routes: Routes = [
         path: 'CreatePost',
         component: CreatePostComponent
       }
+      ,
+      {
+        path: 'Detail',
+        component: DetailsComponent
+      },
+      {
+        path: 'CourseDetails/:CourseID',
+        component: OnlineClassDetailsBComponent
+      },
     ]
   },
   {

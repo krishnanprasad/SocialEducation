@@ -8,7 +8,7 @@ import { UserInstitutionListPremiumService } from 'src/app/Service/user-institut
   styleUrls: ['./follow.component.css']
 })
 export class FollowComponent implements OnInit {
-  public value = 'Institution';
+  public value = 'Topics';
   public query;
   public UserFriendList;
   public UserPremiumInstitutionList;

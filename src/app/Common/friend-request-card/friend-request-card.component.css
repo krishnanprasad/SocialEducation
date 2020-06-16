@@ -11,12 +11,12 @@
 }
 
 .posttime {
-    color: #8a8a8a;
+    color: #5c5c5c;
 }
 
 .postsubject {
     border-bottom: 1px solid #999999;
-    color: #8a8a8a;
+    color: #5c5c5c;
     float: right;
     font-size: x-small;
     margin-right: 5px;

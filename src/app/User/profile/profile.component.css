@@ -10,21 +10,25 @@ div.circletag {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
 }
+
 div.circletag>img {
-   max-height: 100%;
-   max-width: 100%;
-   margin-top: 10px;
-   margin-bottom: 15px;
+    max-height: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
- div.circletag.Active{
+
+div.circletag.Active {
     background: #ff854c;
 }
-.IconSpan{
+
+.IconSpan {
     text-align: center;
     margin-left: -5px;
     font-size: 14px;
 }
-.IconSpan.Active{
+
+.IconSpan.Active {
     color: #ff854c;
     font-weight: 500;
 }
@@ -42,7 +46,9 @@ div.circletag>img {
     border-radius: 0px;
 }
 
+
 /* FOR INSTITUTION LIST */
+
 .container2 {
     width: 100%;
     height: auto;
@@ -54,12 +60,12 @@ div.circletag>img {
 }
 
 .posttime {
-    color: #8a8a8a;
+    color: #5c5c5c;
 }
 
 .postsubject {
     border-bottom: 1px solid #999999;
-    color: #8a8a8a;
+    color: #5c5c5c;
     float: right;
     font-size: x-small;
     margin-right: 5px;
@@ -71,23 +77,27 @@ div.circletag>img {
     height: 40px;
     width: 40px;
 }
-.bottom > * {
+
+.bottom>* {
     vertical-align: bottom;
-  }
-  .bottom a{
+}
+
+.bottom a {
     display: inline-block;
     margin: 0;
     text-align: left;
     margin-left: 10px;
-  }
-.card{
+}
+
+
+/* .card{
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     border-radius: 0px;
-}
+} */
 
-.InterestedSpan{
+.InterestedSpan {
     padding: 5px 15px;
     border: 1px solid #484848;
     border-radius: 20px;

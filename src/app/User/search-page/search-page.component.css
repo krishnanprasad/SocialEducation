@@ -1,0 +1,25 @@
+.onlineTopicHeading {
+    color: #3D3D3D;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.onlineTopicDescription {
+    color: #3D3D3D;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.onlineSubDescription {
+    color: #3D3D3D;
+    font-size: 13px;
+}
+
+.filter-text {
+    padding: 10px 15px;
+    background-color: #227396;
+    font-size: 16px;
+    border-radius: 10px;
+    color: white;
+    margin-right: 10px;
+}

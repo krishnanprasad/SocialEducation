@@ -1,13 +1,13 @@
-<div class="container" style="margin-top:85px;">
-  <div class="row">
-    <div class="col-md-3">
+<div class="">
+    <div class="row">
+        <!-- <div class="col-md-3">
       <app-wall-profile [Editable]="Editable" [UserWallData]="UserWallData"></app-wall-profile>
 
-      <app-institution-card-a [dataType]="'Premium'" [dataInstitution]="UserPremiumInstitutionList"></app-institution-card-a>
-      <app-institution-card-a [dataType]="'Non Premium'" [dataInstitution]="UserNonPremiumInstitutionList"></app-institution-card-a>
-    </div>
-    <div class="col-md-9 row" style="padding:5px;max-height: 350px;">
-      <!-- <div class="d-flex" style="padding: 0px 0px 30px 0px;">
+       <app-institution-card-a [dataType]="'Premium'" [dataInstitution]="UserPremiumInstitutionList"></app-institution-card-a>
+      <app-institution-card-a [dataType]="'Non Premium'" [dataInstitution]="UserNonPremiumInstitutionList"></app-institution-card-a> 
+    </div> -->
+        <div class="col-md-8" style="padding:5px;max-height: 350px;">
+            <!-- <div class="d-flex" style="padding: 0px 0px 30px 0px;">
         <div class="p-2 flex-fill">
           <div
             style="margin: auto;text-align: center"
@@ -57,34 +57,38 @@
           </div>
         </div>
       </div> -->
-      <!--
+            <!--
         <button (click)="ChangeFilter('Profile')">Profile!</button>
         <button (click)="ChangeFilter('Follow')">Follow!</button>
         <button (click)="ChangeFilter('Notification')">Notification!</button>
       -->
-      <!-- <wall-modules-navigation-bar></wall-modules-navigation-bar> -->
-      <!-- <div *ngIf="FilterPage === 'Wall'"> -->
-     
-        <!-- <app-wall-post [walldata]="PostDetails"></app-wall-post> -->
+            <!-- <wall-modules-navigation-bar></wall-modules-navigation-bar> -->
+            <!-- <div *ngIf="FilterPage === 'Wall'"> -->
 
-        <div style="padding-right: 1px !important;
-        padding-left: 1px !important;" class="col-md-6" *ngFor="let members of PostDetails">
-            <app-post [data]="members"></app-post>
-          </div>
-     
-      <!-- </div> -->
+            <!-- <app-wall-post [walldata]="PostDetails"></app-wall-post> -->
 
-      <!-- <div *ngIf="FilterPage === 'Profile'"> -->
-      <!-- <app-profile [Edit]="Editable"></app-profile> -->
-      <!-- </div> -->
+            <div style="padding-right: 1px !important;
+        padding-left: 1px !important;" *ngFor="let members of PostDetails">
+                <!-- <app-post [data]="members"></app-post> -->
+                <app-online-class-a [onlineclassdata]="members"></app-online-class-a>
+            </div>
 
-      <!-- <div *ngIf="FilterPage === 'Follow'"> -->
-      <!-- <app-follow></app-follow> -->
-      <!-- </div> -->
-      <!-- <div *ngIf="FilterPage === 'Notification'"> -->
-      <!-- <app-notification></app-notification> -->
-      <!-- </div> -->
+            <!-- </div> -->
+
+            <!-- <div *ngIf="FilterPage === 'Profile'"> -->
+            <!-- <app-profile [Edit]="Editable"></app-profile> -->
+            <!-- </div> -->
+
+            <!-- <div *ngIf="FilterPage === 'Follow'"> -->
+            <!-- <app-follow></app-follow> -->
+            <!-- </div> -->
+            <!-- <div *ngIf="FilterPage === 'Notification'"> -->
+            <!-- <app-notification></app-notification> -->
+            <!-- </div> -->
+        </div>
+        <div class="col-md-4">
+
+            <app-wall-suggestion></app-wall-suggestion>
+        </div>
     </div>
-    <!-- <div class="col-md-3"><app-wall-suggestion></app-wall-suggestion></div> -->
-  </div>
 </div>

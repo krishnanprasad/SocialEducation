@@ -11,9 +11,8 @@
     font-family: PostMessageFont1;
 }
 
-
-.CommentMessage{
-    color: #8a8a8a;
+.CommentMessage {
+    color: #5c5c5c;
     font-size: 12px;
     font-family: PostMessageFont1;
 }
@@ -21,7 +20,7 @@
 .postsubject {
     font-family: PostMessageFont1;
     border-bottom: 1px solid #999999;
-    color: #8a8a8a;
+    color: #5c5c5c;
     float: right;
     font-size: xx-small;
     margin-right: 5px;

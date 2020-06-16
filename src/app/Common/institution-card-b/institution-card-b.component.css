@@ -8,13 +8,14 @@
     font-family: PostMessageFont1;
 }
 
-.posttime {
-    color: #8a8a8a;
+.topicfollowercount {
+    color: #5c5c5c;
+    font-size: 12px;
 }
 
 .postsubject {
     border-bottom: 1px solid #999999;
-    color: #8a8a8a;
+    color: #5c5c5c;
     float: right;
     font-size: x-small;
     margin-right: 5px;

@@ -11,8 +11,8 @@ export class InstPostListComponent implements OnInit {
   @Input('walldata') dataWallData;
 
   public FilterItems = [
-    {id: 0, Item: 'Post', selected: true  },
-    {id: 0, Item: 'Test', selected: true  },
+    {id: 0, Item: 'Group 1', selected: true  },
+    {id: 0, Item: 'Group 2', selected: true  },
     {id: 0, Item: 'Learning', selected: true  },
     {id: 0, Item: 'Webinar', selected: true  }
   ];

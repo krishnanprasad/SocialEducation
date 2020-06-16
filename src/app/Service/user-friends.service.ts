@@ -6,19 +6,25 @@ import { Injectable } from '@angular/core';
 export class UserFriendsService {
   public UserFriendsList = [
     {
-      Username: 'Saravanan Kumar',
+      Username: 'Ramesh Kumar',
       UserImage: 'assets/Image/employee1.jpg',
-      UserAbout: 'Now in 12th Standard Learning. Interested in Physics and Chemistry'
+      userid: '@rameshkumar',
+      type:"Paid",
+      lastused: "14210"
     },
     {
       Username: 'Singaravel',
       UserImage: 'assets/Image/employee1.jpg',
-      UserAbout: 'Tech Enthusiast, Intersted in IT, Augumented Reality, Learner , Beginner'
+      userid: '@singaravel',
+      type:"Free",
+      lastused: "19200"
     },
     {
       Username: 'Sowmiya',
       UserImage: 'assets/Image/employee1.jpg',
-      UserAbout: 'Wishing to learn Machine Learning'
+      userid: '@sowmiya',
+      type:"Free",
+      lastused: "16803"
     }
   ];
 

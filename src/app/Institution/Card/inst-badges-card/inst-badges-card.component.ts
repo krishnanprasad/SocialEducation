@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inst-badges-card.component.css']
 })
 export class InstBadgesCardComponent implements OnInit {
-
+  topiclist = ['Maths', 'Science', 'Social']
   constructor() { }
 
   ngOnInit() {

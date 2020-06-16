@@ -63,8 +63,22 @@ import { FriendRequestCardComponent } from './Common/friend-request-card/friend-
 import { ActivityComponent } from './User/activity/activity.component';
 import { PageOwnerComponent } from './User/Profile/page-owner/page-owner.component';
 import { HttpClientModule } from '@angular/common/http';
-
-
+import { DetailsComponent } from './Institution/Page/details/details.component';
+import { InstitutionMainPageComponent } from './Institution/Page/institution-main-page/institution-main-page.component';
+import { FollowerTableComponent } from './Common/follower-table/follower-table.component';
+import { OnlineClassAComponent } from './Common/online-class-a/online-class-a.component';
+import { OnlineClassBComponent } from './Common/online-class-b/online-class-b.component';
+import { OnlineClassDetailsAComponent } from './Page/online-class-details-a/online-class-details-a.component';
+import { OnlineClassCComponent } from './Common/online-class-c/online-class-c.component';
+import { SearchPageComponent } from './User/search-page/search-page.component';
+import { FeedbackAComponent } from './Common/feedback-a/feedback-a.component';
+import { SearchItemFilterPipe} from './pipe/SearchItemFilterPipe.pipe';
+import { OnlineClassDetailsBComponent } from './Common/online-class-details-b/online-class-details-b.component';
+import { InsWallProfileSideComponent } from './Institution/ins-wall-profile-side/ins-wall-profile-side.component';
+import { TopicBadgesAComponent } from './Common/topic-badges-a/topic-badges-a.component';
+import { ScheduleRemainderAComponent } from './Common/schedule-remainder-a/schedule-remainder-a.component';
+import { CreateQuestionPaperAComponent } from './Common/create-question-paper-a/create-question-paper-a.component';
+import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-datetimepicker';
 
 @NgModule({
   declarations: [
@@ -124,6 +138,21 @@ import { HttpClientModule } from '@angular/common/http';
     FriendRequestCardComponent,
     ActivityComponent,
     PageOwnerComponent,
+    DetailsComponent,
+    InstitutionMainPageComponent,
+    FollowerTableComponent,
+    OnlineClassAComponent,
+    OnlineClassBComponent,
+    OnlineClassDetailsAComponent,
+    OnlineClassCComponent,
+    SearchPageComponent,
+    FeedbackAComponent,
+    SearchItemFilterPipe,
+    OnlineClassDetailsBComponent,
+    InsWallProfileSideComponent,
+    TopicBadgesAComponent,
+    ScheduleRemainderAComponent,
+    CreateQuestionPaperAComponent,
   ],
   imports: [
     BrowserModule,
@@ -132,6 +161,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     FormsModule,
     CountdownModule,
+    DlDateTimeDateModule,  // <--- Determines the data type of the model
+    DlDateTimePickerModule,
   ],
   exports: [HttpClientModule],
   providers: [],

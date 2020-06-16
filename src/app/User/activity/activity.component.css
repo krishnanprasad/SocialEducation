@@ -12,14 +12,13 @@ ul {
 
 .HeadingSpan {
     font-size: 16px;
-    color: #8a8a8a;
-    text-align: center;
+    color: #5c5c5c;
 }
 
 .headingsuggestion {
     text-align: left;
     padding: 5px 0px 5px 10px;
-    color: #424242;
+    color: #3d3d3d;
 }
 
 .HeadingCenterli {
@@ -37,6 +36,6 @@ ul {
     padding: 10px 10px 10px 0px;
 }
 
-.TopicWiseScoreSpan{
-color: #8a8a8a;
+.TopicWiseScoreSpan {
+    color: #5c5c5c;
 }

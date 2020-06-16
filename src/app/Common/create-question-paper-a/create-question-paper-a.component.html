@@ -1,0 +1,183 @@
+<app-navbar></app-navbar>
+<div class="container qpcontainer" style="margin-top:60px">
+    <div class="" style="padding:10px;">
+        <div class="col-lg-12 row">
+
+            <span>Heading:</span>
+            <input type="text" [(ngModel)]="questionHeading" id="testtime" class="form-control" />
+
+        </div>
+        <div class="row" style="margin-top: 10px;">
+            <div class="col-lg-6">
+                <span>Total Questions</span>
+                <select class="form-control" [(ngModel)]="totalQuestions" (change)="onQuestionCountChange($event.target.value)">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+        </select>
+            </div>
+            <div class="col-lg-4">
+                <span>Test Time:</span>
+                <input type="number" readonly [(ngModel)]="totalTime" class="form-control" minlength="0" />
+            </div>
+            <div class="col-lg-2" style="margin-top: auto;">
+                <input type="button" class="circlebutton" value="+" (click)="onTimeAlter('Add')" />
+                <input type="button" class="circlebutton" value="-" (click)="onTimeAlter('Reduce')" />
+            </div>
+        </div>
+    </div>
+    <div class="" style="margin-top: 15px">
+        <div class=" row questdivider" *ngFor="let qb of questionbank;let in = index">
+
+
+            <div class="col-lg-12">
+                <label for="ex3">Question {{in + 1}}</label>
+                <input type="textarea" min class="form-control" name="ques{{in}}" placeholder="Enter Question" (ngModelChange)="changeValueofArray(in,$event,'question')" [(ngModel)]="questionbank[in].question" />
+            </div>
+            <div class="col-md-12" style="margin-top: 10px;">
+                <div class="row">
+
+                    <div class="col-lg-1">
+                        <label style="font-size: 12px;">Not Required</label>
+                    </div>
+                    <div class="col-lg-10">
+                    </div>
+                    <div class="col-lg-1" style="margin: auto;">
+                        <label style="font-size: 12px;">Correct answer</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12" style="margin-top: 5px;">
+                <div class="row">
+                    <div class="col-lg-1">
+                        <input type="checkbox" [ngModel]="questionbank[in].optiona.required" id="requireda" name="requireda" (ngModelChange)="makeTextBoxNR(in,$event,'optiona')">
+                    </div>
+                    <div class="col-lg-10">
+                        <!-- <label for="ex3">Option A</label> -->
+                        <input type="text" class="form-control" name="opta{{in}}" placeholder="Enter Option A" (ngModelChange)="changeValueofArray(in,$event,'optiona')" [(ngModel)]="questionbank[in].optiona" *ngIf="questionbank[in].optiona!='*NR*'" />
+                    </div>
+                    <div class="col-lg-1" style="margin: auto;">
+                        <label class="radiocontainer" *ngIf="questionbank[in].optiona.length>0">A
+              <input type="radio" name="answer{{in}}" (change)="changeValueOfAnswer(in,$event)" value="a" />
+              <span class="checkmark"></span>
+            </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12" style="margin-top: 5px;">
+
+                <div class="row">
+
+                    <div class="col-lg-1">
+                        <input type="checkbox" [ngModel]="questionbank[in].optionb.required" id="requiredb" name="requiredb" (ngModelChange)="makeTextBoxNR(in,$event,'optionb')">
+                    </div>
+                    <div class="col-lg-10">
+                        <!-- <label for="ex3">Option B</label> -->
+                        <input type="text" class="form-control" name="optb{{in}}" placeholder="Enter Option B" (ngModelChange)="changeValueofArray(in,$event,'optionb')" [(ngModel)]="questionbank[in].optionb" *ngIf="questionbank[in].optionb!='*NR*'" />
+                    </div>
+                    <div class="col-lg-1" style="margin: auto;">
+                        <!-- <label class="radiocontainer">-->
+                        <label class="radiocontainer" *ngIf="questionbank[in].optionb.length>0">B
+              <input type="radio" name="answer{{in}}" (change)="changeValueOfAnswer(in,$event)" value="b" />
+              <span class="checkmark"></span>
+            </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12" style="margin-top: 5px;">
+                <div class="row">
+
+                    <div class="col-lg-1">
+                        <input type="checkbox" [ngModel]="questionbank[in].optionc.required" id="requiredc" name="requiredc" (ngModelChange)="makeTextBoxNR(in,$event,'optionc')">
+                    </div>
+                    <div class="col-lg-10">
+                        <!-- <label for="ex3">Option C</label> -->
+                        <input type="text" class="form-control" name="optc{{in}}" placeholder="Enter Option C" (ngModelChange)="changeValueofArray(in,$event,'optionc')" *ngIf="questionbank[in].optionc!='*NR*'" [(ngModel)]="questionbank[in].optionc" />
+                    </div>
+                    <div class="col-lg-1" style="margin: auto;">
+                        <label class="radiocontainer" *ngIf="questionbank[in].optionc.length>0">C
+              <input type="radio" name="answer{{in}}" (change)="changeValueOfAnswer(in,$event)" value="c" />
+              <span class="checkmark"></span>
+            </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-12" style="margin-top: 5px;">
+                <div class="row">
+
+                    <div class="col-lg-1" style="margin: auto;">
+                        <input type="checkbox" [ngModel]="questionbank[in].optiond.required" id="requiredd" name="requiredd" (ngModelChange)="makeTextBoxNR(in,$event,'optiond')">
+                    </div>
+                    <div class="col-lg-10">
+                        <!-- <label for="ex3">Option D</label> -->
+                        <input type="text" class="form-control" name="optd{{in}}" placeholder="Enter Option D" (ngModelChange)="changeValueofArray(in,$event,'optiond')" *ngIf="questionbank[in].optiond!='*NR*'" [(ngModel)]="questionbank[in].optiond" />
+                    </div>
+                    <div class="col-lg-1" style="margin: auto;">
+                        <label class="radiocontainer" *ngIf="questionbank[in].optiond.length>0">D
+              <input type="radio" name="answer{{in}}" (change)="changeValueOfAnswer(in,$event)" value="d" />
+              <span class="checkmark"></span>
+            </label>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-lg-12" style="margin-top: 5px;">
+                <input type="text" class="form-control" placeholder="Enter Hints" [(ngModel)]="questionbank[in].hints" />
+            </div>
+
+            <div class="col-lg-12" style="margin-top: 5px;">
+                <img [src]="questionbank[in].image" style="max-height: 360px;"> <br />
+                <input type='file' (change)="onSelectFile($event,in)">
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12" style="margin-top: 35px;">
+
+            <div style="margin-top:10px;">
+                <button (click)="ConfirmPost()" class="btn btn-success btnPost">Post</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<div id="myModal" *ngIf="ShowModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" (click)="closemodal()">&times;</span>
+        <div *ngFor="let qbmodel of questionbank;let inmodel = index">
+
+
+            <p>
+                <span style="font-weight: 600;">{{inmodel+1}}. {{questionbank[inmodel].question}}</span>
+            </p>
+            <ul>
+                <li>a.) {{questionbank[inmodel].optiona}}</li>
+                <li>b.) {{questionbank[inmodel].optionb}}</li>
+                <li>c.) {{questionbank[inmodel].optionc}}</li>
+                <li>d.) {{questionbank[inmodel].optiond}}</li>
+                <li>anser. ) <span style="color: green;">{{questionbank[inmodel].answer}}</span></li>
+                <li>hint. ) {{questionbank[inmodel].hint}}</li>
+                <li><img [src]="questionbank[inmodel].image" style="max-height: 360px;"> <br /></li>
+            </ul>
+
+        </div>
+
+        <p>Some text in the Modal..</p>
+    </div>
+
+</div>

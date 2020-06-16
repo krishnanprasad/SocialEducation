@@ -1,12 +1,12 @@
 .NavButtons.Active {
-  background-color: #ffffff;
-  border-bottom: 2px solid #ff854c;
-  color: #ff854c;
-  font-weight: 700;
+    background-color: #ffffff;
+    border-bottom: 2px solid #247ba0;
+    color: #247ba0;
+    font-weight: 700;
 }
 
 .NavButtons {
-  padding: 10px;
-  background-color: #ffffff;
-  border: 0px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 0px;
 }

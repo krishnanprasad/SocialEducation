@@ -1,6 +1,30 @@
-<div class="col-md-12 MT20 MB20">
-  <button class="SpanSelector"  *ngFor="let Filteritems of FilterItems" [class.Active]="Filteritems.selected">{{Filteritems.Item}}</button>
-</div>
-<div *ngFor="let members of PostDetails">
-    <app-ipost [data]="members"></app-ipost>
-  </div>
+<h5 class="Black"> Webinards</h5>
+<!--<div class="col-md-8"> -->
+<table class="table">
+    <tr *ngFor="let post of PostDetails">
+        <td>
+            <span class="F12" style="display: block;">06:45AM</span>
+            <span class="F12">12-Aug-20</span>
+        </td>
+        <td>
+            <span class="F12" style="display: block;">WEB123689</span>
+            <span class="F12" style="display: block;">Thermodynamics and Heat Explanation</span>
+            <span class="F12">DR.Rathore M.B.B.S</span>
+        </td>
+        <td>
+            <span class="F12" style="display: block;">5 Open</span>
+            <span class="F12">20 Seats</span>
+        </td>
+        <td>
+            <span class="F12">Free</span>
+        </td>
+        <td>
+            <span class="F12">Zoom</span>
+        </td>
+        <td>
+            <input type="button" value="View" />
+        </td>
+    </tr>
+</table>
+<!-- <app-ipost [data]="post"></app-ipost> -->
+<!-- </div> -->

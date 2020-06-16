@@ -6,7 +6,7 @@ import { Component, OnInit , Input } from '@angular/core';
   styleUrls: ['./postheader.component.css']
 })
 export class PostheaderComponent implements OnInit {
-
+//INPUTS:Name, CommunityFrom , Image
 
   public Username;
   public CommunityFrom;
@@ -14,6 +14,8 @@ export class PostheaderComponent implements OnInit {
   @Input('Name') dataName;
   @Input('CommunityFrom') dataCommunityFrom;
   @Input('Image') dataUserImage;
+  @Input('time') datatime;
+  public time;
 
 
   constructor() { }
@@ -22,6 +24,7 @@ export class PostheaderComponent implements OnInit {
     this.Username = this.dataName;
     this.CommunityFrom = this.dataCommunityFrom;
     this.UserImage = this.dataUserImage;
+    this.time = this.datatime;
 
   }
 

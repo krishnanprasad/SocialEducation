@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<div class="container" style="margin-top:85px;">
+
+
+    <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search.." style="margin-left:15px;border-radius: 0.01rem;border:none;border-bottom: 1px solid #c4c4c4;" />
+    <div style="margin-top: 20px;">
+        <span class="filter-text" *ngFor="let fls of filters">
+        {{fls}}
+      </span>
+    </div>
+    <div *ngIf="searchText?.length>0" style="background-color: #f1f1f1;
+      margin-left: 15px;
+      width: 100%;
+      margin-top: -10px;">
+        <div class="d-flex mb-3" style="padding: px;" *ngFor="let c of characters | filter : searchText" style="padding: 5px 10px;
+      border-bottom: 5px;
+      margin-top: 10px;
+      border-bottom: 1px solid #e7e7e6;
+  ">
+            <div class="p-2 flex-grow-1">
+                <span class="F12" style="background-color: red;
+            padding: 3px 8px;
+            border-radius: 15px;
+            color: whitesmoke;">Webinar</span>
+
+                <span class="onlineTopicHeading" style="display: block;"> {{c.username}}</span>
+                <span class="onlineSubDescription" style="display: block;">Date</span>
+            </div>
+            <div class="p-2" *ngIf="c.type=='H'">
+                <input type="button" value="Add" (click)="addfilter(c.username)" />
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- 
+<ul *ngIf="searchText?.length>0">
+
+    <li *ngFor="let c of characters | filter : searchText">
+        {{c.username}} -- {{c.webinar}}
+    </li>
+</ul> -->

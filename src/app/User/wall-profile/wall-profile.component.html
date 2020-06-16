@@ -1,46 +1,31 @@
-
-<div class="card">
-  <div style="text-align:center;margin-top: 20px;">
-    <img src="assets/Image/employee1.jpg" class="rounded-circle" alt="Cinque Terre" width="90" height="90">
-  </div>
-  <div class="" style="padding:3px 5px 0px 5px;margin-top: 10px;">
-    <div style="text-align:center" >
-      <h6 style="color:#424242">{{UserWallData.username}}<img *ngIf="dataEditable" (click)="MakeEditable('username')"
-          src="assets/Image/Icons/editable.png" height="10px" width="10px;"></h6> 
-      <div>
-      </div>
-      <div *ngIf="dataEditableItems.username">
-        <input placeholder="Favorite food" value="{{UserWallData.username}}">
-        <input type="button" class="btn bnt-sm btn-success" value="S">
-      </div>
-      <p style="font-size:12px;color: #8a8a8a">{{UserWallData.userstatus}}<img *ngIf="dataEditable" (click)="MakeEditable('userstatus')"
-          src="assets/Image/Icons/editable.png" height="10px" width="10px;" />
-      </p>
-      <div *ngIf="dataEditableItems.userstatus">
-        <input placeholder="Favorite food" value="{{UserWallData.userstatus}}">
-        <input type="button" class="btn bnt-sm btn-success" value="S">
-      </div>
-      <p style="font-size:12px;color: #8a8a8a">{{UserWallData.usergrade}}<img *ngIf="dataEditable" (click)="MakeEditable('usergrade')"
-          src="assets/Image/Icons/editable.png" height="10px" width="10px;" />
-      </p>
-      <div *ngIf="dataEditableItems.usergrade">
-        <input placeholder="Favorite food" value="{{UserWallData.usergrade}}">
-        <input type="button" class="btn bnt-sm btn-success" value="S">
-      </div>
+<div class="card card-noborder">
+    <div style="text-align:center;margin-top: 20px;">
+        <img src="assets/Image/employee1.jpg" class="rounded-circle" alt="Cinque Terre" width="90" height="90">
     </div>
-  </div>
+    <div class="" style="padding:3px 5px 0px 5px;margin-top: 10px;">
+        <div style="text-align:center">
+            <h4 style="color:#3d3d3d">{{UserWallData.username}}<img *ngIf="dataEditable" (click)="MakeEditable('username')" src="assets/Image/Icons/editable.png" height="10px" width="10px;"></h4>
+            <div>
+            </div>
+
+            <span style="font-size:16px;color: #5c5c5c;display: block;">@Phone Number</span>
+            <span style="font-size:16px;color: #5c5c5c;display: block;">@EMail</span>
+            <span style="font-size:16px;color: #5c5c5c;display: block;">@Professional</span>
+
+        </div>
+    </div>
 </div>
 
-<div class="card" style="padding:10px;margin-top: 10px;">
+<!-- <div class="card card-noborder" style="padding:10px;margin-top: 10px;">
   <div style="text-align:center;margin: 10px 0px;">
     <span style="font-size:32px;">48</span>
   </div>
   <div style="text-align:center">
-    <span style="font-size:16px;color:#8a8a8a">Points Available</span>
+    <span style="font-size:16px;color:#5c5c5c">Points Available</span>
   </div>
-</div>
+</div> 
 <div style="margin-top: 10px;margin-bottom: 10px;">
   <button class="btn btn-success" type="button" style="width: 100%;">Add Points</button>
-</div>
+</div>-->
 
-<app-wall-profile-count [UserCount]="UserWallData.usercount"></app-wall-profile-count>
+<app-wall-profile-count [UserCount]=""></app-wall-profile-count>

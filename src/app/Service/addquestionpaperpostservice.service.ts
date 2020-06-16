@@ -11,7 +11,7 @@ export class addquestionpaperpostservice {
 
     }
     addQuestionPaper(questionpaper): Observable<any> {
-        debugger;
+        //debugger;
         const httpOptions = {
             headers: new HttpHeaders({ 'Content-Type': 'application/json' })
         }

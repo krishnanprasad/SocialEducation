@@ -1,37 +1,37 @@
 <div style="margin-top: 30px;">
     <div class="d-flex">
         <div class="p-2 mr-auto">
-          <h5 style="margin-bottom: 10px;">Project List</h5>
+            <h5 style="margin-bottom: 10px;">Project List</h5>
         </div>
         <div class="p-2">
-          <img src="assets/Image/Icons/add.png" height="18px" width="18px" style="margin-right: 20px;">
-          <img src="assets/Image/Icons/edit.png" height="18px" width="18px" style="margin-right: 20px;">
+            <img src="assets/Image/Icons/add.png" height="18px" width="18px" style="margin-right: 20px;">
+            <img src="assets/Image/Icons/edit.png" height="18px" width="18px" style="margin-right: 20px;">
         </div>
-      </div>
-<div class="card" style="margin-top:10px;margin-bottom: 5px;" *ngFor="let ProList of projectlist">
-  <!-- <div class="HeaderDiv">
-    <span class="Bold" style="color: #424242">Project List</span>
+    </div>
+    <div class="card" style="margin-top:10px;margin-bottom: 5px;" *ngFor="let ProList of projectlist">
+        <!-- <div class="HeaderDiv">
+    <span class="Bold" style="color: #3d3d3d">Project List</span>
   </div> -->
-  <div class="ListTypeNone" style="padding:8px 20px">
-    <li class="F16 LightBlack Bold lineHeight30" style="justify-content: space-between;width: 100%;">
-      <div style="width:90%">
-        {{ProList.Name}}
-      </div>
-      <div style="width:10%" *ngIf="Editable">
-        <img src="assets/Image/Icons/edit.png" style="height:14px;width:14px;margin:0px 5px;">
-        <img src="assets/Image/Icons/delete.png" style="height:14px;width:14px;margin:0px 5px;">
-      </div>
-    </li>
+        <div class="ListTypeNone" style="padding:8px 20px">
+            <li class="F16 LightBlack Bold lineHeight30" style="justify-content: space-between;width: 100%;">
+                <div style="width:90%">
+                    {{ProList.Name}}
+                </div>
+                <div style="width:10%" *ngIf="Editable">
+                    <img src="assets/Image/Icons/edit.png" style="height:14px;width:14px;margin:0px 5px;">
+                    <img src="assets/Image/Icons/delete.png" style="height:14px;width:14px;margin:0px 5px;">
+                </div>
+            </li>
 
-    <li class="F14 LightBlack ContainerReadLess">
-      <p>{{ProList.Description}}</p>
-    </li>
-    <!-- <li class="F14 LightBlack ContainerReadLess"  [ngClass]="status ? 'show' : ''">{{ProList.Description}}</li>
+            <li class="F14 LightBlack ContainerReadLess">
+                <p>{{ProList.Description}}</p>
+            </li>
+            <!-- <li class="F14 LightBlack ContainerReadLess"  [ngClass]="status ? 'show' : ''">{{ProList.Description}}</li>
     <button [attr.id]="'undoBtn'+i" (click)="ToggleReadLess()">Show text</button> -->
-    <li class="F14 LightBlack lineHeight30">{{ProList.With}}</li>
-    <li class="F14 LightBlack lineHeight30">Photo</li>
-    <li class="F14 LightBlack lineHeight30">Video</li>
-    <li class="F14 LightBlack lineHeight30">{{ProList.Timeline}}</li>
-  </div>
-</div>
+            <li class="F14 LightBlack lineHeight30">{{ProList.With}}</li>
+            <li class="F14 LightBlack lineHeight30">Photo</li>
+            <li class="F14 LightBlack lineHeight30">Video</li>
+            <li class="F14 LightBlack lineHeight30">{{ProList.Timeline}}</li>
+        </div>
+    </div>
 </div>

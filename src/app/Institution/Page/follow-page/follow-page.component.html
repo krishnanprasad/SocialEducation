@@ -1,26 +1,3 @@
-<div class="d-flex">
-    <div class="p-2  flex-fill" style="text-align:center">
-      <button class="NavButtons" [ngClass]="value=== 'Followers'?'Active':''" (click)="value='Followers'">Followers</button>
-    </div>
-    <div class="p-2 flex-fill" style="text-align:center">
-      <button class="NavButtons" [ngClass]="value==='Following'?'Active':''" (click)="value='Following'">Following</button>
-    </div>
-    <div class="p-2 flex-fill" style="text-align:center">
-      <button class="NavButtons" [ngClass]="value==='Premium'?'Active':''" (click)="value='Premium'">Premium</button>
-    </div>
-  </div>
-  
-  <!-- Tab panes -->
-  <div [ngSwitch]="value">
-       
-    <div *ngSwitchCase="'Followers'">
-      <app-user-detail-a [UserFriendList]="UserFriendList"></app-user-detail-a>
-     </div>
-    <div *ngSwitchCase="'Following'">
-        <app-user-detail-a [UserFriendList]="UserFriendList"></app-user-detail-a>
-   </div>
-    <div *ngSwitchCase="'Premium'">
-      <app-institution-card-b  [dataInstitution]="UserPremiumInstitutionList"></app-institution-card-b> </div>
-    <div *ngSwitchDefault>Default Template</div>
-  
-  </div>
+<div>
+  <app-follower-table [UserFriendList]="UserFriendList"></app-follower-table>
+</div>

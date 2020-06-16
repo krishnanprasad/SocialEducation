@@ -9,19 +9,21 @@ import { LoginService } from '../Service/login.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  IsStudent: boolean = true;
   ActiveNav: string;
   constructor(
     private modalService: NgbModal,
-    private router: Router,private LogSer: LoginService,
-  
-  ) {}
+    private router: Router, private LogSer: LoginService,
+
+  ) { }
   private UserId;
   // private ActiveRouter: string;
   ngOnInit() {
-    // this.ActiveRouter= "Wall";
-    console.log("Current Page" + this.router.isActive.name);
+    var currentUser = JSON.parse(localStorage.getItem('usertype'));
+    this.IsStudent = currentUser.isstudent; // your token
+    console.log('--ISSTUDENT--' + this.IsStudent);
   }
- 
+
   navbarOpen = false;
 
   toggleNavbar() {
@@ -34,11 +36,27 @@ export class NavbarComponent implements OnInit {
   openVerticallyCentered(content) {
     this.modalService.open(content, { centered: true });
   }
+
+  changeUserType(val) {
+    debugger
+    let myObj
+    if (val == 1) {
+      myObj = { usertype: 'std', isstudent: true };
+    }
+    else {
+      myObj = { usertype: 'ins', isstudent: false };
+    }
+    localStorage.setItem('usertype', JSON.stringify(myObj));
+
+    this.ngOnInit();
+
+  }
+
   GoToPage(Page) {
     this.LogSer.setUserId('Institution');
     this.UserId = this.LogSer.getUserId();
     if (Page === 'Wall') {
-        this.router.navigate(['/Wall']);
+      this.router.navigate(['/Wall']);
     }
     if (Page === 'AddPost') {
       console.log('page' + Page + ' user Id' + this.UserId);

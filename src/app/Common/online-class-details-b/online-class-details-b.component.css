@@ -1,0 +1,72 @@
+tr.tabletd td {
+    padding: 0.45rem !important;
+    vertical-align: top;
+    border-top: none;
+    font-size: 14px;
+}
+
+.boldtd {
+    font-weight: 600;
+}
+
+.onlineTopicHeading {
+    color: #3D3D3D;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.onlineTopicDescription {
+    color: #2e2e2e;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.onlineSubDescription {
+    color: #3D3D3D;
+    font-size: 14px;
+}
+
+.onlineSubHeading {
+    color: #5c5c5c;
+    font-size: 12px;
+}
+
+.QuesLinkBrief {
+    color: #5c5c5c;
+    font-size: 12px;
+}
+
+.boxshadowcard {
+    -webkit-box-shadow: 0px 0px 9px 1px rgba(237, 237, 237, 1);
+    -moz-box-shadow: 0px 0px 9px 1px rgba(237, 237, 237, 1);
+    box-shadow: 0px 0px 9px 1px rgba(237, 237, 237, 1);
+    margin-bottom: 15px;
+}
+
+.regisbutn {
+    width: 100%;
+    border: none;
+    background-color: white;
+    color: #ff8952;
+    padding: 5px 5px;
+    font-weight: 500;
+}
+
+.regisbutn2 {
+    width: 100%;
+    border: none;
+    background-color: #ff8952;
+    color: white;
+    padding: 5px 15px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.regismore {
+    width: 100%;
+    border: none;
+    background-color: white;
+    color: #494949;
+    padding: 5px 5px;
+    font-weight: 500;
+}

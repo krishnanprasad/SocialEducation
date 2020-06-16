@@ -1,4 +1,4 @@
-.FontColor{
+.FontColor {
     color: red;
 }
 
@@ -7,52 +7,55 @@
     margin-bottom: 5px;
 }
 
-.MessageSpan{
+.MessageSpan {
     font-size: 14px;
     color: #4a4a4a;
     font-family: PostMessageFont1;
 }
 
-.PostTypeTag{
-    text-align: center; 
-    display: block; 
-
-    width: 20%;  
+.PostTypeTag {
+    text-align: center;
+    display: block;
+    width: 20%;
     float: right;
-    border-left:1px solid white; 
+    border-left: 1px solid white;
 }
-.PostTypeTagSpan{
-    font-size:12px;
+
+.PostTypeTagSpan {
+    font-size: 12px;
     text-align: center;
     color: #fff;
     font-family: PostMessageFont1;
 }
-.card-bodyAltered{
+
+.card-bodyAltered {
     flex: 1 1 auto;
     padding: 5px 10px;
 }
-.FromTimeImg{
+
+.FromTimeImg {
     height: 18px;
     width: 18px;
 }
-.FromTimeSpan{
+
+.FromTimeSpan {
     font-size: 12px;
     font-weight: 400;
     padding-left: 5px;
 }
 
-.SubjectSpan{
+.SubjectSpan {
     font-family: PostMessageFont1;
-    font-size:14px;
+    font-size: 14px;
 }
 
-.OptionMessage{
+.OptionMessage {
     font-size: 12px;
 }
 
-.PremiumSpan{
+.PremiumSpan {
     float: right;
-    background-color: #424242;
+    background-color: #3d3d3d;
     color: #f8f9fa;
     padding: 5px 10px;
     font-size: 12px;

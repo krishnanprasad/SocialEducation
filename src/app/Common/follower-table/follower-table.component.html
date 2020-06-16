@@ -1,0 +1,28 @@
+<div class="" style="margin-bottom:5px">
+  <input type="text" placeholder="Search Friends" class="form-control" [(ngModel)]="SearchFriends">
+</div>
+<div style="margin-bottom:5px">
+  <div class="card boxshadowcard">
+    <table class='container2'>
+      <tr *ngFor="let UsrFrdlst of UserFriendList | search:'Username':SearchFriends">
+      
+        <td>
+          <img src="{{UsrFrdlst.UserImage}}" class="iconDetails" alt="Cinque Terre" style=" border-radius: 20%;">
+          <div class='container2'>
+            <div style='margin-left:60px;'>
+              <div style="display: block;"><span>{{UsrFrdlst.Username}}</span></div>
+              <div style="float:left;display: block"><span class="postfrom">{{UsrFrdlst.userid}}</span></div>
+            </div>
+          </div>
+        </td>
+       
+        
+        <td>
+          <span>{{UsrFrdlst.lastused}}</span>
+        </td>
+        <td>
+          <span>{{UsrFrdlst.type}}</span>
+        </td>
+    </table>
+  </div>
+</div>

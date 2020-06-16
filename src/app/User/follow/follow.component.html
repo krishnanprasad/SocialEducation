@@ -1,9 +1,9 @@
-<div class="container"  style="margin-top: 85px;">
-  <h4 class="Color">Follow</h4>
-  <div class="d-flex">
+<div>
+    <h4 class="Black">Follow</h4>
+    <!-- <div class="d-flex">
       <div class="p-2 flex-fill card boxshadowcard" style="text-align:center">
         <span class="F30"> 2011 </span>
-        <span class="F14 Color Bold"> Total Followers </span>
+        <span class="F14 Color Bold"> Topics Followers </span>
       </div>
       <div class="p-2 flex-fill card boxshadowcard" style="text-align:center">
         <span class="F30"> 12 </span>
@@ -14,61 +14,36 @@
         <span class="F14 Color Bold"> Class Rooms </span>
       </div>  
          
-    </div>
-  <div class="row">
-    
-    <div class="col-md-9">
-      <div class="card boxshadowcard" style="padding:10px;">
-        <div class="d-flex">
-          <div class="p-2 flex-fill" style="text-align:center">
-            <button
-              class="NavButtons"
-              [ngClass]="value === 'Institution' ? 'Active' : ''"
-              (click)="value = 'Institution'"
-            >
-            Class Rooms
+    </div> -->
+
+    <div class="col-md-12">
+        <div class="boxshadowcard" style="padding:10px;">
+            <div class="d-flex">
+                <div class="p-2 flex-fill" style="text-align:center">
+                    <button class="NavButtons" [ngClass]="value === 'Topics' ? 'Active' : ''" (click)="value = 'Topics'">
+            Topics
             </button>
-          </div>
-          <div class="p-2  flex-fill" style="text-align:center">
-            <button
-              class="NavButtons"
-              [ngClass]="value === 'Friends' ? 'Active' : ''"
-              (click)="value = 'Friends'"
-            >
-              Friends
-            </button>
-          </div>
-          <div class="p-2 flex-fill" style="text-align:center">
-            <button
-              class="NavButtons"
-              [ngClass]="value === 'Followers' ? 'Active' : ''"
-              (click)="value = 'Followers'"
-            >
+                </div>
+
+                <div class="p-2 flex-fill" style="text-align:center">
+                    <button class="NavButtons" [ngClass]="value === 'Followers' ? 'Active' : ''" (click)="value = 'Followers'">
               Tutors
             </button>
-          </div>
+                </div>
+            </div>
+            <div [ngSwitch]="value">
+
+                <div *ngSwitchCase="'Topics'">
+                    <app-institution-card-b [dataInstitution]="UserPremiumInstitutionList"></app-institution-card-b>
+                </div>
+                <div *ngSwitchCase="'Followers'">
+                    <app-user-detail-a [UserFriendList]="UserFriendList"></app-user-detail-a>
+                </div>
+                <div *ngSwitchDefault>Default Template</div>
+            </div>
         </div>
-        <div [ngSwitch]="value">
-          <div *ngSwitchCase="'Friends'">
-            <app-user-detail-a
-              [UserFriendList]="UserFriendList"
-            ></app-user-detail-a>
-          </div>
-          <div *ngSwitchCase="'Institution'">
-            <app-institution-card-b
-              [dataInstitution]="UserPremiumInstitutionList"
-            ></app-institution-card-b>
-          </div>
-          <div *ngSwitchCase="'Followers'">
-            <app-user-detail-a
-              [UserFriendList]="UserFriendList"
-            ></app-user-detail-a>
-          </div>
-          <div *ngSwitchDefault>Default Template</div>
-        </div>
-      </div>
     </div>
-    <div class="col-md-3">
+    <!-- <div class="col-md-3">
       <p>Suggestions</p>
       <div class="">
       <div *ngFor="let FriendsData of MutualFriendDataList">
@@ -77,8 +52,7 @@
         ></app-user-recommendation-card>
       </div>
     </div>
-    </div>
-  </div>
+    </div> -->
 
-  <!-- Tab panes -->
+    <!-- Tab panes -->
 </div>

@@ -1,21 +1,31 @@
-<div class=""  style="margin-bottom:5px">
- <input type="text" placeholder="Search Friends" class="form-control" [(ngModel)]="SearchFriends">
+<div class="" style="margin-bottom:5px">
+    <input type="text" placeholder="Search Friends" class="form-control" [(ngModel)]="SearchFriends">
 </div>
-<div class="row">
-  <div class="col-md-6" *ngFor="let UsrFrdlst of UserFriendList | search:'Username':SearchFriends" style="margin-bottom:5px">
-    <div class="card boxshadowcard">
-      <div class='container2'>
-        <div>
-          <img src="{{UsrFrdlst.UserImage}}" class="iconDetails" alt="Cinque Terre" style=" border-radius: 50%;">
+<div style="margin-bottom:5px">
+    <div class="card-noborder">
+
+        <div class=''>
+            <div *ngFor="let UsrFrdlst of UserFriendList | search:'Username':SearchFriends">
+                <div class="d-flex mb-3">
+                    <div class="p-2 flex-grow-1">
+                        <img src="{{UsrFrdlst.UserImage}}" class="iconDetails" alt="name">
+                        <div class='container2'>
+                            <div style='margin-left:60px;'>
+                                <div style="display: block;"><span class="F14 Black">{{UsrFrdlst.Username}}</span></div>
+                                <div style="float:left;display: block"><span class="F12 LightBlack">{{UsrFrdlst.userid}}</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2" style="display: flex;justify-content: center;align-items: center;">
+                        <span class="F12 LightBlack">{{UsrFrdlst.lastused}} Followers</span>
+                    </div>
+                    <div class="p-2" style="display: flex;justify-content: center;align-items: center;">
+                        <input type="button" value="Unfollow" class="regisbutn-small" />
+                    </div>
+
+                </div>
+
+            </div>
         </div>
-        <div style='margin-left:60px;'>
-          <span class="postfrom">{{UsrFrdlst.Username}}</span>
-          <div style="float:right;"></div>
-        </div>
-      </div>
-      <div class="F12" style="font-size:.75em;padding: 5px;">
-        <span class="posttime">{{UsrFrdlst.UserAbout}}</span>
-      </div>
     </div>
-  </div>
 </div>
