@@ -11,6 +11,7 @@ import { LoginService } from '../Service/login.service';
 export class NavbarComponent implements OnInit {
   IsStudent: boolean = true;
   ActiveNav: string;
+  ActiveLink = { Wall: false, Notification: false, Follow: false, Activity: false };
   constructor(
     private modalService: NgbModal,
     private router: Router, private LogSer: LoginService,
@@ -19,11 +20,22 @@ export class NavbarComponent implements OnInit {
   private UserId;
   // private ActiveRouter: string;
   ngOnInit() {
+    
     var currentUser = JSON.parse(localStorage.getItem('usertype'));
-    this.IsStudent = currentUser.isstudent; // your token
-    console.log('--ISSTUDENT--' + this.IsStudent);
-  }
 
+    //console.log('--ISSTUDENT--' + this.IsStudent);
+    if (currentUser == null) {
+      alert('Please Login !');
+      this.router.navigate(['/Login']);
+    }
+    else {
+      this.IsStudent = currentUser.isstudent; // your token
+    }
+  }
+  LogOff() {
+    localStorage.removeItem('usertype');
+    this.router.navigate(['/Login']);
+  }
   navbarOpen = false;
 
   toggleNavbar() {
@@ -36,9 +48,25 @@ export class NavbarComponent implements OnInit {
   openVerticallyCentered(content) {
     this.modalService.open(content, { centered: true });
   }
+  makeallactivelinkfalse() {
+    this.ActiveLink = { Wall: false, Notification: false, Follow: false, Activity: false };
+  }
+  routenav(page) {
+    this.makeallactivelinkfalse();
 
+    this.ActiveLink[page] = true;
+
+    var usertype = JSON.parse(localStorage.getItem('usertype'));
+    if (usertype.isstudent == true) {
+      this.router.navigate(['/User/' + page]);
+    }
+    else {
+      this.router.navigate(['/Institution/' + page]);
+    }
+
+  }
   changeUserType(val) {
-    debugger
+
     let myObj
     if (val == 1) {
       myObj = { usertype: 'std', isstudent: true };
@@ -59,12 +87,17 @@ export class NavbarComponent implements OnInit {
       this.router.navigate(['/Wall']);
     }
     if (Page === 'AddPost') {
-      console.log('page' + Page + ' user Id' + this.UserId);
+      // console.log('page' + Page + ' user Id' + this.UserId);
       if (this.UserId !== undefined) {
         this.router.navigate(['/Institution/CreatePost']);
       } else {
         this.router.navigate(['/User/', this.UserId]);
       }
     }
+    if(Page=='Search')
+    {
+      this.router.navigate(['/Search']);
+    }
+
   }
 }

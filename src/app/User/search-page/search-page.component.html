@@ -1,37 +1,91 @@
 <app-navbar></app-navbar>
 <div class="container" style="margin-top:85px;">
-
-
-    <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search.." style="margin-left:15px;border-radius: 0.01rem;border:none;border-bottom: 1px solid #c4c4c4;" />
-    <div style="margin-top: 20px;">
-        <span class="filter-text" *ngFor="let fls of filters">
-        {{fls}}
-      </span>
-    </div>
-    <div *ngIf="searchText?.length>0" style="background-color: #f1f1f1;
-      margin-left: 15px;
-      width: 100%;
-      margin-top: -10px;">
-        <div class="d-flex mb-3" style="padding: px;" *ngFor="let c of characters | filter : searchText" style="padding: 5px 10px;
-      border-bottom: 5px;
-      margin-top: 10px;
-      border-bottom: 1px solid #e7e7e6;
-  ">
-            <div class="p-2 flex-grow-1">
-                <span class="F12" style="background-color: red;
-            padding: 3px 8px;
-            border-radius: 15px;
-            color: whitesmoke;">Webinar</span>
-
-                <span class="onlineTopicHeading" style="display: block;"> {{c.username}}</span>
-                <span class="onlineSubDescription" style="display: block;">Date</span>
+    <h4 style="color:#5c5c5c"> Search better here</h4>
+    <div class="row" style="margin-top: 40px;">
+        <div class="col-md-4">
+            <div style="display: flex;">
+                <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search.."
+                    style="border-radius: 0.01rem;border: 1px solid #c4c4c4;" />
+                <i class="fas fa-search" style="margin-left:5px;margin-top: auto;margin-bottom: auto;color:#5c5c5c"
+                    (click)="searchtextboxfilter(searchText)"></i>
             </div>
-            <div class="p-2" *ngIf="c.type=='H'">
-                <input type="button" value="Add" (click)="addfilter(c.username)" />
+            <div>
+
+                <div *ngIf="searchText?.length>0"
+                    style="background-color: #fafafa;top: 38px;width: 92%;position: absolute;">
+                    <div class="d-flex" *ngFor="let c of characters | filter : searchText" style="padding: 5px 10px;
+                border-bottom: 5px;
+                margin-top: 10px;
+                border-bottom: 1px solid #e7e7e6;
+            ">
+                        <div class="flex-grow-1">
+                            <span class="onlineTopicHeading" style="display: block;"> {{c.username}}</span>
+                        </div>
+                        <div class="" *ngIf="c.type=='H'">
+                            <input type="button" class="regisbutn-cancel-x-small" value="add"
+                                (click)="addfilter(c.username)" />
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
+        <div class="col-md-8">
+            <div style="padding:5px">
+                <h6 style="color: #5c5c5c;">results
+                    <i class="fas fa-filter F14" *ngIf="isShowFilter" (click)="toggleShowfilter()"></i>
+                    <i class="fas fa-filter F14" *ngIf="!isShowFilter" style="color: #c4c4c4;"
+                        (click)="toggleShowfilter()"></i>
+                </h6>
+            </div>
 
+            <div class="row" *ngIf="isShowFilter">
+                <div class="col-md-4">
+                    <app-dropdown-a (selectedvalue)="filterDate($event)" [values]="DateFilterdata"></app-dropdown-a>
+                </div>
+                <div class="col-md-4">
+                    <app-dropdown-a (selectedvalue)="filterPaid($event)" [values]="PaidFilterdata"></app-dropdown-a>
+                </div>
+            </div>
+
+
+
+
+            <div style="margin-top: 20px;">
+                <span class="filter-text" (click)="removefilter(fls)" *ngFor="let fls of filters">
+                    {{fls}}
+                </span>
+            </div>
+            <div *ngIf="searchText?.length>0" style="background-color: #f1f1f1;
+          margin-left: 15px;
+          width: 100%;
+          margin-top: -10px;">
+                <div class="d-flex mb-3" style="padding: px;" *ngFor="let c of characters | filter : searchText" style="padding: 5px 10px;
+          border-bottom: 5px;
+          margin-top: 10px;
+          border-bottom: 1px solid #e7e7e6;
+      ">
+                    <div class="p-2 flex-grow-1">
+                        <span class="F12" style="background-color: red;
+                padding: 3px 8px;
+                border-radius: 15px;
+                color: whitesmoke;">Webinar</span>
+
+                        <span class="onlineTopicHeading" style="display: block;"> {{c.username}}</span>
+                        <span class="onlineSubDescription" style="display: block;">Date</span>
+                    </div>
+                    <div class="p-2" *ngIf="c.type=='H'">
+                        <input type="button" value="Add" (click)="addfilter(c.username)" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
+
+
+
 
 </div>
 

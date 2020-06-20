@@ -1,8 +1,9 @@
-<div class="card">
+<div class="">
   <div *ngFor="let notifylist of NotificationList" style="padding:5px;">   
         <div class="d-flex BorderBottomLight">
             <div class="p-2">
-                <img src="{{notifylist.Icon}}" alt="like icon" />
+              <i *ngIf="notifylist.Icon=='Accepted'" class="fas fa-thumbs-up PrimaryColor2"></i>
+              <i *ngIf="notifylist.Icon=='Rejected'" class="fas fa-thumbs-down PrimaryRed"></i>
             </div>           
             <div class="p-2 flex-grow-1">
                 <span class="F14">{{ notifylist.Message }}</span> <span class="F12 LightBlack" style="float:right">{{ notifylist.Time }}</span>

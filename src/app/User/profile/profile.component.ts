@@ -17,12 +17,15 @@ export class ProfileComponent implements OnInit {
   public UserWallData;
   public UserPremiumInstitutionList;
   public UserNonPremiumInstitutionList;
+
+  
+  selectedvalueoffilter: any;
   // tslint:disable-next-line:max-line-length
   constructor(
     private _PostListService: PostListService,
     private _UserWallData: UserDetailsService,
     private _UserInstitutionList: UserInstitutionListPremiumService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.FilterPage = 'Wall';
@@ -36,5 +39,8 @@ export class ProfileComponent implements OnInit {
     console.log(pagename);
     this.CurrentComponent = pagename;
     this.FilterPage = pagename;
+  }
+  selectedvalueoffilterA(e) {   
+    this.selectedvalueoffilter = e;
   }
 }

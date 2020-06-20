@@ -143,7 +143,7 @@ export class CreateQuestionPaperAComponent implements OnInit {
   ShowHideItems() {
   }
   onTimeAlter(type) {
-    //debugger;
+    //
     switch (type) {
       case "Add": {
         
@@ -270,7 +270,7 @@ export class CreateQuestionPaperAComponent implements OnInit {
     this.questionpaper.questions=this.questionbank;
     this._addquestionpaperpostservice.addQuestionPaper(this.questionpaper).subscribe(userTransaction => {
       if (userTransaction != "No User") {
-      //debugger;
+      //
         // this.transactionList = userTransaction;
         // this.Iserror = false;
       }

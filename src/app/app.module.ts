@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -79,6 +80,10 @@ import { TopicBadgesAComponent } from './Common/topic-badges-a/topic-badges-a.co
 import { ScheduleRemainderAComponent } from './Common/schedule-remainder-a/schedule-remainder-a.component';
 import { CreateQuestionPaperAComponent } from './Common/create-question-paper-a/create-question-paper-a.component';
 import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-datetimepicker';
+import { InsNotificationComponent } from './Institution/Page/ins-notification/ins-notification.component';
+import { InsActivityPageComponent } from './Institution/Page/activity-page/activity-page.component';
+import { ParticipantRequestAComponent } from './Common/participant-request-a/participant-request-a.component';
+import { DropdownAComponent } from './Common/Altered/dropdown-a/dropdown-a.component';
 
 @NgModule({
   declarations: [
@@ -153,10 +158,15 @@ import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-
     TopicBadgesAComponent,
     ScheduleRemainderAComponent,
     CreateQuestionPaperAComponent,
+    InsNotificationComponent,
+    InsActivityPageComponent,
+    ParticipantRequestAComponent,
+    DropdownAComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    
     NgbModule,
     BrowserAnimationsModule,
     FormsModule,

@@ -1,0 +1,21 @@
+.dropdownvalclass{
+    padding: 5px 10px;
+        border-bottom: 5px;
+        margin-top: 10px;
+        font-size: 12px;
+        border-bottom: 1px solid #e7e7e6;display: block;
+}
+
+.dropdownvaldivclass{
+    border: 1px solid #e7e7e7;
+    z-index: 1;  
+    position: absolute;
+    background-color: #f6f6f6;    
+    box-sizing: border-box;
+    max-width: 340px; 
+}
+
+.dropdownvalclass:hover{
+    background-color: #2A8CB7;    
+    color:white
+}

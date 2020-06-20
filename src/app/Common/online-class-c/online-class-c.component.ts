@@ -11,5 +11,6 @@ export class OnlineClassCComponent implements OnInit {
 
   ngOnInit() {
   }
+  postdetails=[{status:1,platform:'zoom'},{status:1,platform:'zoom'},{status:2,platform:'hangout'},{status:0,platform:'teams'}]
 
 }

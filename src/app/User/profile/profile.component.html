@@ -5,42 +5,45 @@
             <img src="assets/Image/employee1.jpg" height="160px" width="160px" style="border-radius:50%">
         </div>
     </div>
-    <div class="row">
 
-        <div class="col-md-3">
-            <div class="card" style="padding:10px">
-                <div style="text-align:center;margin: 10px 0px;">
-                    <span style="font-size:32px;">48</span>
-                </div>
-                <div style="text-align:center">
-                    <span style="font-size:16px;color:#5c5c5c">Points Available</span>
-                </div>
-            </div>
-            <div style="margin-top: 20px;margin-bottom: 10px;">
-
-                <button class="btn btn-success" type="button" style="width: 100%;">Add Points</button>
-            </div>
-
-            <div class="bottom" style="margin-top: 20px;margin-bottom: 10px;padding: 10px 30px">
-                <img src="assets/Image/Icons/institution.png" height="32px" width="32px">
-                <a style="color:#636363">Create Institution</a>
-            </div>
-            <div class="bottom" style="margin-top: 20px;margin-bottom: 10px;padding: 10px 30px">
-                <img src="assets/Image/Icons/tutor.png" height="32px" width="32px">
-                <a style="color:#636363">Create Tutor</a>
-            </div>
-
-
+    <div class="col-md-12">
+        <div class="col-md-4">
+            
+            <span> Answer Is {{selectedvalueoffilter}}</span>
         </div>
-        <div class="col-md-9">
+    </div>
+    <div class="row">
+        <div class="col-md-12">
 
-            <div class="form-group">
-                <label for="usr">Name:</label>
-                <input type="text" class="form-control" value="KRISHNAN RA" id="usr" style="padding: 30px 20px;font-size: 20px;">
-            </div>
             <div>
-                <app-page-owner></app-page-owner>
+                <span style="display: block;">Name:</span>
+                <input *ngIf="1==0" type="text" class="form-control" value="KRISHNAN RA" id="usr"
+                    style="padding: 30px 20px;font-size: 20px;">
+                <span style="padding: 10px 0px;font-size: 20px;display: block;">Krishnan RA</span>
             </div>
+
+            <div>
+                <span style="display: block;">Phone:</span>
+                <input *ngIf="1==0" type="text" class="form-control" value="98989898**" id="usr"
+                    style="padding: 30px 20px;font-size: 20px;">
+                <span style="padding: 10px 0px;font-size: 20px;display: block;">98989898**</span>
+            </div>
+
+
+            <div>
+                <span style="display: block;">Email:</span>
+                <input *ngIf="1==0" type="text" class="form-control" value="krishnanra@gmail" id="usr"
+                    style="padding: 30px 20px;font-size: 20px;">
+                <span style="padding: 10px 0px;font-size: 20px;display: block;">krishnanra@gmail</span>
+            </div>
+
+            <div>
+                <span style="display: block;">Professional:</span>
+                <input *ngIf="1==0" type="text" class="form-control" value="Student" id="usr"
+                    style="padding: 30px 20px;font-size: 20px;">
+                <span style="padding: 10px 0px;font-size: 20px;display: block;">Student</span>
+            </div>
+
             <div style="margin-top: 30px;">
                 <div class="d-flex">
                     <div class="p-2 mr-auto">
@@ -61,13 +64,13 @@
                 </div>
             </div>
 
-            <div style="margin-top:5px;">
+            <!-- <div style="margin-top:5px;">
 
-                <!-- <app-courses-detail [Edit]="Editable"></app-courses-detail> -->
+             <app-courses-detail [Edit]="Editable"></app-courses-detail> 
                 <app-institutions [Edit]="Editable"></app-institutions>
                 <app-projects [Edit]="Editable"></app-projects>
                 <app-awards [Edit]="Editable"></app-awards>
-            </div>
+            </div> -->
 
         </div>
     </div>

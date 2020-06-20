@@ -21,6 +21,8 @@ import { InstitutionMainPageComponent } from './Institution/Page/institution-mai
 import { OnlineClassDetailsAComponent } from './Page/online-class-details-a/online-class-details-a.component';
 import { SearchPageComponent } from './User/search-page/search-page.component';
 import { OnlineClassDetailsBComponent } from './Common/online-class-details-b/online-class-details-b.component';
+import { InsNotificationComponent } from './Institution/Page/ins-notification/ins-notification.component';
+import { InsActivityPageComponent } from './Institution/Page/activity-page/activity-page.component';
 
 const routes: Routes = [
   {
@@ -99,6 +101,16 @@ const routes: Routes = [
         component: InsWallComponent
       },
       {
+        path: 'Notification',
+        component: InsNotificationComponent
+      }
+      ,
+      {
+        path: 'Activity',
+        component: InsActivityPageComponent
+      }
+      ,
+      {
         path: 'PostDetail',
         component: PostDetailsComponent
       }
@@ -113,7 +125,7 @@ const routes: Routes = [
         component: DetailsComponent
       },
       {
-        path: 'CourseDetails/:CourseID',
+        path: 'WebinarDetails/:CourseID',
         component: OnlineClassDetailsBComponent
       },
     ]

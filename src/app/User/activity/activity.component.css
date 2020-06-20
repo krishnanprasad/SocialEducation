@@ -3,6 +3,17 @@ ul {
     list-style: none;
     margin-left: -25px;
 }
+.boxshadowcard2{
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 15px 10px;
+}
+
+.boxshadowcard2:hover{
+    background-color: #2A8CB7;
+    /* Third Primary Color */
+    color: white !important;
+}
 
 .ResultSpan {
     font-size: 24px;

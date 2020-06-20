@@ -1,0 +1,48 @@
+<div class="col-md-12 ani-from-bottom">
+  <div class="row container" style="margin-bottom: 30px;">
+
+    <div class="col-md-3">
+      <div class="boxshadowcard2">
+        <span class="ResultSpan">42</span>
+        <span class="F12 LightBlack" style="display: block;">Conducted Web.</span>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="boxshadowcard2">
+        <span class="ResultSpan">6</span>
+        <span class="F12 LightBlack" style="display: block;">Scheduled Web.</span>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="boxshadowcard2">
+        <span class="ResultSpan">36</span>
+        <span class="F12 LightBlack" style="display: block;">Completed Web.</span>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="boxshadowcard2">
+        <span class="ResultSpan">1300</span>
+        <span class="F12 LightBlack" style="display: block;">Seats Filled</span>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-8">
+      <app-inst-post-list (passParticipantid)="getparticipantid($event)" [walldata]="PostDetails"></app-inst-post-list>
+    </div>
+    <div class="col-md-4">
+      <div style="padding:15px">
+        <div id="feedback">
+          <div>
+            <span class="headings-small">Particpant Request</span>
+          </div>
+          <app-participant-request-a [participantlist]="participantlist"></app-participant-request-a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

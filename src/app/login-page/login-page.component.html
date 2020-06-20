@@ -1,89 +1,187 @@
- <div class="row" style="background-color:#8a2be2;margin: 0px">
-    <span style="font-size: 40px;
-    padding: 5px 20px;color: white;margin: 10px;font-family: 'Oregano', cursive;">edpicker</span>
+<div style="background-color:#247ba0 ;">
+    <div class="row" style="background-color:#247ba0;margin: 0px">
+        <span style="font-size: 40px;
+    padding: 5px 20px;color: white;margin: 10px;font-family: 'Oregano', cursive;">edpicker
+        </span>
     </div>
-    <div class="row" style="background-color:#8a2be2;margin: 0px;">
-        <div class="col-md-7" style="line-height: 300px;text-align:center">
-            <h4 style=" display: inline-block;
-    vertical-align: middle;
-    line-height: normal;color: white;">where seekers consume knowledge from providers</h4>
+    <div class="row" style="background-color:#247ba0;    padding: 5px 20px;
+    margin: 20px 10px;
+    line-height: 1.5;">
+        <span style="font-size: 20px;
+    color: white;font-family: ubuntu-regular;">
+            find webinars across the globe,
+            <span style="display: block;font-family: ubuntu-regular;">you can join webinars as <span
+                    style="font-style: italic;text-decoration: underline;">PARTICPANT</span> </span>
+            <span style="display: block;font-family: ubuntu-regular;">you can organise and manage your webinars as <span
+                    style="font-style: italic;text-decoration: underline;">ORGANISER</span></span>
+        </span>
+    </div>
+    <div class="row" style="background-color:#247ba0;margin: 0px;height: 380px;">
+        <div [ngClass]="(chooseuserval=='org')?'Left-SideHeading': 'Right-SideHeading'" style="min-height: 300px">
+            <div style="text-align: left;">
+                <div class="d-flex flex-column" *ngIf="chooseuserval=='part'">
+                    <div class="p-2">
+                        <span class="heading-sidelist">
+                            <i class="fas fa-search" style="padding: 15px;" aria-hidden="true"></i>
+                            Search & Register Webinars
+                        </span>
+                    </div>
+                    <div class="p-2">
+                        <span class="heading-sidelist">
+                            <i class="fas fa-heart" style="padding: 15px;"></i>Follow your Fav
+                            Topics
+                        </span>
+
+                    </div>
+                    <div class="p-2">
+                        <span class="heading-sidelist"><i class="fas fa-star" style="padding: 15px;"></i>
+                            Rate Webinar
+                        </span>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column" *ngIf="chooseuserval=='org'">
+                    <div class="p-2">
+                        <span class="heading-sidelist">
+                            <i class="fas fa-file-alt" style="padding: 15px;" aria-hidden="true"></i>
+                            Create Webinar Post
+                        </span>
+                    </div>
+                    <div class="p-2"> <span class="heading-sidelist">
+                            <i class="fas fa-clock" style="padding: 15px;" aria-hidden="true"></i>
+                            Schedule it!
+                        </span>
+                    </div>
+                    <div class="p-2">
+                        <span class="heading-sidelist">
+                            <i class="fas fa-user-plus" style="padding: 15px;" aria-hidden="true"></i>
+                            Manage Participant
+                        </span>
+                    </div>
+                    <div class="p-2">
+                        <span class="heading-sidelist">
+                            <i class="fas fa-share-alt" style="padding: 15px;" aria-hidden="true"></i>
+                            Share Meeting Details
+                        </span>
+                    </div>
+                </div>
+
+
+
+
+            </div>
         </div>
-        <div class="col-md-5">
+        <div class="" [ngClass]="(chooseuserval=='part')?'Left-SideHeading': 'Right-SideHeading'">
             <div class="SideDiv">
+                <span style="display: block;font-size: 24px;color: #3d3d3d;">you are a?</span>
                 <div>
-                    <span>Choose</span>
-                    <input type="radio" name="ChooseUserType" checked="checked" class="btn" (change)="radioChange($event)" value="student" id="student"/>
-                    <label for="student">Student</label>
-                    <input type="radio" name="ChooseUserType" class="btn" (change)="radioChange($event)" value="institution" id="institution"/>
-                    <label for="institution">Institution</label>
+                    <div class="box">
+                        <label>
+                            <input type="radio" name="chooseuser" value="part" [(ngModel)]="chooseuserval">
+                            <span>Participant</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="chooseuser" value="org" [(ngModel)]="chooseuserval">
+                            <span>Organiser</span>
+                        </label>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="usr" style="color:#303030">Name:</label>
-                    <input type="text" class="form-control" [(ngModel)]="username" placeholder="Username"
+                <div class="form-group" style="display: block;" *ngIf="chooseuserval=='part'"
+                    style="margin-bottom: 15px;">
+                    <input type="text" class="form-control" [(ngModel)]="phoneno" placeholder="Enter Phone"
                         required="required">
                 </div>
-                <div class="form-group" *ngIf="usertype=='institution'">
-                    <label for="pwd" style="color:#303030">Password:</label>
-                    <input type="password" class="form-control" [(ngModel)]="password" placeholder="Password"
+                <div class="form-group" style="display: block;" *ngIf="chooseuserval=='org'"
+                    style="margin-bottom: 15px;">
+                    <input type="text" class="form-control" [(ngModel)]="email" placeholder="Enter Email"
                         required="required">
                 </div>
-                <div class="d-flex justify-content-between">
-                    <div *ngIf="usertype=='student'">
-                        <input type="button" value="Send OTP" (click)="SendOTP()" class="btn btn-signin">
+                <div class="form-group" style="display: block;" *ngIf="chooseuserval=='org'"
+                    style="margin-bottom: 15px;">
+                    <input type="text" class="form-control" [(ngModel)]="password" placeholder="Enter Password"
+                        required="required">
+                </div>
+
+
+                <div *ngIf="chooseuserval=='part'" style="display: block;margin-bottom: 15px;">
+                    <input type="button" value="Send OTP" (click)="sendOTP()" class="btn btn-signup">
+                </div>
+                <div class="">
+                    <div *ngIf="chooseuserval=='org'" style="display: block;margin-bottom: 15px;">
+                        <input type="button" value="Sign In" (click)="confirm_Credentials()" class="btn btn-signup">
                     </div>
-                    <div>
-                        <input type="button" value="Sign In" (click)="CheckCredentials()" class="btn btn-signin">
-                    </div>
+
                     <!-- <button class="btn bt-success btn-block btn-lg" >Sign In</button>           -->
-                    <div>
-                        <input type="button" href="/SignUp" value="Sign Up" class="btn btn-signup">
+                    <div *ngIf="chooseuserval=='org'" style="display: block;margin-bottom: 15px;">
+                        <input type="button" href="/SignUp" value="Create New" class="btn btn-signup">
                     </div>
-                    <div>
-                        <label class="checkbox-inline"><input type="checkbox"> Remember me</label>
-                        <a href="/ForgotPassword">Forgot Password?</a>
+                    <div *ngIf="chooseuserval=='org'" style="display: block;">
+
+                        <a style="font-size: 12px;" href="/ForgotPassword">Forgot Password?</a>
                     </div>
                 </div>
             </div>
+
             <!-- <div class="text-center small">Don't have an account? <a href="/SignUp">Sign up</a></div> -->
 
 
         </div>
     </div>
-    <div class="col-md-12" style="line-height: 500px;text-align:center">
+</div>
+<div id="myOTPModal" *ngIf="ShowOTPModal" class="modal">
 
-        <p class="text">FOLLOW - LEARN - IMPROVE - SHARE</p>
-    </div>
-    <div class="row bottomshadow" style="margin: 0px;">
+    <!-- Modal content -->
+    <div class="modal-content otp-modal-content">
+        <span class="close" (click)="alter_OTPModal()">&times;</span>
 
-
-        <div class="col-md-4">
-
+        <span>ENTER THE OTP HERE</span>
+        <div class="form-group" style="display: block;margin-bottom: 15px;">
+            <input type="text" class="form-control" [(ngModel)]="password" placeholder="Enter OTP" required="required">
         </div>
-        <div class="col-md-4 d-flex justify-content-between mb-3" style="font-size: 12px;
-    padding: 10px 20px;color: #8a2be2;">
-            <a>terms & conditions</a>
-            <a>about us</a>
-            <a>report</a>
-        </div>
-        <div class="col-md-4 d-flex justify-content-end">
-            <span style="font-size: 12px;
-    padding: 10px 20px;color: #8a2be2;">rights reserved with edpicker</span>
+        <div style="display: block;margin-bottom: 15px;">
+            <input type="button" value="Submit OTP" (click)="confirm_otp()" class="btn btn-signup">
         </div>
     </div>
-    <div class="login-form">
-        <h4 class="modal-title">Login to Your Account</h4>
-        <div class="form-group">
-            <input type="text" class="form-control" [(ngModel)]="username" placeholder="Username" required="required">
-        </div>
-        <div class="form-group">
-            <input type="password" class="form-control" [(ngModel)]="password" placeholder="Password"
-                required="required">
-        </div>
-        <div class="form-group small clearfix">
-            <label class="checkbox-inline"><input type="checkbox"> Remember me</label>
-            <a href="/ForgotPassword">Forgot Password?</a>
-        </div>
-        <button class="btn bt-success btn-block btn-lg" (click)="CheckCredentials()">Sign In</button>
 
-        <div class="text-center small">Don't have an account? <a href="/SignUp">Sign up</a></div>
+</div>
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-4 col-lg-4">
+            <div class="p-5" style="box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;">
+                <div class="promo-block-icon mb-3">
+                    <span class="fab fa-superpowers icon-md color-primary"></span>
+                </div>
+                <div class="promo-block-content">
+                    <h5>Search Webinars</h5>
+                    <p>Compellingly promote collaborative products without synergistic schemas. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4">
+            <div class="single-promo-block promo-hover-bg-2 hover-image shadow-lg p-5 custom-radius white-bg">
+                <div class="promo-block-icon mb-3">
+                    <span class="far fa-clock icon-md color-primary"></span>
+                </div>
+                <div class="promo-block-content">
+                    <h5>Fovourite Topic</h5>
+                    <p>Enthusiastically scale mission-critical imperatives rather than an expanded array.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-4">
+            <div class="single-promo-block promo-hover-bg-3 hover-image shadow-lg p-5 custom-radius white-bg">
+                <div class="promo-block-icon mb-3">
+                    <span class="fas fa-headphones-alt icon-md color-primary"></span>
+                </div>
+                <div class="promo-block-content">
+                    <h5>Rate Webinar</h5>
+                    <p>Rapidiously create cooperative resources rather than client-based leadership skills.</p>
+                </div>
+            </div>
+        </div>
     </div>
+</div> -->
+<!-- <div class="col-md-12" style="line-height: 500px;text-align:center">
+
+    <p class="text">where seekers consume knowledge from providersE</p>
+</div> -->

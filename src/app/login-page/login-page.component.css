@@ -1,40 +1,60 @@
+.heading-sidelist{
+    color: white;
+    font-family: ubuntu-regular;
+    font-size: 22px;
+    
+}
+.Left-SideHeading{
+    left: 15%;
+    position: absolute;
+    transition: left 2s;
+    animation-direction: normal;
+}
+.Right-SideHeading{
+    left: 55%;
+    position: absolute;
+    transition: left 2s;
+    animation-direction: normal;
+}
 
 .SideDiv {
     z-index: 1;
-    position: relative;
+    position: absolute;
     background-color: white;
-    margin: 30px 20px;
-    padding: 20px 30px;
-    -webkit-box-shadow: -1px -1px 40px 2px rgb(124, 0, 239);
-    -moz-box-shadow: -1px -1px 40px 2px rgba(124, 0, 239);
-    box-shadow: -1px -1px 40px 2px rgba(124, 0, 239);
+    margin: 20px 20px;
+    padding: 20px 20px;
+    -webkit-box-shadow: -1px -1px 20px 2px #247ba0;
+    -moz-box-shadow: -1px -1px 20px 2px #247ba0;
+    box-shadow: -1px -1px 20px 2px #247ba0;
     opacity: .98;
+    min-width: 375px;
 }
 
 .btn-signin {
-    color: #8a2be2;
+    color: #247ba0;
     background-color: #ffffff;
     border-color: #ffffff;
 }
 
 .btn-signin:hover {
     color: #ffffff;
-    background-color: #8a2be2;
-    border-color: #8a2be2;
+    background-color: #247ba0;
+    border-color: #247ba0;
     border-radius: 0px;
 }
 
 .btn-signup {
     color: #ffffff;
-    background-color: #8a2be2;
-    border-color: #8a2be2;
+    background-color: #247ba0;
+    border-color: #247ba0;
     border-radius: 0px;
+    width: 100%;
 }
 
 .btn-signup:hover {
-    color: #8a2be2;
-    background-color: #ffffff;
-    border-color: #ffffff;
+    color: white;
+    background-color: #095170;
+    border-color: #095170;
     border-radius: 0px;
 }
 
@@ -47,14 +67,14 @@
 }
 
 .form-control:focus {
-    border-bottom: 1px solid #8a2be2 !important;
+    border-bottom: 1px solid #247ba0 !important;
     ;
-    box-shadow: 0 0 0px rgba(98, 101, 228, 1) !important;
+    box-shadow: 0 0 0px 247ba0(98, 101, 228, 1) !important;
 }
 
 .text {
     text-transform: uppercase;
-    background: linear-gradient(to right, #30CFD0 0%, #8a2be2 100%);
+    background: linear-gradient(to right, #30CFD0 0%, #247ba0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 50px;
@@ -159,3 +179,168 @@ body {
 .login-form a {
     color: #ff8900;
 }
+
+
+
+
+/* Radio Button CSS */
+
+.box {
+    /* text-align: center; */
+    float: left;
+    margin-top: 15px;
+}
+
+.box:before,
+.box:after {
+    color: blue;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(250px);
+}
+
+.box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    transform: skewX(-3deg);
+    pointer-events: none;
+}
+
+.box label {
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.box label input {
+    display: none;
+}
+
+.box label span {
+    position: relative;
+    /* display: inline-block; */
+    /* margin: 20px 10px; */
+    font-size: 14px;
+    padding: 10px 20px;
+    /* width: 150px; */
+    background: white;
+    border: 1px solid #5c5c5c;
+    color: #5c5c5c;
+    border-radius: 4px;
+    display: inline-flex;
+}
+
+.box label input:checked~span {
+    color: #fff;
+    border: 1px solid #227396;
+}
+
+.box label input:checked~span:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #227396;
+    z-index: -1;
+}
+
+.box label input:checked~span:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #227396;
+    z-index: -1;
+}
+
+.box label input:checked~span {
+    color: #227396;
+    border-color: #227396;
+    font-weight: bold;
+}
+
+.box label input:checked~span:before,
+.box label input:checked~span:after {
+    background: #227396;
+}
+
+
+
+
+/* **MODAL CSS START** */
+
+
+/* The Modal (background) */
+
+.modal {
+    display: block;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: auto;
+}
+
+.otp-modal-content{
+    width: 320px !important;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* **MODAL CSS END** */

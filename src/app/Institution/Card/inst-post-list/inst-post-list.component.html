@@ -1,7 +1,7 @@
-<h5 class="Black"> Webinards</h5>
+<h5 class="Black"> Webinars</h5>
 <!--<div class="col-md-8"> -->
 <table class="table">
-    <tr *ngFor="let post of PostDetails">
+    <tr *ngFor="let post of PostDetails" (click)="valueChanged()">
         <td>
             <span class="F12" style="display: block;">06:45AM</span>
             <span class="F12">12-Aug-20</span>
@@ -22,7 +22,7 @@
             <span class="F12">Zoom</span>
         </td>
         <td>
-            <input type="button" value="View" />
+            <i class="fas fa-chevron-circle-right PrimaryColor2"></i>
         </td>
     </tr>
 </table>

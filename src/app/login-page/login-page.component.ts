@@ -12,40 +12,37 @@ export class LoginPageComponent implements OnInit {
   private password;
   private usertype;
   protected IsUser;
-  constructor(private logser: LoginService, private router: Router) {}
+  ShowOTPModal: boolean = false;
+  constructor(private logser: LoginService, private router: Router) { }
 
   ngOnInit(
 
   ) {
-    this.usertype='student';
+    this.usertype = 'student';
   }
 
-  radioChange(e){
-    this.usertype=(e.target.value);
+  radioChange(e) {
+    this.usertype = (e.target.value);
     //console.log('usertype='+this.usertype);
   }
-  CheckCredentials() {
-    if (
-      this.username === 'student' &&
-      this.password != null &&
-      this.password !== undefined
-    ) {
-      this.logser.setUserId(this.username);
-      this.IsUser = this.logser.getUserId();
-      console.log('User' + this.IsUser);
-      if (
-        this.IsUser !== undefined &&
-        this.IsUser !== null &&
-        this.IsUser !== ''
-      ) {
-        this.router.navigate(['/User/Wall']);
-      } else {
-        alert('Credentials are Wrong');
-      }
-    } else {
-      alert('Credentials are Wrong');
-      this.username = '';
-      this.password = '';
-    }
+
+  sendOTP() {
+
+    this.alter_OTPModal();
+  }
+  alter_OTPModal() {
+
+    this.ShowOTPModal = !this.ShowOTPModal;
+  }
+  confirm_Credentials() {
+    var myObj = { usertype: 'org', isstudent: false };
+    localStorage.setItem('usertype', JSON.stringify(myObj));
+    this.router.navigate(['/Institution/Wall']);
+  }
+  confirm_otp() {
+    var myObj = { usertype: 'part', isstudent: true };
+    localStorage.setItem('usertype', JSON.stringify(myObj));
+    this.alter_OTPModal()
+    this.router.navigate(['/User/Wall']);
   }
 }
