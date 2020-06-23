@@ -57,12 +57,9 @@ const routes: Routes = [
         path: 'PostDetails',
         component: PostDetailsComponent
       },
+    
       {
-        path: 'QuestionPaper/:QuestionPaperId',
-        component: QuestionPaperComponent
-      },
-      {
-        path: 'CourseDetails/:CourseID',
+        path: 'WebinarDetails/:CourseID',
         component: OnlineClassDetailsAComponent
       },
       {

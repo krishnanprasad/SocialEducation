@@ -11,7 +11,7 @@ export class QAPostComponent implements OnInit {
   constructor() {}
   public Ques;
   public Ansred;
-  private IsLoading;
+  public IsLoading;
   ngOnInit() {
     this.Ques = this.Question;
     this.Ansred = this.Answered;

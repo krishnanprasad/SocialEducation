@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginPageComponent implements OnInit {
   private username;
+  public chooseuserval: string = 'part';
   private password;
   private usertype;
   protected IsUser;

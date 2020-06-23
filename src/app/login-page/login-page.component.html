@@ -5,15 +5,18 @@
         </span>
     </div>
     <div class="row" style="background-color:#247ba0;    padding: 5px 20px;
-    margin: 20px 10px;
+    margin: 10px 10px;justify-content: center;
     line-height: 1.5;">
-        <span style="font-size: 20px;
-    color: white;font-family: ubuntu-regular;">
-            find webinars across the globe,
-            <span style="display: block;font-family: ubuntu-regular;">you can join webinars as <span
+        <span style="font-size: 70px;
+    color: white;font-family: ubuntu-regular;text-align: center;"> 
+            <span *ngIf="chooseuserval=='part'"> discover</span> 
+            <span *ngIf="chooseuserval=='org'"> promote</span>
+            webinars
+           
+            <!-- <span style="display: block;font-family: ubuntu-regular;">you can join webinars as <span
                     style="font-style: italic;text-decoration: underline;">PARTICPANT</span> </span>
             <span style="display: block;font-family: ubuntu-regular;">you can organise and manage your webinars as <span
-                    style="font-style: italic;text-decoration: underline;">ORGANISER</span></span>
+                    style="font-style: italic;text-decoration: underline;">ORGANISER</span></span> -->
         </span>
     </div>
     <div class="row" style="background-color:#247ba0;margin: 0px;height: 380px;">
@@ -75,7 +78,7 @@
             <div class="SideDiv">
                 <span style="display: block;font-size: 24px;color: #3d3d3d;">you are a?</span>
                 <div>
-                    <div class="box">
+                    <div class="box ">
                         <label>
                             <input type="radio" name="chooseuser" value="part" [(ngModel)]="chooseuserval">
                             <span>Participant</span>
@@ -143,6 +146,13 @@
         </div>
     </div>
 
+</div>
+
+<div class="row" style="justify-content: center;text-align: center;padding-top: 20px;margin-top: 10px;">
+    <span style="padding: 10px; font-size: 42px;font-weight: bold;"> Hello People !</span>
+</div>
+<div class="row" style="justify-content: center;text-align: center;padding-top: 20px;margin-top: 0px;">
+    <span style="padding: 20px;">Our aim is to build webinar discovery platform which will help students to discover webinars happening across the globe in turn we are also helping institution/tutors to promote their webinar, we are a self funded INDIAN startup, we are looking for investors who believe in the scope of the platform, we request to share your views and ideas with us at edpickerteam@gmail.com <br />Have a great day !</span>
 </div>
 <!-- <div class="container">
     <div class="row">

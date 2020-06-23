@@ -36,8 +36,8 @@
 
     </div>
     <div class="row">
-        <div class="col-md-8">
-            <app-online-class-c></app-online-class-c>
+        <div class="col-md-8" *ngFor="let data of PostDetails">
+            <app-online-class-c [onlineclassdata]="data"></app-online-class-c>
             <!-- <app-logs-card-a [UserLogsList]="UserLogsList"></app-logs-card-a> -->
         </div>
         <div class="col-md-4">

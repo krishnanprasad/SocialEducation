@@ -1,4 +1,4 @@
-<div class="card-online-class-a boxshadowcard" (click)="GoToTestPaper(QuesPapLink.QuestionPaperId)">
+<div class="card-online-class-a"  (click)="GoToWebinarDetail(onlineclassdata.webinarid)">>
     <!-- <app-postheader [Name]="'Institution Name'" [Image]="'img'" [time]="'time'"></app-postheader> -->
     <div style="padding: 15px;">
         <div class="d-flex" style="border-bottom: 1px solid #f1f1f1 ">
@@ -23,6 +23,9 @@
                     </span>
                 </div>
             </div>
+        </div>
+        <div style="margin-top: 15px;">
+            <app-topic-badges-b></app-topic-badges-b>
         </div>
         <div style="margin-top: 15px;">
             <div class="row">
@@ -58,7 +61,7 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="row" style="margin-top: 15px;">
             <div class="col-md-4">
                 <span class="onlineSubHeading" style="display: block;">Date</span>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-online-class-b',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OnlineClassBComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
-
+  GoToWebinarDetail(id) {
+    this.router.navigate(['/User/WebinarDetails', id]);
+  }
 }

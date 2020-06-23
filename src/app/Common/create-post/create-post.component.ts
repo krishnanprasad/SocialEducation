@@ -11,10 +11,18 @@ import { DlDateTimePickerModel } from 'angular-bootstrap-datetimepicker';
 export class CreatePostComponent implements OnInit {
   selectedDate: DlDateTimePickerModel;
   IsCalenderShowing: boolean = false;
+  public chooseWebinarFee: string = 'free';
+  public questionHeading;
+  public ShowModal: any;
+  public onQuestionCountChange: any;
+  public totalQuestions: any;
 
   constructor(private _addquestionpaperpostservice: addquestionpaperpostservice) { }
   ngOnInit() {
 
+  }
+  ConfirmPost() {
+    return null;
   }
   ngDoCheck() {
     if (this.selectedDate)

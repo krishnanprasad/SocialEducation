@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageOwnerComponent } from './page-owner.component';
+import { TopicBadgesBComponent } from './topic-badges-b.component';
 
-describe('PageOwnerComponent', () => {
-  let component: PageOwnerComponent;
-  let fixture: ComponentFixture<PageOwnerComponent>;
+describe('TopicBadgesBComponent', () => {
+  let component: TopicBadgesBComponent;
+  let fixture: ComponentFixture<TopicBadgesBComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageOwnerComponent ]
+      declarations: [ TopicBadgesBComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PageOwnerComponent);
+    fixture = TestBed.createComponent(TopicBadgesBComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

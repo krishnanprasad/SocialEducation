@@ -2,11 +2,12 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-online-class-a',
-  templateUrl: './online-class-a.component.html',
-  styleUrls: ['./online-class-a.component.css']
+  selector: 'app-online-class-d',
+  templateUrl: './online-class-d.component.html',
+  styleUrls: ['./online-class-d.component.css']
 })
-export class OnlineClassAComponent implements OnInit {
+export class OnlineClassDComponent implements OnInit {
+  postdetails = [{ status: 1, platform: 'zoom' }, { status: 1, platform: 'zoom', fee: 0 }, { status: 2, platform: 'hangout', fee: 0 }, { status: 0, platform: 'teams', fee: 100 }]
   modal: string = "modal modal-close";
   isOpen: boolean = false;
   @Input() onlineclassdata;
@@ -20,7 +21,6 @@ export class OnlineClassAComponent implements OnInit {
   GoToWebinarDetail(id) {
     this.router.navigate(['/User/WebinarDetails', id]);
   }
-
   closemodal() {
     this.modal = "modal modal-close";
     this.isOpen = false;

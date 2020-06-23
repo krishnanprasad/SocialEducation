@@ -9,7 +9,7 @@ import { EditStatusModalComponent } from 'src/app/Modal/edit-status-modal/edit-s
 })
 
 export class EditProfileComponent implements OnInit {
-  private Editable;
+  public Editable;
   constructor(
     private modalService: NgbModal,
   ) { }

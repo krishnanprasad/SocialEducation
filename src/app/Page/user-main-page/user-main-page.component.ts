@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-main-page.component.css']
 })
 export class UserMainPageComponent implements OnInit {
-
+  UserWallData:any;
   constructor() { }
 
   ngOnInit() {

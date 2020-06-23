@@ -91,6 +91,28 @@
                 </select>
             </div> -->
         </div>
+
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-lg-4" style="margin-top: auto;">
+                <span style="display: block;">Fee</span>
+                <div class="box">
+                    <label>
+                <input type="radio"  value="free"  [(ngModel)]="chooseWebinarFee" name="chooseWebinarFee" checked="">
+                <span>Free</span>
+            </label>
+                    <label>
+                <input type="radio" value="charge" [(ngModel)]="chooseWebinarFee" name="chooseWebinarFee">
+                <span>Charge</span>
+            </label>
+                </div>
+            </div>
+            <div class="col-lg-4" style="margin-top: auto;" *ngIf="chooseWebinarFee=='charge'">
+                <div class="input-field">
+                    <input class="input-material" type="text" id="MaxCount" required />
+                    <label class="label-material" for="MaxCount">Enter Registration Cost:</label>
+                </div>
+            </div>
+        </div>
         <div class="row" style="margin-top: 15px;">
             <div class="col-lg-4" style="margin-top: auto;">
                 <span style="display: block;">Open</span>
@@ -119,7 +141,7 @@
         <div class="col-md-12" style="margin-top: 35px;">
 
             <div style="margin-top:10px;">
-                <button (click)="ConfirmPost()" class="btn btn-success btnPost">Post</button>
+                <button class="btn btn-success btnPost">Post</button>
             </div>
         </div>
 

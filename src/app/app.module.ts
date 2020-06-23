@@ -62,7 +62,7 @@ import { UserRecommendationCardComponent } from './Common/user-recommendation-ca
 import { RequestCardComponent } from './Common/request-card/request-card.component';
 import { FriendRequestCardComponent } from './Common/friend-request-card/friend-request-card.component';
 import { ActivityComponent } from './User/activity/activity.component';
-import { PageOwnerComponent } from './User/Profile/page-owner/page-owner.component';
+// import { PageOwnerComponent } from './User/Profile/page-owner/page-owner.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './Institution/Page/details/details.component';
 import { InstitutionMainPageComponent } from './Institution/Page/institution-main-page/institution-main-page.component';
@@ -84,6 +84,8 @@ import { InsNotificationComponent } from './Institution/Page/ins-notification/in
 import { InsActivityPageComponent } from './Institution/Page/activity-page/activity-page.component';
 import { ParticipantRequestAComponent } from './Common/participant-request-a/participant-request-a.component';
 import { DropdownAComponent } from './Common/Altered/dropdown-a/dropdown-a.component';
+import { TopicBadgesBComponent } from './Common/topic-badges-b/topic-badges-b.component';
+import { OnlineClassDComponent } from './Common/online-class-d/online-class-d.component';
 
 @NgModule({
   declarations: [
@@ -142,7 +144,7 @@ import { DropdownAComponent } from './Common/Altered/dropdown-a/dropdown-a.compo
     RequestCardComponent,
     FriendRequestCardComponent,
     ActivityComponent,
-    PageOwnerComponent,
+    // PageOwnerComponent,
     DetailsComponent,
     InstitutionMainPageComponent,
     FollowerTableComponent,
@@ -162,6 +164,8 @@ import { DropdownAComponent } from './Common/Altered/dropdown-a/dropdown-a.compo
     InsActivityPageComponent,
     ParticipantRequestAComponent,
     DropdownAComponent,
+    TopicBadgesBComponent,
+    OnlineClassDComponent,
   ],
   imports: [
     BrowserModule,

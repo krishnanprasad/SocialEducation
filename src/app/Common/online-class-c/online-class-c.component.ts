@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-online-class-c',
@@ -6,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./online-class-c.component.css']
 })
 export class OnlineClassCComponent implements OnInit {
-
-  constructor() { }
+  @Input() onlineclassdata;
+  webinardata: any;
+  constructor(private router: Router,) { }
 
   ngOnInit() {
+    this.webinardata = this.onlineclassdata;
   }
-  postdetails=[{status:1,platform:'zoom'},{status:1,platform:'zoom'},{status:2,platform:'hangout'},{status:0,platform:'teams'}]
-
+  postdetails = [{ status: 1, platform: 'zoom' }, { status: 1, platform: 'zoom' }, { status: 2, platform: 'hangout' }, { status: 0, platform: 'teams' }]
+  GoToWebinarDetail(id) {
+    this.router.navigate(['/User/WebinarDetails', id]);
+  }
 }
