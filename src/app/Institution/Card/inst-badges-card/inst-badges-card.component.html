@@ -1,7 +1,13 @@
-<h5 class="Black">Topics</h5>
-<!--<div class="col-md-8"> -->
-<div class="d-flex" style="margin-bottom: 5px;" *ngFor="let top of topiclist">
-    <span class="topiclist F12">{{top}}</span>
+<div class="card100">
+    <div class="card100-heading">
+        <h5 class="Black"> Topics</h5>
+    </div>
+    <div class="card100-content">
+        <!--<div class="col-md-8"> -->
+        <div class="d-flex" style="margin-bottom: 15px;border-bottom:1px solid #eeeeee ;" *ngFor="let top of topiclist">
+            <span class="LightBlack F12">{{top}}</span>
+        </div>
+    </div>
 </div>
 <!-- <app-ipost [data]="post"></app-ipost> -->
 <!-- </div> -->

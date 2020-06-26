@@ -36,15 +36,21 @@
 
     </div>
     <div class="row">
-        <div class="col-md-8" *ngFor="let data of PostDetails">
-            <app-online-class-c [onlineclassdata]="data"></app-online-class-c>
+        <div class="col-md-8">
+            <app-online-class-c *ngFor="let data of PostDetails" [onlineclassdata]="data"></app-online-class-c>
             <!-- <app-logs-card-a [UserLogsList]="UserLogsList"></app-logs-card-a> -->
         </div>
         <div class="col-md-4">
             <div id="scheduleofwebinar">
-                <div>
-                    <span class="headings-small">Schedule</span></div>
-                <app-schedule-remainder-a></app-schedule-remainder-a>
+                <div class="card100">
+                    <div class="card100-heading">
+                        <h6 class="Black">Schedule</h6>
+                    </div>
+                    <div class="card100-content">
+                        <app-schedule-remainder-a></app-schedule-remainder-a>
+                    </div>
+                </div>
+
             </div>
             <!-- <app-logs-card-a [UserLogsList]="UserLogsList"></app-logs-card-a> -->
         </div>

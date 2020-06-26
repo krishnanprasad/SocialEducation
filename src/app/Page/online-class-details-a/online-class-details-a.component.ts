@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./online-class-details-a.component.css']
 })
 export class OnlineClassDetailsAComponent implements OnInit {
-
+  modal: string = "modal modal-close";
+  isOpen: boolean = false;
   constructor() { }
   public onlineclassdata = {
     webinarid: 'POS0005',
@@ -20,5 +21,12 @@ export class OnlineClassDetailsAComponent implements OnInit {
   };
   ngOnInit() {
   }
-
+  closemodal() {
+    this.modal = "modal modal-close";
+    this.isOpen = false;
+  }
+  openmodal() {
+    this.isOpen = true;
+    this.modal = "modal modal-open";
+  }
 }

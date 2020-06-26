@@ -8,10 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ParticipantRequestAComponent implements OnInit {
   @Input('participantlist') participantlist: any;
   studentinvitationlist = [
-    { name: 'Sudhakar Sai' },
-    { name: 'Kumaravel Ganeshan' },
-    { name: 'Krishnan Kumar' },
-    { name: 'Partheepan' }
+    { name: 'Sudhakar Sai',status:0 ,type:'student'},
+    { name: 'Kumaravel Ganeshan' ,status:0,type:'working'},
+    { name: 'Krishnan Kumar' ,status:1,type:'student'},
+    { name: 'Partheepan' ,status:1,type:'working'}
   ]
   constructor() { }
   ngOnChanges(){

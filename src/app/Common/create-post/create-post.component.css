@@ -1,3 +1,5 @@
+
+
 .ChoiceButn.Active {
     background-color: #f1f1f1;
     color: black;
@@ -50,7 +52,14 @@
     float: right;
     padding: 10px 30px;
 }
-
+.filter-text {
+    padding: 5px 10px;
+    background-color: #227396;
+    font-size: 12px;
+    border-radius: 10px;
+    color: white;
+    margin-right: 10px;
+}
 
 /* RADIO CONTAINER */
 

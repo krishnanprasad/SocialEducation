@@ -29,4 +29,7 @@ export class OnlineClassDComponent implements OnInit {
     this.isOpen = true;
     this.modal = "modal modal-open";
   }
+  GoToTrasaction() {
+    this.router.navigate(['/User/Activity']);
+  }
 }

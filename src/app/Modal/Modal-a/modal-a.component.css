@@ -1,0 +1,37 @@
+modal-a {
+    display: none;
+}
+
+modal-a .modal-a {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: auto;
+}
+
+modal-a .modal-a .modal-a-body {
+    padding: 20px;
+    background: #fff;
+    /* margin: 40px; */
+    width: 60%;
+    margin: auto;
+   
+}
+
+modal-a .modal-a-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.75;
+    z-index: 900;
+}
+
+.modal-a-open {
+    overflow: hidden;
+}

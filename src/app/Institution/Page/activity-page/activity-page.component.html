@@ -34,12 +34,15 @@
       <app-inst-post-list (passParticipantid)="getparticipantid($event)" [walldata]="PostDetails"></app-inst-post-list>
     </div>
     <div class="col-md-4">
-      <div style="padding:15px">
-        <div id="feedback">
-          <div>
-            <span class="headings-small">Participant Request [15/30]</span>
+      <div>
+        <div class="card100" id="feedback">
+          <div class="card100-heading">
+            <h6 class="Black">Participant Request</h6>
+            <span class="F12 LightBlack">15/20</span>
           </div>
-          <app-participant-request-a [participantlist]="participantlist"></app-participant-request-a>
+          <div class="card100-content">
+            <app-participant-request-a [participantlist]="participantlist"></app-participant-request-a>
+          </div>
         </div>
 
       </div>

@@ -9,10 +9,10 @@ import { PostListService } from 'src/app/post-list.service';
 export class InsActivityPageComponent implements OnInit {
   PostDetails: any;
   studentinvitationlist = [
-    { name: 'Sudhakar Vignesh' },
-    { name: 'Kumaravel Ganeshan' },
-    { name: 'Krishnan Kumar' },
-    { name: 'Partheepan' }
+    { name: 'Sudhakar Sai',status:0 ,type:'student'},
+    { name: 'Kumaravel Ganeshan' ,status:0,type:'working'},
+    { name: 'Krishnan Kumar' ,status:1,type:'student'},
+    { name: 'Partheepan' ,status:1,type:'working'}
   ]
   participantlist: any;
   myCount: any;

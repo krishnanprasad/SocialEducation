@@ -1,10 +1,10 @@
-<div class="card-online-class-a"  (click)="GoToWebinarDetail(onlineclassdata.webinarid)">>
+<div class="card100" >
     <!-- <app-postheader [Name]="'Institution Name'" [Image]="'img'" [time]="'time'"></app-postheader> -->
-    <div style="padding: 15px;">
+    <div class="card100-content" style="padding: 15px;">
         <div class="d-flex" style="border-bottom: 1px solid #f1f1f1 ">
             <div class="flex-grow-1">
                 <div style="display: block;">
-                    <span class="onlineTopicHeading">Master 'Reading Skills' for CBSE 10th Board</span>
+                    <span class="onlineTopicHeading" (click)="GoToWebinarDetail(onlineclassdata.webinarid)">Master 'Reading Skills' for CBSE 10th Board</span>
                 </div>
                 <div style="display: block;margin-top: 15px;
         margin-bottom: 15px;
@@ -61,7 +61,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="row" style="margin-top: 15px;">
             <div class="col-md-4">
                 <span class="onlineSubHeading" style="display: block;">Date</span>

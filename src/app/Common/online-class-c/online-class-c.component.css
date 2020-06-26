@@ -63,33 +63,7 @@ tr.tabletd td {
     font-size: 12px;
 }
 
-.pricetag{
-    border: none;
-    background-color: #e0e0e0;
-    color: #5c5c5c;
-    padding: 7px 15px;
-    font-weight: 500;
-    border-radius: 10px;   
-    font-size: 14px;
-}
-.pricetag.free{
-    border: 1px solid #2A8CB7;
-    background-color: white;
-    color: #2A8CB7;
-    padding: 7px 15px;
-    font-weight: 500;
-    border-radius: 10px;   
-    font-size: 14px;
-}
-.platformtag{
-    border: none;
-    background-color: #e0e0e0;
-    color: #5c5c5c;
-    padding: 7px 15px;
-    font-weight: 500;
-    border-radius: 10px;   
-    font-size: 14px;
-}
+
 .boxshadowcard2{
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;

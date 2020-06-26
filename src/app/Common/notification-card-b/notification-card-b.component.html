@@ -1,0 +1,27 @@
+<div class="d-flex">
+  <span (click)="chooseFilter('')" [ngClass]='{"activeFilter" : filtertoggle.all}' class="F12 Black"
+    style="background-color: #b9b9b9;padding:5px 10px;border-radius: 15px;margin-right: 5px;">show all</span>
+
+  <span (click)="chooseFilter('Webinar')" [ngClass]='{"activeFilter" : filtertoggle.Webinar}' class="F12 Black"
+    style="background-color: #b9b9b9;padding:5px 10px;border-radius: 15px;margin-right: 5px;">Webinar</span>
+
+  <span (click)="chooseFilter('Request')" [ngClass]='{"activeFilter" : filtertoggle.Request}' class="F12 Black"
+    style="background-color: #b9b9b9;padding:5px 10px;border-radius: 15px;margin-right: 5px;">Request</span>
+
+
+</div>
+<div class="card100">
+  <div class="card100-content" *ngFor="let notifylist of NotificationList  | notificationfilter : filters"
+    style="padding:5px;">
+    <div class="d-flex BorderBottomLight">
+      <div class="p-2">
+        <i *ngIf="notifylist.Icon=='Accepted'" class="fas fa-thumbs-up PrimaryColor2"></i>
+        <i *ngIf="notifylist.Icon=='Rejected'" class="fas fa-thumbs-down PrimaryRed"></i>
+      </div>
+      <div class="p-2 flex-grow-1">
+        <span class="F14">{{ notifylist.Message }}</span> <span class="F12 LightBlack"
+          style="float:right">{{ notifylist.Time }}</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,36 +1,44 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-right fixed-top" style="z-index:1;border-bottom: 0px solid #247ba0;
-  color: white;box-shadow: 0px 0px 10px 12px rgb(251, 251, 251);height: 70px;background-color: white;">
-    <div class="container-fluid">
+  color: white;box-shadow: 0px 0px 5px 2px rgb(207, 207, 207);height: 70px;background-color: white;">
+  <div class="container-fluid">
 
-        <a style="font-family: 'Pacifico', cursive;color:#247ba0;font-size: xx-large;text-decoration:none" (click)="routenav('Wall')">Socedu</a>
-        <input type="text" class="form-control" placeholder="Search.." (click)="GoToPage('Search')" style="margin-left:15px; width: 20%;border-radius:20px;border: 1px solid #247ba0;" />
-        <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <a style="font-family: 'Pacifico', cursive;color:#247ba0;font-size: xx-large;text-decoration:none"
+      (click)="routenav('Wall')">edpicker</a>
+    <input type="text" class="form-control" placeholder="Search.." (click)="GoToPage('Search')"
+      style="margin-left:15px; width: 20%;border-radius:20px;border: 1px solid #247ba0;" />
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-        <div class="collapse navbar-collapse" style="margin-top: auto;" id="navbarSupportedContent" [ngClass]="{ 'show': navbarOpen }">
-            <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item" *ngIf="!IsStudent">
-                    <!-- <a class="nav-link" id="addpost" (click)="openVerticaksllyCentered(content)"  data-target=".bd-example-modal-sm" style="color:white;background-color:#d24200" data-toggle="modal" >ADD Post</a> --> -->
-                     <input type="button" class="btn regisbutn-small" value="Create Webinar" (click)="GoToPage('AddPost')"
-            />
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [class.YesActive]="ActiveLink.Wall" style="line-height: 35px;" (click)="routenav('Wall')">Wall</a>
-                    
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [class.YesActive]="ActiveLink.Activity" style="line-height: 35px;" (click)="routenav('Activity')">Activity</a>
-                </li>
+    <div class="collapse navbar-collapse" style="margin-top: auto;" id="navbarSupportedContent"
+      [ngClass]="{ 'show': navbarOpen }">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item" *ngIf="!IsStudent">
+          <!-- <a class="nav-link" id="addpost" (click)="openVerticaksllyCentered(content)"  data-target=".bd-example-modal-sm" style="color:white;background-color:#d24200" data-toggle="modal" >ADD Post</a> -->
+          -->
+          <input type="button" class="btn regisbutn-small" value="Create Webinar" (click)="GoToPage('AddPost')" />
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.YesActive]="ActiveLink.Wall" style="line-height: 35px;"
+            (click)="routenav('Wall')">Wall</a>
 
-                <li class="nav-item">
-                    <a class="nav-link" [class.YesActive]="ActiveLink.Follow" *ngIf="IsStudent" style="line-height: 35px;" (click)="routenav('Follow')">Follow</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [class.YesActive]="ActiveLink.Notification" (click)="routenav('Notification')" style="line-height: 35px;" routerLink="/User/Notification">Notification</a>
-                </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.YesActive]="ActiveLink.Activity" style="line-height: 35px;"
+            (click)="routenav('Activity')">Activity</a>
+        </li>
 
-                <!-- <li class="nav-item">
+        <li class="nav-item">
+          <a class="nav-link" [class.YesActive]="ActiveLink.Follow" style="line-height: 35px;"
+            (click)="routenav('Follow')"><span *ngIf="IsStudent">Following</span><span
+              *ngIf="!IsStudent">Followers</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.YesActive]="ActiveLink.Notification" (click)="routenav('Notification')"
+            style="line-height: 35px;" routerLink="/User/Notification">Notification</a>
+        </li>
+
+        <!-- <li class="nav-item">
                   <div ngbDropdown class="d-inline-block">
                     <img src="assets/Image/elonmusk1.jpg" id="dropdownBasic1"  ngbDropdownToggle style="height:40px;width:40px;border-radius:50%">
                     <button class="btn btn-outline-primary">Name</button> 
@@ -41,23 +49,24 @@
                     </div>
                   </div>
               </li> -->
-                <li class="nav-item">
-                    <img src="assets/Image/elonmusk1.jpg" id="dropdownBasic1" style="height:40px;width:40px;border-radius:50%">
-                    <ul class="dropdown">
-                        <li class="dropname"><a href="/User/Profile" style="color:#247ba0">Name</a></li>
-                        <li><a style="color:#6b6b6b" href="#">Manage</a>
-                            <ul class="managedropdown">
-                                <li style="color:#6b6b6b" (click)="changeUserType(1)">As Student</li>
-                                <li style="color:#6b6b6b" (click)="changeUserType(2)">AS Institution</li>
-                            </ul>
-                        </li>
-                        <li style="color:#6b6b6b"><a (click)="LogOff()" style="color:#6b6b6b" href="#">Sign Out</a></li>
-                    </ul>
-                </li>
+        <li class="nav-item">
+          <img src="assets/Image/elonmusk1.jpg" id="dropdownBasic1" style="height:40px;width:40px;border-radius:50%">
+          <ul class="dropdown">
+            <li class="dropname"><a href="/User/Profile" style="color:#247ba0">Name</a></li>
+            <!-- <li>
+              <a style="color:#6b6b6b" href="#">Manage</a>
+              <ul class="managedropdown">
+                <li style="color:#6b6b6b" (click)="changeUserType(1)">As Student</li>
+                <li style="color:#6b6b6b" (click)="changeUserType(2)">AS Institution</li>
+              </ul>
+            </li> -->
+            <li style="color:#6b6b6b"><a (click)="LogOff()" style="color:#6b6b6b" href="#">Sign Out</a></li>
+          </ul>
+        </li>
 
-            </ul>
-        </div>
+      </ul>
     </div>
+  </div>
 </nav>
 <!-- <ng-template #popContent let-greeting="greeting">
   <li>Name</li>

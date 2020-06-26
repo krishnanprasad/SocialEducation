@@ -1,89 +1,110 @@
 <div style="margin-top: 15px;
 display: flex;">
-    <div class="col-md-12" style="padding:15px;">
-        <div class="d-flex justify-content-end" style="margin-bottom: 5px;">
-            <div class="d-flex" style="margin-top: 5px;margin-bottom: 5px;">
-                <!-- <div class="flex-fill">
+  <div class="col-md-12" style="padding:15px;">
+    <div class="d-flex justify-content-end" style="margin-bottom: 5px;">
+      <div class="d-flex" style="margin-top: 5px;border-top: 1px solid #f8f8f8;;">
+        <!-- <div class="flex-fill">
                 <span>To Participate</span>      
                 <input type="button" value="more" class="regismore" style="width: 100%;" /> 
               </div> -->
 
-                <div class="p-2" style="padding: 10px;
+        <div class="p-2" style="padding: 10px;
               text-align: center;    
               margin-top: auto;
               margin-bottom: auto;">
-                    <span class="platformtag"><i class="fas fa-video"></i> {{onlineclassdata.platform}}</span>
-                </div>
-                <div class="p-2" style="padding: 10px;
+          <span class="platformtag">Platform: <i class="fas fa-video"></i> {{onlineclassdata.platform}}</span>
+        </div>
+        <div class="p-2" style="padding: 10px;
                 text-align: center;    
                 margin-top: auto;
                 margin-bottom: auto;">
-                    <span class="pricetag  free" *ngIf="onlineclassdata.fee==0">Free</span>
-                    <span class="pricetag" *ngIf="onlineclassdata.fee!=0">{{onlineclassdata.fee}} <i
-                            class="fas fa-rupee-sign"></i></span>
-                </div>
-
-
-                <div class="p-2" style="padding: 10px;text-align: center;">
-                    <input type="button" class="regisbutn" value="Register" (click)="openmodal()" />
-                </div>
-            </div>
-        </div>
-        <div class="d-flex" style="margin-bottom: 15px;">
-            <div class="p-2 mr-auto" style="display: block;padding-left: 0px !important;">
-                <span class="onlineTopicHeading">Master 'Reading Skills' for CBSE 10th Board</span>
-            </div>
-
-        </div>
-        <div class="d-flex" style="margin-top: 15px;">
-            <div class="flex-fill">
-                <span class="onlineSubHeading2" style="display: block;">when</span>
-                <span class="onlineSubDescription2">3-Jun 16:30 PM,30 Mins</span>
-            </div>
-            <div class="flex-fill">
-                <span class="onlineSubHeading2" style="display: block;">Participant</span>
-                <span class="onlineSubDescription2">15 out 15 available</span>
-            </div>
+          <span class="pricetag  free" *ngIf="onlineclassdata.fee==0">Fee: Free</span>
+          <span class="pricetag" *ngIf="onlineclassdata.fee!=0">Fee: {{onlineclassdata.fee}} <i
+              class="fas fa-rupee-sign"></i></span>
         </div>
 
 
-
-        <div class="d-flex">
-            <div class="">
-                <div style="display: block;margin-top: 15px;
-        margin-bottom: 15px;
-        line-height: 2.25;">
-                    <span class="onlineSubHeading" style="display: block;">Course Detail</span>
-                    <span class="onlineTopicDescription">
-
-                        <ul style=" list-style-type: none;
-            margin: 0;
-            padding: 0;">
-                            <li style="font-size: 13px;">Understand Kirchhoff's Current Law in this Live session</li>
-                            <li style="font-size: 13px;">Learn to apply KCL and KVL in an Electrical Circuit</li>
-                            <li style="font-size: 13px;">Understand Kirchhoff's Voltage Law with some simple examples
-                            </li>
-                            <li style="font-size: 13px;">Clear your doubts with Subject Expert Hemant Sir</li>
-                        </ul>
-                    </span>
-                </div>
-
-                <div style="margin-top: 15px;line-height: 2.25;">
-                    <span class="onlineSubHeading" style="display: block;">Tutor Detail</span>
-                    <span style="display: block;">S.Bala Krishnan <span class="QuesLinkDescription">13 Yrs , </span>
-                        <span class="QuesLinkDescription">M.A, B.Ed</span>
-                    </span>
-
-                    <ul style=" list-style-type: none;margin: 0;padding: 0;line-height: 2.25;">
-                        <li style="font-size: 13px;">13 years of Experience in NEET, JEE Maths</li>
-                        <li style="font-size: 13px;">Taught and Mentored more 100+ students</li>
-                        <li style="font-size: 13px;">Understand Kirchhoff's Voltage Law with some simple examples</li>
-                        <li style="font-size: 13px;">Guided 100s of students to score 100% in Mathematics</li>
-                    </ul>
-                </div>
-            </div>
-
+        <div class="p-2" style="padding: 10px;text-align: center;">
+          <input type="button" class="regisbutn" value="Register" (click)="openmodal()" />
         </div>
+      </div>
+    </div>
+    <div class="d-flex" style="margin-bottom: 15px;">
+      <div class="p-2 mr-auto" style="display: block;padding-left: 0px !important;">
+        <span class="onlineTopicHeading">Master 'Reading Skills' for CBSE 10th Board</span>
+      </div>
 
     </div>
+    <div class="d-flex" style="margin-top: 15px;">
+      <div class="flex-fill">
+        <span class="onlineSubHeading2" style="display: block;">when</span>
+        <span class="onlineSubDescription2">3-Jun 16:30 PM,30 Mins</span>
+      </div>
+      <div class="flex-fill">
+        <span class="onlineSubHeading2" style="display: block;">Participant</span>
+        <span class="onlineSubDescription2">15 out 15 available</span>
+      </div>
+    </div>
+
+
+
+    <div class="d-flex">
+      <div class="">
+        <div style="display: block;margin-top: 15px;
+        margin-bottom: 15px;
+        line-height: 2.25;">
+          <span class="onlineSubHeading2" style="display: block;">Course Detail</span>
+          <span class="onlineTopicDescription">
+
+            <ul style=" list-style-type: none;
+            margin: 0;
+            padding: 0;">
+              <li style="font-size: 13px;">Understand Kirchhoff's Current Law in this Live session</li>
+              <li style="font-size: 13px;">Learn to apply KCL and KVL in an Electrical Circuit</li>
+              <li style="font-size: 13px;">Understand Kirchhoff's Voltage Law with some simple examples
+              </li>
+              <li style="font-size: 13px;">Clear your doubts with Subject Expert Hemant Sir</li>
+            </ul>
+          </span>
+        </div>
+        <div style="margin-top: 15px;">
+          <app-topic-badges-b></app-topic-badges-b>
+        </div>
+        <div style="margin-top: 15px;">
+          <div class="row">
+            <div class="flex-fill">
+              <div class="d-flex">
+                <div class="p-2">
+                  <img src="../../../assets/Image/elonmusk1.jpg" style="width: 64px;height:64px;border-radius: 10px;">
+                </div>
+                <div class="p-2 flex-grow-1">
+                  <span class="onlineSubHeading" style="display: block;">Organiser</span>
+                  <span class="tutorname" style="display: block;">S.Bala Krishnan</span>
+                  <div style="display: block;">
+                    <span class="tutordescription">13 Yrs , M.A, B.Ed </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex-fill">
+              <div class="d-flex">
+                <div class="p-2">
+                  <img src="../../../assets/Image/elonmusk1.jpg" style="width: 64px;height:64px;border-radius: 10px;">
+                </div>
+                <div class="p-2 flex-grow-1">
+                  <span class="onlineSubHeading" style="display: block;">Organiser</span>
+                  <span class="tutorname" style="display: block;">S.Bala Krishnan</span>
+                  <div style="display: block;">
+                    <span class="tutordescription">13 Yrs , M.A, B.Ed </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </div>

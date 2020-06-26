@@ -34,6 +34,7 @@ import { FollowComponent } from './User/follow/follow.component';
 import { MessengerComponent } from './Common/messenger/messenger.component';
 import { UserDetailAComponent } from './Common/user-detail-a/user-detail-a.component';
 import { SearchFilterPipe } from './Pipes/search-filter.pipe';
+import { NoticationSearchItemFilterPipe } from './pipe/NoticationSearchItemFilterPipe.pipe '
 import { InstitutionCardBComponent } from './Common/institution-card-b/institution-card-b.component';
 import { NotificationComponent } from './User/notification/notification.component';
 import { NotificatioCardAComponent } from './Common/notificatio-card-a/notificatio-card-a.component';
@@ -42,7 +43,7 @@ import { ProfileCardComponent } from './User/profile/profile-card/profile-card.c
 import { PostBriefComponent } from './post-brief/post-brief.component';
 import { QuestionNumbersCardComponent } from './Common/question-numbers-card/question-numbers-card.component';
 import { QuestionPaperComponent } from './Page/question-paper/question-paper.component';
-import { CountdownModule  } from 'ngx-countdown';
+import { CountdownModule } from 'ngx-countdown';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { InsWallComponent } from './Institution/Page/ins-wall/ins-wall.component';
 import { BannerComponent } from './Institution/Card/banner/banner.component';
@@ -55,7 +56,6 @@ import { FollowPageComponent } from './Institution/Page/follow-page/follow-page.
 import { ForgotPasswordComponent } from './Common/Page/forgot-password/forgot-password.component';
 import { SignUpComponent } from './Common/sign-up/sign-up.component';
 import { EditProfileComponent } from './User/EditProfile/edit-profile.component';
-import { EditStatusModalComponent } from './Modal/edit-status-modal/edit-status-modal.component';
 import { ProjectComponent } from './Editable/Component/project/project.component';
 import { UserMainPageComponent } from './Page/user-main-page/user-main-page.component';
 import { UserRecommendationCardComponent } from './Common/user-recommendation-card/user-recommendation-card.component';
@@ -73,7 +73,7 @@ import { OnlineClassDetailsAComponent } from './Page/online-class-details-a/onli
 import { OnlineClassCComponent } from './Common/online-class-c/online-class-c.component';
 import { SearchPageComponent } from './User/search-page/search-page.component';
 import { FeedbackAComponent } from './Common/feedback-a/feedback-a.component';
-import { SearchItemFilterPipe} from './pipe/SearchItemFilterPipe.pipe';
+import { SearchItemFilterPipe } from './pipe/SearchItemFilterPipe.pipe';
 import { OnlineClassDetailsBComponent } from './Common/online-class-details-b/online-class-details-b.component';
 import { InsWallProfileSideComponent } from './Institution/ins-wall-profile-side/ins-wall-profile-side.component';
 import { TopicBadgesAComponent } from './Common/topic-badges-a/topic-badges-a.component';
@@ -86,6 +86,11 @@ import { ParticipantRequestAComponent } from './Common/participant-request-a/par
 import { DropdownAComponent } from './Common/Altered/dropdown-a/dropdown-a.component';
 import { TopicBadgesBComponent } from './Common/topic-badges-b/topic-badges-b.component';
 import { OnlineClassDComponent } from './Common/online-class-d/online-class-d.component';
+import { InstPostListBComponent } from './Institution/Card/inst-post-list-b/inst-post-list-b.component';
+import { InsWallProfileTopComponent } from './Institution/ins-wall-profile-top/ins-wall-profile-top.component';
+import { NotificationCardBComponent } from './Common/notification-card-b/notification-card-b.component';
+import { OnlineClassEComponent } from './Common/online-class-e/online-class-e.component';
+import { ModalAComponent } from './Modal/Modal-a/modal-a.component';
 
 @NgModule({
   declarations: [
@@ -137,7 +142,6 @@ import { OnlineClassDComponent } from './Common/online-class-d/online-class-d.co
     ForgotPasswordComponent,
     SignUpComponent,
     EditProfileComponent,
-    EditStatusModalComponent,
     ProjectComponent,
     UserMainPageComponent,
     UserRecommendationCardComponent,
@@ -155,6 +159,7 @@ import { OnlineClassDComponent } from './Common/online-class-d/online-class-d.co
     SearchPageComponent,
     FeedbackAComponent,
     SearchItemFilterPipe,
+    NoticationSearchItemFilterPipe,
     OnlineClassDetailsBComponent,
     InsWallProfileSideComponent,
     TopicBadgesAComponent,
@@ -166,11 +171,16 @@ import { OnlineClassDComponent } from './Common/online-class-d/online-class-d.co
     DropdownAComponent,
     TopicBadgesBComponent,
     OnlineClassDComponent,
+    InstPostListBComponent,
+    InsWallProfileTopComponent,
+    NotificationCardBComponent,
+    OnlineClassEComponent,
+    ModalAComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+   
     NgbModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -181,6 +191,6 @@ import { OnlineClassDComponent } from './Common/online-class-d/online-class-d.co
   exports: [HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [EditStatusModalComponent] ,
+  entryComponents: [],
 })
 export class AppModule { }

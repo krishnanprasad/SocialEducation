@@ -1,5 +1,6 @@
-<div class="card-online-class-a boxshadowcard2" style="margin-bottom: 25px;"
-    (click)="GoToWebinarDetail(onlineclassdata.webinarid)">
+<div class="card100">
+    <!-- <app-postheader [Name]="'Institution Name'" [Image]="'img'" [time]="'time'"></app-postheader> -->
+    <div class="card100-content" style="padding: 15px;">
     <!-- <app-postheader [Name]="'Institution Name'" [Image]="'img'" [time]="'time'"></app-postheader>  -->
     <div class="" style="display: block;">
         <span class="statusspan" *ngIf="onlineclassdata.status==1" style="background-color: #28a745;">Scheduled</span>
@@ -10,7 +11,8 @@
         <div class="d-flex" style="border-bottom: 1px solid #f1f1f1 ">
             <div class="flex-grow-1">
                 <div style="display: block;">
-                    <span class="onlineTopicHeading">Master 'Reading Skills' for CBSE 10th Board Reading Skills' for
+                    <span (click)="GoToWebinarDetail(onlineclassdata.webinarid)" class="onlineTopicHeading">Master
+                        'Reading Skills' for CBSE 10th Board Reading Skills' for
                         CBSE 10th Board</span>
                 </div>
 
@@ -35,10 +37,13 @@
 
 
         </div>
-        <div class="d-flex" style="margin-top: 15px;">
+        <div class="d-flex" style="margin-top: 10px;">
             <div class="p-1 flex-fill">
                 <span class="onlineSubHeading2" style="display: block;">when</span>
-                <span class="onlineSubDescription2">3-Jun 16:30 PM,30 Mins</span>
+                <span class="onlineSubDescription2" style="display: block;">3-Jun 16:30 PM</span>
+                <span class="onlineSubDescription2">
+                    30 Mins
+                </span>
             </div>
             <div class="p-1 flex-fill">
 
@@ -46,40 +51,53 @@
                 <span class="onlineSubDescription2">15 out 15 available</span>
             </div>
         </div>
-        <div class="d-flex justify-content-end" style="margin-top: 5px;margin-bottom: 5px;">
-            <!-- <div class="flex-fill">
-            <span>To Participate</span>      
-            <input type="button" value="more" class="regismore" style="width: 100%;" /> 
-          </div> -->
+        <div class="d-flex justify-content-end" *ngIf="onlineclassdata.status!=1"
+            style="margin-top: 5px;border-top: 1px solid #f8f8f8;">
 
             <div class="p-2" style="padding: 10px;
           text-align: center;    
           margin-top: auto;
           margin-bottom: auto;">
-                <span class="platformtag"><i class="fas fa-video"></i> {{onlineclassdata.platform}}</span>
+                <span class="platformtag">Platform: <i class="fas fa-video"></i> {{onlineclassdata.platform}}</span>
             </div>
             <div class="p-2" style="padding: 10px;
             text-align: center;    
             margin-top: auto;
             margin-bottom: auto;">
-                <span class="pricetag  free" *ngIf="onlineclassdata.fee==0">Free</span>
-                <span class="pricetag" *ngIf="onlineclassdata.fee!=0">{{onlineclassdata.fee}} <i
+                <span class="pricetag  free" *ngIf="onlineclassdata.fee==0">Fee: Free</span>
+                <span class="pricetag" *ngIf="onlineclassdata.fee!=0">Fee: {{onlineclassdata.fee}} <i
                         class="fas fa-rupee-sign"></i></span>
             </div>
-
-
-
         </div>
     </div>
-
-    <div class="row" style="margin-top: 15px;
-        background-color: #bfbfbf;
-        padding: 10px 0px" *ngIf="onlineclassdata.status==1">
+    <div class="d-flex col-md-12" style="margin-top: 10px;
+    border-top:1px solid #f0f0f0;
+    padding: 10px 0px" *ngIf="onlineclassdata.status==1">
         <div class="col-md-6">
-            <span class="onlineSubHeading" style="display: block;">URL</span>
+            <span class="onlineSubHeading" style="display: block;"> <i class="fas fa-video"></i>
+                {{onlineclassdata.platform}}</span>
             <span class="onlineSubDescription" style=" word-break: break-all;">www.zoom.com/j/awasadsad</span>
         </div>
         <div class="col-md-6" style="margin-top: auto;margin-bottom: auto;">
+            <span class="onlineSubDescription" style="display: block;">Room ID:46153693</span>
+            <span class="onlineSubDescription" style="display: block;">Password:4210</span>
+        </div>
+
+        <!-- <div>
+    <input type="button" class="btn" value="view" />
+  </div> -->
+    </div>
+    <div class="d-flex col-md-12" style="margin-top: 10px; 
+        border-top:1px solid #f0f0f0;
+        padding: 10px 0px" *ngIf="onlineclassdata.status==1">
+        <div class="col-md-6">
+            <span class="onlineSubHeading" style="display: block;"> <i class="fas fa-rupee-sign"></i>
+                Transaction</span>
+            <span class="pricetag  free" *ngIf="onlineclassdata.fee==0">Fee: Free</span>
+            <span class="pricetag" *ngIf="onlineclassdata.fee!=0">Fee: {{onlineclassdata.fee}} <i
+                    class="fas fa-rupee-sign"></i></span>
+        </div>
+        <div class="col-md-6" *ngIf="onlineclassdata.fee!=0" style="margin-top: auto;margin-bottom: auto;">
             <span class="onlineSubDescription" style="display: block;">Room ID:46153693</span>
             <span class="onlineSubDescription" style="display: block;">Password:4210</span>
         </div>
@@ -89,7 +107,7 @@
       </div> -->
     </div>
 
-
+</div>
 
 
 </div>

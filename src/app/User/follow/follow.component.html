@@ -1,6 +1,6 @@
 <div>
-    <h4 class="Black">Follow</h4>
-    <!-- <div class="d-flex">
+  
+  <!-- <div class="d-flex">
       <div class="p-2 flex-fill card boxshadowcard" style="text-align:center">
         <span class="F30"> 2011 </span>
         <span class="F14 Color Bold"> Topics Followers </span>
@@ -16,34 +16,34 @@
          
     </div> -->
 
-    <div class="col-md-12">
-        <div class="boxshadowcard" style="padding:10px;">
-            <div class="d-flex">
-                <div class="p-2 flex-fill" style="text-align:center">
-                    <button class="NavButtons" [ngClass]="value === 'Topics' ? 'Active' : ''" (click)="value = 'Topics'">
+  <div class="col-md-12">
+    <div class="" style="padding:10px;">
+      <div class="d-flex flex-row card100" style="">
+        <div class="p-2" style="text-align:center">
+          <button class="NavButtons" [ngClass]="value === 'Topics' ? 'Active' : ''" (click)="value = 'Topics'">
             Topics
-            </button>
-                </div>
-
-                <div class="p-2 flex-fill" style="text-align:center">
-                    <button class="NavButtons" [ngClass]="value === 'Followers' ? 'Active' : ''" (click)="value = 'Followers'">
-              Organisers
-            </button>
-                </div>
-            </div>
-            <div [ngSwitch]="value">
-
-                <div *ngSwitchCase="'Topics'">
-                    <app-institution-card-b [dataInstitution]="UserPremiumInstitutionList"></app-institution-card-b>
-                </div>
-                <div *ngSwitchCase="'Followers'">
-                    <app-user-detail-a [UserFriendList]="UserFriendList"></app-user-detail-a>
-                </div>
-                <div *ngSwitchDefault>Default Template</div>
-            </div>
+          </button>
         </div>
+
+        <div class="p-2" style="text-align:center">
+          <button class="NavButtons" [ngClass]="value === 'Followers' ? 'Active' : ''" (click)="value = 'Followers'">
+            Organisers
+          </button>
+        </div>
+      </div>
+      <div class="card100" [ngSwitch]="value">
+
+        <div *ngSwitchCase="'Topics'">
+          <app-institution-card-b [dataInstitution]="UserPremiumInstitutionList"></app-institution-card-b>
+        </div>
+        <div *ngSwitchCase="'Followers'">
+          <app-user-detail-a [UserFriendList]="UserFriendList"></app-user-detail-a>
+        </div>
+        <div *ngSwitchDefault>Default Template</div>
+      </div>
     </div>
-    <!-- <div class="col-md-3">
+  </div>
+  <!-- <div class="col-md-3">
       <p>Suggestions</p>
       <div class="">
       <div *ngFor="let FriendsData of MutualFriendDataList">
@@ -54,5 +54,5 @@
     </div>
     </div> -->
 
-    <!-- Tab panes -->
+  <!-- Tab panes -->
 </div>

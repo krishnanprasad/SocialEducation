@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { EditStatusModalComponent } from 'src/app/Modal/edit-status-modal/edit-status-modal.component';
+
 
 @Component({
   selector: 'app-edit-profile',
@@ -16,8 +16,8 @@ export class EditProfileComponent implements OnInit {
 
   openVerticallyCentered() {
     console.log('Model Coming In');
-    const modalRef = this.modalService.open(EditStatusModalComponent, { centered: true });
-    modalRef.componentInstance.name = 'Saravanan';
+    
+  
   }
 
   ngOnInit() {

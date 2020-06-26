@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostListService } from 'src/app/post-list.service';
 
 @Component({
   selector: 'app-search-page',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPageComponent implements OnInit {
   searchText: String;
+  PostDetails = [];
   filters = [];
   characters = [
     { username: 'Finn the human', webinar: 'camel', date: '10/10/2020' },
@@ -35,14 +37,12 @@ export class SearchPageComponent implements OnInit {
   isShowFilter: boolean;
   filterPaidvalue: any;
 
-  constructor() { }
+  constructor(  private _PostListService: PostListService,) { }
 
   ngOnInit() {
+    this.PostDetails = this._PostListService.getpostwalllist();
   }
-  addfilter(val) {
-    this.filters.push(val);
-    this.searchText = null;
-  }
+ 
 
   filterDate(e) {
     this.filterDatevalue = e.value;
@@ -52,16 +52,7 @@ export class SearchPageComponent implements OnInit {
     }
 
   }
-  filterPaid(e) {
-    debugger
-    this.filterPaidvalue = e.value;
-    var index = this.filters.findIndex(x => x == e.detail)
-    if (index === -1) {
-      this.filters.push(e.detail);
-    }
-    // this.filters.indexOf(e) === -1 ? this.filters.push(e.detail) : null;
-
-  }
+ 
   
   toggleShowfilter() {
     this.isShowFilter = !this.isShowFilter
@@ -73,7 +64,12 @@ export class SearchPageComponent implements OnInit {
     }
     this.searchText="";
   }
+  addfilter(val) {
+    this.filters.push(val);
+    this.searchText = null;
+  }
   removefilter(val) {
     this.filters = this.filters.filter(e => e !== val)
   }
+  
 }

@@ -43,24 +43,7 @@ tr.tabletd td {
     margin-bottom: 15px;
 }
 
-.regisbutn {
-    width: 100%;
-    border: none;
-    background-color: white;
-    color: #ff8952;
-    padding: 5px 5px;
-    font-weight: 500;
-}
 
-.regisbutn2 {
-    width: 100%;
-    border: none;
-    background-color: #ff8952;
-    color: white;
-    padding: 5px 15px;
-    font-weight: 500;
-    border-radius: 5px;
-}
 
 .regismore {
     width: 100%;

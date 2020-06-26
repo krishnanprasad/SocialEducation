@@ -1,10 +1,10 @@
-<div class="card-online-class-a" (click)="GoToWebinarDetail(onlineclassdata.webinarid)">
+<div class="card100" >
   <!-- <app-postheader [Name]="'Institution Name'" [Image]="'img'" [time]="'time'"></app-postheader> -->
-  <div style="padding: 15px;">
+  <div class="card100-content" style="padding: 15px;">
     <div class="d-flex" style="border-bottom: 1px solid #f1f1f1 ">
       <div class="flex-grow-1">
         <div style="display: block;">
-          <span class="onlineTopicHeading">Master 'Reading Skills' for CBSE 10th Board</span>
+          <span class="onlineTopicHeading" (click)="GoToWebinarDetail(onlineclassdata.webinarid)">Master 'Reading Skills' for CBSE 10th Board</span>
         </div>
       </div>
 
@@ -80,14 +80,14 @@
   text-align: center;    
   margin-top: auto;
   margin-bottom: auto;">
-      <span class="platformtag"><i class="fas fa-video"></i> {{onlineclassdata.platform}}</span>
+      <span class="platformtag">Platform: <i class="fas fa-video"></i> {{onlineclassdata.platform}}</span>
     </div>
     <div class="p-2" style="padding: 10px;
     text-align: center;    
     margin-top: auto;
     margin-bottom: auto;">
-      <span class="pricetag  free" *ngIf="onlineclassdata.fee==0">Free</span>
-      <span class="pricetag" *ngIf="onlineclassdata.fee!=0">{{onlineclassdata.fee}} <i
+      <span class="pricetag  free" *ngIf="onlineclassdata.fee==0">Fee: Free </span>
+      <span class="pricetag" *ngIf="onlineclassdata.fee!=0">Fee:{{onlineclassdata.fee}} <i
           class="fas fa-rupee-sign"></i></span>
     </div>
 
@@ -111,18 +111,19 @@
         <span class="onlineTopicHeading">Master 'Reading Skills' for CBSE 10th Board</span>
       </div>
 
-      <div class="row" style="margin-top: 15px;">
-        <div class="col-md-4">
+      <div class="d-flex" style="margin-top: 15px;">
+        <div class="flex-fill">
           <span class="onlineSubHeading" style="display: block;">Date</span>
-          <span class="onlineSubDescription">3-Jun 16:30 PM</span>
-        </div>
-        <div class="col-md-4">
-          <span class="onlineSubHeading" style="display: block;">Duration</span>
+          <span class="onlineSubDescription" style="display: block;">3-Jun 16:30 PM</span>
           <span class="onlineSubDescription">30 Mins</span>
         </div>
-        <div class="col-md-4">
+        <div class="flex-fill">
+          <span class="onlineSubHeading" style="display: block;">Fee</span>
+          <span class="onlineSubDescription">{{onlineclassdata.fee}}</span>
+        </div>
+        <div class="flex-fill">
           <span class="onlineSubHeading" style="display: block;">Platform</span>
-          <span class="onlineSubDescription">Zoom</span>
+          <span class="onlineSubDescription">{{onlineclassdata.platform}}</span>
         </div>
       </div>
     </div>
@@ -132,7 +133,7 @@
 
       </div>
       <div style="margin-left: 5px;">
-        <input type="button" class="regisbutn-small" value="Confirm" />
+        <input type="button" class="regisbutn-small" (click)="GoToTrasaction()" value="Confirm" />
       </div>
     </div>
 

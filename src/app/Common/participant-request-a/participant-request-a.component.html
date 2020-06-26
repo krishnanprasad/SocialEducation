@@ -1,15 +1,23 @@
-
 <div id="reqpart" class="d-flex mb-3" *ngFor="let st of studentinvitationlist">
   <div class="flex-grow-1">
     <div class="TotalHeading">
-      <span class="topic-head-small-2"> {{st.name}}</span>
-      <span class="topic-desc-small-1" style="display:block">Date / Time</span>
+      <span class="topic-head-small-2 tooltip2">
+        {{st.name}}
+        <div class="tooltiptext2">
+          <span style="display: block;">{{st.name}} / Phone</span>
+          <span>@email</span>
+        </div>
+      </span>
+      <span class="topic-desc-small-1" style="display:block">{{st.type}}</span>
     </div>
   </div>
+
   <div class="">
     <div style="padding:5px 0px">
-      <img src="../../../assets/Icons/accept.png" style="height: 18px;width: 18px;" />
-      <img src="../../../assets/Icons/close.png" style="height: 18px;width: 18px;margin-left: 10px;" />
+      <span *ngIf="st.status==1"
+        style="margin-right:5px;font-size: 10px;background-color:#28a745;padding: 2px;border-radius: 2px;color: white;">added</span>
+      <i class="fas fa-plus-circle" *ngIf="st.status==0" style="margin-right: 5px;color:#28a745 ;"></i>
+      <i class="fas fa-minus-circle" *ngIf="st.status==1" style="margin-right: 5px;color:#d24956 ;"></i>
     </div>
   </div>
 </div>
