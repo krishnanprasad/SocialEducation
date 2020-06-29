@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class NoticationSearchItemFilterPipe implements PipeTransform {
   transform(items: any[], filters: any[]): any[] {
-    debugger
+   
 
     if (!items) return [];
     if (filters == []) return items;

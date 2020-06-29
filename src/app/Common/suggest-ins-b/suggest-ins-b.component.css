@@ -1,0 +1,36 @@
+.container2 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.postfrom3{
+    font-size: 14px;
+    color: #404040;
+    font-weight: 600;
+    word-break: break-word !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.posttime {
+    color: #5c5c5c;
+}
+
+.postsubject {
+    border-bottom: 1px solid #999999;
+    color: #5c5c5c;
+    float: right;
+    font-size: x-small;
+    margin-right: 5px;
+}
+
+.iconDetails {
+    margin-left: 1%;
+    float: left;
+    height: 40px;
+    width: 40px;
+}

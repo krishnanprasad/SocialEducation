@@ -23,6 +23,13 @@ export class NotificationService {
         Message: 'Rejected for Webinar "Maximum algorithm in Physics"',
         Time: '09:48',
         Icon: 'Rejected',
+      },
+      
+      {
+        NotificationId: 'not3',
+        Message: 'Rejected for Webinar "Maximum algorithm in Physics"',
+        Time: '09:48',
+        Icon: 'Payment',
       }
     ];
 

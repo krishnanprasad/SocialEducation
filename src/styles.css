@@ -162,6 +162,10 @@
     padding-bottom: 1px !important;
 }
 
+.boxshadowcard:hover {
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
 .card100 {
     margin-top: 10px;
     background-color: white;
@@ -176,7 +180,7 @@
 }
 
 .card100-heading {
-    padding: 1.5rem 1rem 0.25rem 1rem;
+    padding: 1.0rem;
     border-bottom: none;
 }
 
@@ -218,10 +222,10 @@ html {
     border: none;
     background-color: white;
     color: #2A8CB7;
-    padding: 7px 15px;
+    padding: 5px 10px;
     font-weight: 500;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .pricetag.free {
@@ -232,17 +236,37 @@ html {
     border: none;
     background-color: white;
     color: #5c5c5c;
-    padding: 7px 15px;
+    padding: 5px 10px;
     font-weight: 500;
     border-radius: 10px;
+    font-size: 12px;
+}
+
+.unlike-small {
+    border: none;
+    background-color: #247ba0;
     font-size: 14px;
+    color: white;
+    padding: 5px 10px;
+    font-weight: 500;
+    border-radius: 25px;
+    box-shadow: 0px 2px 5px #b6b6b6;
+}
+
+.like-small {
+    border: 1px solid #247ba0;
+    font-size: 14px;
+    color: #247ba0;
+    padding: 5px 10px;
+    font-weight: 500;
+    border-radius: 25px;
 }
 
 .regisbutn {
     border: none;
     background-color: #247ba0;
     color: white;
-    padding: 5px 15px;
+    padding: 5px 10px;
     font-weight: 500;
     border-radius: 10px;
     box-shadow: 0px 2px 5px #b6b6b6;
@@ -339,4 +363,53 @@ html {
     100% {
         opacity: 1;
     }
+}
+
+/* ---SCROLL MENU--START */
+
+div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.scrollmenu .scrollitems {
+    display: inline-block;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(235, 235, 235);
+    border-radius: 5px;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: rgb(219, 219, 219);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(109, 109, 109);
+}
+
+/* --SCROLL MENU END */
+
+
+.wordbreak{
+    word-break: break-word !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important; 
 }

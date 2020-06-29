@@ -6,72 +6,60 @@
         </div>
     </div>
 
-    <div class="col-md-12">
-        <div class="col-md-4">
-            
-            <span> Answer Is {{selectedvalueoffilter}}</span>
-        </div>
-    </div>
     <div class="row">
-        <div class="col-md-12">
-
-            <div>
-                <span style="display: block;">Name:</span>
-                <!-- <input *ngIf="1==0" type="text" class="form-control" value="KRISHNAN RA" id="usr"
-                    style="padding: 30px 20px;font-size: 20px;"> -->
-                <span style="padding: 10px 0px;font-size: 20px;display: block;">Krishnan RA</span>
-            </div>
-
-            <div>
-                <span style="display: block;">Phone:</span>
-                <!-- <input *ngIf="1==0" type="text" class="form-control" value="98989898**" id="usr"
-                    style="padding: 30px 20px;font-size: 20px;"> -->
-                <span style="padding: 10px 0px;font-size: 20px;display: block;">98989898**</span>
-            </div>
-
-
-            <div>
-                <span style="display: block;">Email:</span>
-                <!-- <input *ngIf="1==0" type="text" class="form-control" value="krishnanra@gmail" id="usr"
-                    style="padding: 30px 20px;font-size: 20px;"> -->
-                <span style="padding: 10px 0px;font-size: 20px;display: block;">krishnanra@gmail</span>
-            </div>
-
-            <div>
-                <span style="display: block;">Professional:</span>
-                <!-- <input *ngIf="1==0" type="text" class="form-control" value="Student" id="usr"
-                    style="padding: 30px 20px;font-size: 20px;"> -->
-                <span style="padding: 10px 0px;font-size: 20px;display: block;">Student</span>
-            </div>
-
-            <div style="margin-top: 30px;">
-                <div class="d-flex">
-                    <div class="p-2 mr-auto">
-                        <h5 style="margin-bottom: 10px;">Your Interest</h5>
+        <div class="col-md-12 col-lg-6">
+            <div class="card100">
+                <div class="card100-heading">
+                    <span class="F16 Bold LightBlack"><i class="fas fa-hashtag"
+                            style="color: #247ba0;;margin-right: 10px"></i>Profile</span>
+                </div>
+                <div class="card100-content">
+                    <div class="col-md-12">
+                        <span class="F12 LightBlack" style="display: block;">Name:</span>
+                        <!-- <input *ngIf="1==0" type="text" class="form-control" value="KRISHNAN RA" id="usr"
+                        style="padding: 30px 20px;font-size: 20px;"> -->
+                        <span class="Black F18" style="padding: 10px 0px;font-size: 20px;display: block;">Krishnan
+                            RA</span>
                     </div>
-                    <div class="p-2">
-                        <img src="assets/Image/Icons/add.png" height="18px" width="18px" style="margin-right: 20px;">
-                        <img src="assets/Image/Icons/edit.png" height="18px" width="18px" style="margin-right: 20px;">
+
+                    <div class="col-md-12">
+                        <span class="F12 LightBlack" style="display: block;">Phone:</span>
+                        <!-- <input *ngIf="1==0" type="text" class="form-control" value="98989898**" id="usr"
+                        style="padding: 30px 20px;font-size: 20px;"> -->
+                        <span class="Black F18"
+                            style="padding: 10px 0px;font-size: 20px;display: block;">98989898**</span>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <span class="F12 LightBlack" style="display: block;">Email:</span>
+                        <!-- <input *ngIf="1==0" type="text" class="form-control" value="krishnanra@gmail" id="usr"
+                        style="padding: 30px 20px;font-size: 20px;"> -->
+                        <span class="Black F18"
+                            style="padding: 10px 0px;font-size: 20px;display: block;">krishnanra@gmail</span>
+                    </div>
+
+                    <div class="col-md-12">
+                        <span class="F12 LightBlack" style="display: block;">Professional:</span>
+                        <!-- <input *ngIf="1==0" type="text" class="form-control" value="krishnanra@gmail" id="usr"
+                        style="padding: 30px 20px;font-size: 20px;"> -->
+                        <span class="Black F18" style="padding: 10px 0px;font-size: 20px;display: block;">Student</span>
                     </div>
                 </div>
-                <div class="card" style="margin-top:10px;margin-bottom: 5px;">
-                    <div style="padding: 20px 25px;">
-                        <span class="InterestedSpan">CBSC</span>
-                        <span class="InterestedSpan">CBSC</span>
-                        <span class="InterestedSpan">CBSC</span>
-                        <span class="InterestedSpan">CBSC</span>
-                    </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-12 col-lg-6">
+            <div class="card100" id="">
+                <div class="card100-heading">
+                    <span class="F16 Bold LightBlack"><i class="fas fa-hashtag"
+                            style="color: #247ba0;;margin-right: 10px"></i>Your topics</span>
+                </div>
+                <div class="card100-content">
+                    <app-topic-badges-a></app-topic-badges-a>
                 </div>
             </div>
-
-            <!-- <div style="margin-top:5px;">
-
-             <app-courses-detail [Edit]="Editable"></app-courses-detail> 
-                <app-institutions [Edit]="Editable"></app-institutions>
-                <app-projects [Edit]="Editable"></app-projects>
-                <app-awards [Edit]="Editable"></app-awards>
-            </div> -->
-
         </div>
     </div>
 </div>

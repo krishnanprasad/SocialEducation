@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NotificationCardBComponent implements OnInit {
   filters = [];
-  filtertoggle = { all: true, Webinar: false, Request: false };
+  filtertoggle = { all: true, Webinar: false, Request: false, Payment: false };
   public NotificationList =
     [
       {
@@ -16,6 +16,7 @@ export class NotificationCardBComponent implements OnInit {
         Time: '10:30',
         Icon: 'Accepted',
         notificationtype: 'Webinar',
+
       },
       {
         NotificationId: 'not2',
@@ -37,7 +38,15 @@ export class NotificationCardBComponent implements OnInit {
         Time: '09:48',
         Icon: 'Rejected',
         notificationtype: 'Request'
-      }
+      },
+      {
+        NotificationId: 'not1',
+        Message: 'Payment Recieved 1200 Rs added to your bank account',
+        Time: '10:30',
+        Icon: 'Payment',
+        notificationtype: 'Payment',
+
+      },
     ];
   @Input('UserNotificationList') dataNotificationList;
 
@@ -48,10 +57,10 @@ export class NotificationCardBComponent implements OnInit {
     this.NotificationList = this.NotificationList;
   }
   chooseFilter(val) {
-    debugger
+
     if (val == '') {
       this.filters = [];
-      this.filtertoggle = { all: true, Webinar: false, Request: false };
+      this.filtertoggle = { all: true, Webinar: false, Request: false,Payment:false };
       //  this.filtertoggle['all'] = !this.filtertoggle['all'];
     }
     else {
@@ -65,7 +74,7 @@ export class NotificationCardBComponent implements OnInit {
 
         this.filters = this.filters.filter(e => e !== val)
         if (this.filters.length == 0) {
-          this.filtertoggle = { all: true, Webinar: false, Request: false };
+          this.filtertoggle = { all: true, Webinar: false, Request: false ,Payment:false};
         }
       }
     }

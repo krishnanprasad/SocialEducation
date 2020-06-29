@@ -1,15 +1,20 @@
-<div class="card100" >
+<div class="card100">
+  <!-- <div style="padding: 10px 5px">
+    <span class="F10" class="Recommended-Badge">Recommended</span>
+  </div> -->
+
   <!-- <app-postheader [Name]="'Institution Name'" [Image]="'img'" [time]="'time'"></app-postheader> -->
   <div class="card100-content" style="padding: 15px;">
     <div class="d-flex" style="border-bottom: 1px solid #f1f1f1 ">
       <div class="flex-grow-1">
         <div style="display: block;">
-          <span class="onlineTopicHeading" (click)="GoToWebinarDetail(onlineclassdata.webinarid)">Master 'Reading Skills' for CBSE 10th Board</span>
+          <span class="onlineTopicHeading" (click)="GoToWebinarDetail(onlineclassdata.webinarid)">Master 'Reading
+            Skills' for CBSE 10th Board</span>
         </div>
       </div>
 
     </div>
-    <div style="display: block;margin-top: 15px;
+    <div class="descriptionshort" style="display: block;margin-top: 15px;
     margin-bottom: 15px;
     line-height: 1.75;">
       <span class="onlineTopicDescription">
@@ -19,15 +24,15 @@
           examples,Understand Kirchhoff's Voltage Law with some simple examples</span>
       </span>
     </div>
-    <div style="margin-top: 15px;">
+    <div style="margin-top: 5px;">
       <app-topic-badges-b></app-topic-badges-b>
     </div>
-    <div style="margin-top: 15px;">
-      <div class="row">
-        <div class="flex-fill">
+    <div style="margin-top: 5px;">
+      <div class="scrollmenu">
+        <div class="scrollitems">
           <div class="d-flex">
             <div class="p-2">
-              <img src="../../../assets/Image/elonmusk1.jpg" style="width: 64px;height:64px;border-radius: 10px;">
+              <img src="../../../assets/Image/elonmusk1.jpg" style="width: 48px;height:48px;border-radius: 10px;">
             </div>
             <div class="p-2 flex-grow-1">
               <span class="onlineSubHeading" style="display: block;">Organiser</span>
@@ -38,10 +43,10 @@
             </div>
           </div>
         </div>
-        <div class="flex-fill">
+        <div class="scrollitems">
           <div class="d-flex">
             <div class="p-2">
-              <img src="../../../assets/Image/elonmusk1.jpg" style="width: 64px;height:64px;border-radius: 10px;">
+              <img src="../../../assets/Image/elonmusk1.jpg" style="width: 48px;height:48px;border-radius: 10px;">
             </div>
             <div class="p-2 flex-grow-1">
               <span class="onlineSubHeading" style="display: block;">Organiser</span>
@@ -54,12 +59,12 @@
         </div>
       </div>
     </div>
-    <div class="d-flex" style="margin-top: 15px;">
-      <div class="p-1 flex-fill">
+    <div class="d-flex flex-column" style="margin-top: 5px;">
+      <div class="p-1">
         <span class="onlineSubHeading2" style="display: block;">when</span>
         <span class="onlineSubDescription2">3-Jun 16:30 PM,30 Mins</span>
       </div>
-      <div class="p-1 flex-fill">
+      <div class="p-1">
 
         <span class="onlineSubHeading2" style="display: block;">Participant</span>
         <span class="onlineSubDescription2">15 out 15 available</span>
@@ -76,24 +81,24 @@
     <input type="button" value="more" class="regismore" style="width: 100%;" /> 
   </div> -->
 
-    <div class="p-2" style="padding: 10px;
+    <div class="p-1" style="padding: 10px;
   text-align: center;    
   margin-top: auto;
   margin-bottom: auto;">
-      <span class="platformtag">Platform: <i class="fas fa-video"></i> {{onlineclassdata.platform}}</span>
+      <span class="platformtag"><i class="fas fa-video"></i> {{onlineclassdata.platform}}</span>
     </div>
-    <div class="p-2" style="padding: 10px;
+    <div class="p-1" style="padding: 10px;
     text-align: center;    
     margin-top: auto;
     margin-bottom: auto;">
-      <span class="pricetag  free" *ngIf="onlineclassdata.fee==0">Fee: Free </span>
-      <span class="pricetag" *ngIf="onlineclassdata.fee!=0">Fee:{{onlineclassdata.fee}} <i
-          class="fas fa-rupee-sign"></i></span>
+      <span class="pricetag" *ngIf="onlineclassdata.fee!=0"> <i
+          class="fas fa-rupee-sign"></i>{{onlineclassdata.fee}}</span>
     </div>
 
 
-    <div class="p-2" style="padding: 10px;text-align: center;">
-      <input type="button" class="regisbutn" value="Register" (click)="openmodal()" />
+    <div class="p-1" style="padding: 10px;text-align: center;display: inline-block;">
+      <button type="button" class="regisbutn apply" value="Apply" (click)="openmodal()"> <i
+          class="far fa-hand-paper"></i><span>aaply</span> </button>
     </div>
   </div>
 
@@ -110,20 +115,36 @@
       <div style="display: block;">
         <span class="onlineTopicHeading">Master 'Reading Skills' for CBSE 10th Board</span>
       </div>
-
       <div class="d-flex" style="margin-top: 15px;">
-        <div class="flex-fill">
-          <span class="onlineSubHeading" style="display: block;">Date</span>
-          <span class="onlineSubDescription" style="display: block;">3-Jun 16:30 PM</span>
-          <span class="onlineSubDescription">30 Mins</span>
+        <div class="p-1" style="padding: 10px;
+      text-align: center;    
+      margin-top: auto;
+      margin-bottom: auto;
+      border:1px solid #e9e9e9;
+      margin-right: 5px;
+      ">
+          <span class="platformtag"><i class="fas fa-video"></i> {{onlineclassdata.platform}}</span>
         </div>
-        <div class="flex-fill">
-          <span class="onlineSubHeading" style="display: block;">Fee</span>
-          <span class="onlineSubDescription">{{onlineclassdata.fee}}</span>
+        <div class="p-1" style="padding: 10px;
+        text-align: center;    
+        margin-top: auto;
+        margin-bottom: auto;
+        border:1px solid #e9e9e9;
+        ">
+          <span class="pricetag" *ngIf="onlineclassdata.fee!=0"> <i
+              class="fas fa-rupee-sign"></i>{{onlineclassdata.fee}}</span>
+          <span class="pricetag" *ngIf="onlineclassdata.fee==0"> <i class="fas fa-rupee-sign"></i>Free</span>
         </div>
-        <div class="flex-fill">
-          <span class="onlineSubHeading" style="display: block;">Platform</span>
-          <span class="onlineSubDescription">{{onlineclassdata.platform}}</span>
+      </div>
+      <div class="d-flex flex-column" style="margin-top: 5px;">
+        <div class="p-1">
+          <span class="onlineSubHeading2" style="display: block;">when</span>
+          <span class="onlineSubDescription2">3-Jun 16:30 PM,30 Mins</span>
+        </div>
+        <div class="p-1">
+
+          <span class="onlineSubHeading2" style="display: block;">Participant</span>
+          <span class="onlineSubDescription2">15 out 15 available</span>
         </div>
       </div>
     </div>

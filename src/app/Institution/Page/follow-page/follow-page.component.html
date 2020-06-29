@@ -1,3 +1,48 @@
 <div>
-  <app-follower-table [UserFriendList]="UserFriendList"></app-follower-table>
+
+  <!-- <div class="d-flex">
+      <div class="p-2 flex-fill card boxshadowcard" style="text-align:center">
+        <span class="F30"> 2011 </span>
+        <span class="F14 Color Bold"> Topics Followers </span>
+      </div>
+      <div class="p-2 flex-fill card boxshadowcard" style="text-align:center">
+        <span class="F30"> 12 </span>
+        <span class="F14 Color Bold"> Paid Class Rooms </span>
+      </div>
+      <div class="p-2 flex-fill card boxshadowcard" style="text-align:center">
+        <span class="F30"> 161 </span>
+        <span class="F14 Color Bold"> Class Rooms </span>
+      </div>  
+         
+    </div> -->
+
+  <div class="col-md-12">
+    <div class="" style="padding:10px;">
+      <div class="d-flex flex-row card100">
+        <div class="p-2" style="text-align:center">
+          <button class="NavButtons" [ngClass]="value === 'Users' ? 'Active' : ''" (click)="value = 'Users'">
+            Users
+          </button>
+        </div>
+      </div>
+      <div class="card100" [ngSwitch]="value">
+        <div *ngSwitchCase="'Users'">
+          <app-user-detail-a [UserFriendList]="UserFriendList"></app-user-detail-a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- <div class="col-md-3">
+      <p>Suggestions</p>
+      <div class="">
+      <div *ngFor="let FriendsData of MutualFriendDataList">
+        <app-user-recommendation-card
+          [MutualFriendData]="FriendsData"
+        ></app-user-recommendation-card>
+      </div>
+    </div>
+    </div> -->
+
+  <!-- Tab panes -->
 </div>

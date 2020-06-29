@@ -10,6 +10,7 @@ import { ModalAService } from 'src/app/Modal/Modal-a/modal-a.service';
   styleUrls: ['./create-post.component.css']
 })
 export class CreatePostComponent implements OnInit {
+  organTemp: any = { Brief: '', Name: '', Type: "1" };
   searchText: String;
   selectedDate: DlDateTimePickerModel;
   IsCalenderShowing: boolean = false;

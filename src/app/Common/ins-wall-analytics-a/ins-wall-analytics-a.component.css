@@ -1,0 +1,53 @@
+ul {
+    margin-bottom: 10px;
+    list-style: none;
+    margin-left: -25px;
+}
+
+.boxshadowcard2 {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 15px 10px;
+}
+
+.boxshadowcard2:hover {
+    background-color: #2A8CB7;
+    /* Third Primary Color */
+    color: white !important;
+}
+
+.ResultSpan {
+    font-size: 24px;
+    color: #636363;
+    text-align: center;
+}
+
+.HeadingSpan {
+    font-size: 16px;
+    color: #5c5c5c;
+}
+
+.headingsuggestion {
+    text-align: left;
+    padding: 5px 0px 5px 10px;
+    color: #3d3d3d;
+}
+
+.HeadingCenterli {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.Centerli {
+    text-align: center;
+    font-size: 10px;
+}
+
+.TopicWiseScoreli {
+    padding: 10px 10px 10px 0px;
+}
+
+.TopicWiseScoreSpan {
+    color: #5c5c5c;
+}

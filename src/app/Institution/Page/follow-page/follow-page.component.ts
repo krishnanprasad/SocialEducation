@@ -9,7 +9,7 @@ import { UserInstitutionListPremiumService } from 'src/app/Service/user-institut
 })
 export class FollowPageComponent implements OnInit {
 
-  public value = 'Followers';
+  public value = 'Users';
   public query;
   public UserFriendList;
   public UserPremiumInstitutionList;

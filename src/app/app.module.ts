@@ -91,6 +91,8 @@ import { InsWallProfileTopComponent } from './Institution/ins-wall-profile-top/i
 import { NotificationCardBComponent } from './Common/notification-card-b/notification-card-b.component';
 import { OnlineClassEComponent } from './Common/online-class-e/online-class-e.component';
 import { ModalAComponent } from './Modal/Modal-a/modal-a.component';
+import { SuggestInsBComponent } from './Common/suggest-ins-b/suggest-ins-b.component';
+import { InsWallAnalyticsAComponent } from './Common/ins-wall-analytics-a/ins-wall-analytics-a.component';
 
 @NgModule({
   declarations: [
@@ -176,6 +178,8 @@ import { ModalAComponent } from './Modal/Modal-a/modal-a.component';
     NotificationCardBComponent,
     OnlineClassEComponent,
     ModalAComponent,
+    SuggestInsBComponent,
+    InsWallAnalyticsAComponent,
   ],
   imports: [
     BrowserModule,

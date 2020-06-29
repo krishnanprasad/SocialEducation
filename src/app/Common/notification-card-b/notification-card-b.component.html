@@ -7,6 +7,8 @@
 
   <span (click)="chooseFilter('Request')" [ngClass]='{"activeFilter" : filtertoggle.Request}' class="F12 Black"
     style="background-color: #b9b9b9;padding:5px 10px;border-radius: 15px;margin-right: 5px;">Request</span>
+  <span (click)="chooseFilter('Payment')" [ngClass]='{"activeFilter" : filtertoggle.Payment}' class="F12 Black"
+    style="background-color: #b9b9b9;padding:5px 10px;border-radius: 15px;margin-right: 5px;">Payment</span>
 
 
 </div>
@@ -15,8 +17,9 @@
     style="padding:5px;">
     <div class="d-flex BorderBottomLight">
       <div class="p-2">
-        <i *ngIf="notifylist.Icon=='Accepted'" class="fas fa-thumbs-up PrimaryColor2"></i>
-        <i *ngIf="notifylist.Icon=='Rejected'" class="fas fa-thumbs-down PrimaryRed"></i>
+        <i *ngIf="notifylist.Icon=='Accepted'" style="color: #28a745;" class="fas fa-thumbs-up PrimaryColor2"></i>
+        <i *ngIf="notifylist.Icon=='Rejected'" class="fas fa-thumbs-down PrimaryRed"></i>        
+        <i *ngIf="notifylist.Icon=='Payment'" style="color: #247ba0;" class="fas fa-rupee-sign"></i>
       </div>
       <div class="p-2 flex-grow-1">
         <span class="F14">{{ notifylist.Message }}</span> <span class="F12 LightBlack"

@@ -125,6 +125,10 @@ const routes: Routes = [
         path: 'WebinarDetails/:CourseID',
         component: OnlineClassDetailsBComponent
       },
+      {
+        path: 'Follow',
+        component: FollowPageComponent
+      },
     ]
   },
   {

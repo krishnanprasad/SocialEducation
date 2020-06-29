@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topic-badges-a.component.css']
 })
 export class TopicBadgesAComponent implements OnInit {
-  topiclist = ['Maths', 'Science', 'Social']
+  topiclist = ['#Maths', '#Science', '#Social','#covid19','#Diabetics']
   constructor() { }
 
   ngOnInit() {

@@ -1,24 +1,28 @@
-<div class="" style="margin-bottom:5px">
-    <input style="border: none; margin-left: 15px;  
-    border-bottom: 1px solid #247ba0;" type="text" placeholder="Search Organisers" class="form-control"
-        [(ngModel)]="SearchFriends">
+<div class="" style="margin-bottom:5px;margin-top: 15px;padding: 5px;justify-content: center;">
+    <input style="border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #247ba0;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;" type="text" placeholder="Search here..." class="form-control" [(ngModel)]="SearchFriends">
 </div>
 <div class="row" style="margin-top: 20px;">
-    <div class="col-md-4" *ngFor="let UsrFrdlst of UserFriendList | search:'Username':SearchFriends">
-        <div class="boxshadowcard d-flex flex-column" style="text-align: center;">
+    <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let UsrFrdlst of UserFriendList | search:'Username':SearchFriends">
+        <div class="boxshadowcard" style="text-align: center;">
             <div style="text-align: center;margin-top: 10px;">
                 <img src="{{UsrFrdlst.UserImage}}" class="iconDetails" alt="name">
             </div>
-            <div style="margin-top: 10px;">
+            <div style="margin-top: 10px;display: block;">
                 <span class="F14 Black">{{UsrFrdlst.Username}}</span>
             </div>
             <div style="margin-top:-10px;display: block">
                 <span class="F12 LightBlack">{{UsrFrdlst.userid}}</span></div>
-            <div>
+            <div style="display: block;">
                 <span style="font-size: 10px;" class="LightBlack">{{UsrFrdlst.lastused}} Followers</span>
             </div>
-            <div>
-                <input type="button" value="Unfollow" class="regisbutn-small" />
+            <div style="display: block;margin-bottom: 10px;">
+                <button type="button" class="unlike-small">
+                    <i class="far fa-thumbs-down"></i></button>
             </div>
         </div>
     </div>
