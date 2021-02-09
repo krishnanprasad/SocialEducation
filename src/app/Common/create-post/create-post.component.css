@@ -8,9 +8,11 @@
     -moz-box-shadow: -2px 2px 2px 0px rgba(158, 158, 158, 1);
     box-shadow: -2px 2px 2px 0px rgba(158, 158, 158, 1);
 }
-
+.MB20{
+margin-bottom: 20px;
+}
 .qpcontainer {
-    max-width: 1300px !important;
+    max-width: 1200px !important;
 }
 
 .circlebutton {
@@ -132,8 +134,8 @@
 /* Style the indicator (dot/circle) */
 
 .radiocontainer .checkmark:after {
-    top: 9px;
-    left: 9px;
+    top: 8px;
+    left: 8px;
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -258,7 +260,7 @@ form {
 .box {
     /* text-align: center; */
     float: left;
-    margin-top: 15px;
+    margin-top: 14px;
 }
 
 .box:before,

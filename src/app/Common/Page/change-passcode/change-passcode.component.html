@@ -1,0 +1,12 @@
+<div class="container">
+  <span class="F22 LightBlack">Change Passcode</span>
+  <div class="p-2">
+    <label>Enter Old Passcode</label>
+    <input type="text" class="form-control" [ngModel]="passcodeA" />
+    <label>Enter New 6 digit Passcode</label>
+    <input type="text" class="form-control" [ngModel]="passcodeA" />
+    <label>Re Enter New 6 digit Passcode</label>
+    <input type="text" class="form-control" [ngModel]="passcodeB" />
+    <input type="button" class="btn btn-success" (click)="verifypasscode()" value="Submit" />
+  </div>
+</div>

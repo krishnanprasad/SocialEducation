@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-md-6 col-lg-4" *ngFor="let det of details">
+    <div class="card100">
+      <div class="">
+        <div class="d-flex">
+          <div class="p-1 flex-grow-1">
+            <div class='container2' style="border:none">
+              <div>
+                <img src="../../assets/Image/elonmusk1.jpg" class="iconDetails" alt="" style=" border-radius: 50%;">
+              </div>
+              <div style='margin-left:60px;'>
+                <span class="postfrom">{{det.tutorname}} </span>
+                <div class="d-flex" style="padding-bottom: 5px;">
+                  <div style="display: block;">
+                    <span class="LightBlack2 F12" style="word-break: break-word !important;
+                display: -webkit-box !important;
+                -webkit-line-clamp: 1 !important;
+                -webkit-box-orient: vertical !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;">tutor small description unleash the test of what is important</span>
+                  </div>
+                </div>
+                <div style="float:right;"></div>
+                <div style="font-size:.6em">
+                  <span class="posttime"><i class="fas fa-users"></i> {{det.followers}} <i class="fas fa-video"></i>
+                    {{det.followers}} </span>
+                </div>
+                <div style="font-size:.6em">
+                  <span class="posttime"><i class="far fa-star"></i> 4.5 </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-1" style="padding: 2px;text-align: center;margin-top: auto;margin-bottom: auto;">
+            <button type="button" class="apply2" value="" (click)="openmodal()"> <i
+                class="far fa-thumbs-up"></i><span>like</span> </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

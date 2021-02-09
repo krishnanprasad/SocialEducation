@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalAService } from 'src/app/Modal/Modal-a/modal-a.service';
 
 @Component({
   selector: 'app-online-class-d',
@@ -12,7 +13,7 @@ export class OnlineClassDComponent implements OnInit {
   isOpen: boolean = false;
   @Input() onlineclassdata;
   public QuesPapLink;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private modalService: ModalAService) { }
 
   ngOnInit() {
     this.modal = "modal modal-close";
@@ -31,5 +32,13 @@ export class OnlineClassDComponent implements OnInit {
   }
   GoToTrasaction() {
     this.router.navigate(['/User/Activity']);
+  }
+
+  openModal(id: string) {
+    this.modalService.open(id);
+  }
+
+  closeModal(id: string) {
+    this.modalService.close(id);
   }
 }

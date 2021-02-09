@@ -1,0 +1,36 @@
+<h4 class="LightBlack">Payment</h4>
+
+
+<div class="row">
+  <div class="col-lg-6 container justify-content-center">
+    <div class="card100">
+      <div class="card100-heading">
+        <h5>Order Summary</h5>
+      </div>
+      <div class="card100-content">
+        <div class="p-1">
+          <span class="onlineSubHeading2" style="display: block;">Amount </span>
+          <span class="PrimaryColor"> <i style="margin-right: 5px;" class="fas fa-rupee-sign"></i>{{webinardetail.webinarfee}}</span>
+        </div>
+
+
+        <div class="p-1">
+          <span class="onlineSubHeading2" style="display: block;">Webinar ID : {{webinardetail.webinarid}}</span>
+          <span class="LightBlack F14">{{webinardetail.heading}} </span>
+        </div>
+
+        <div class="p-1">
+          <span class="onlineSubHeading2" style="display: block;">Date / Time</span>
+          <span class="LightBlack F14">Master 'Reading Skills' for CBSE 10th Board Reading Skills' </span>
+        </div>
+
+        <div class="p-1">
+          <button type="button" class="btn btn-secondary">Cancel</button>
+          <button type="button" class="btn btn-success" (click)="confirmorder()">Confirm & Pay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

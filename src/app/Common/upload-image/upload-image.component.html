@@ -1,0 +1,14 @@
+
+  
+  <input type="file" #file accept="image/*" (change)="uploadFile(file.files)">
+  <button type="button" (click)="file.click()" class="btn">Sumbit</button>
+
+
+  <div *ngIf="progress>0">
+    {{progress}} %
+  </div>
+
+
+  <div *ngIf="message">
+    {{message}}
+  </div>

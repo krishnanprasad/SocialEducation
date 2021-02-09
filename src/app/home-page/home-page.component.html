@@ -1,0 +1,78 @@
+<div style="background-image: url(https://iacademy.qodeinteractive.com/wp-content/uploads/2017/05/h4-background-img-1.png);
+margin-top:70px">
+  <div class="row">
+    <div class="col-md-6">
+      <div style="padding:35px;top:10%;position: relative;">
+        <h3 class="LightBlack">
+          Discover Online Session across the globe</h3>
+        <p class="LightBlack F16" style="margin-top: 20px;">
+          Follow your favourite topics and inspiring teachers and never miss their sesssions online</p>
+        <p class="LightBlack F16">
+          Now register and pay premium session easily</p>
+      </div>
+      <app-welcome-search></app-welcome-search>
+    </div>
+    <div class="col-md-6">
+      <div class="vc_single_image-wrapper   vc_box_border_grey">
+        <img src="../../assets/Image/home-img.png" class="img" style="width: 100%;
+                height: auto;">
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+
+<div class="container">
+
+
+  <div class="" style="margin-top: 20px;">
+    <span class="F20 LightBlack"><i class="fas fa-rocket" style="color: #5c5c5c;;margin-right: 5px"></i>trending</span>
+  </div>
+  <div class="row" style="margin-top: 5px;">
+    <div class="col-lg-3 col-md-4" style="padding-left: 5px;padding-right:5px;" *ngFor="let data of PostDetails">
+      <app-webinar-small-a [onlineclassdata]="data"></app-webinar-small-a>
+    </div>
+  </div>
+
+
+
+  <div class="" style="margin-top: 40px;">
+    <span class="F20 LightBlack"><i class="fas fa-atom"
+        style="color: #5c5c5c;;margin-right: 5px"></i>Live</span>
+  </div>
+  <div class="row" style="margin-top: 5px;">
+    <div class="col-lg-3 col-md-4" style="padding-left: 5px;padding-right:5px;" *ngFor="let data of PostDetails">
+      <app-webinar-small-a [onlineclassdata]="data"></app-webinar-small-a>
+    </div>
+
+    <div class="" style="margin-top: 40px;">
+      <span class="F20 LightBlack"><i class="fas fa-atom"
+          style="color: #5c5c5c;;margin-right: 5px"></i>Recorder Video</span>
+    </div>
+    <div class="row" style="margin-top: 5px;">
+      <div class="col-lg-3 col-md-4" style="padding-left: 5px;padding-right:5px;" *ngFor="let data of PostDetails">
+        <app-webinar-small-a [onlineclassdata]="data"></app-webinar-small-a>
+      </div>
+  </div>
+
+
+
+  <div class="" style="margin-top: 40px;">
+    <span class="F20 LightBlack"><i class="fas fa-users"
+        style="color: #5c5c5c;;margin-right: 5px"></i>One-One Meeting</span>
+  </div>
+  <div class="" style="margin-top: 5px;">
+    <app-follow-tutor-a></app-follow-tutor-a>
+  </div>
+
+
+  <!-- <div class="" style="margin-top: 40px;">
+    <span class="F20 LightBlack"><i class="fas fa-hashtag" style="color: #5c5c5c;;margin-right: 5px"></i>topics</span>
+  </div>
+  <div style="margin-top: 5px;margin-bottom: 40px;">
+    <app-topic-badge-c></app-topic-badge-c>
+  </div> -->
+</div>

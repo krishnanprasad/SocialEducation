@@ -9,12 +9,13 @@ import { Router } from '@angular/router';
 })
 export class LoginPageComponent implements OnInit {
   private username;
-  public chooseuserval: string = 'part';
+  public chooseuserval: number = 1;
+  public email:string;
   private password;
   private usertype;
   protected IsUser;
   ShowOTPModal: boolean = false;
-  constructor(private logser: LoginService, private router: Router) { }
+  constructor(private loginservice: LoginService, private router: Router) { }
 
   ngOnInit(
 
@@ -37,13 +38,31 @@ export class LoginPageComponent implements OnInit {
   }
   confirm_Credentials() {
     var myObj = { usertype: 'org', isstudent: false };
-    localStorage.setItem('usertype', JSON.stringify(myObj));
+    sessionStorage.setItem('usertype', JSON.stringify(myObj));
     this.router.navigate(['/Institution/Wall']);
   }
   confirm_otp() {
     var myObj = { usertype: 'part', isstudent: true };
-    localStorage.setItem('usertype', JSON.stringify(myObj));
+    sessionStorage.setItem('usertype', JSON.stringify(myObj));
     this.alter_OTPModal()
     this.router.navigate(['/User/Wall']);
   }
+  get_otp(){
+    //debugger      
+      this.loginservice.getOTP(this.chooseuserval,this.email).subscribe(data => {
+        if (data != "No User") {
+          console.log(data);
+          //this.userData = data;        
+          
+        }
+        else {
+          
+       
+        }
+  
+      }, (err) => {
+       
+      });
+    }
+  
 }

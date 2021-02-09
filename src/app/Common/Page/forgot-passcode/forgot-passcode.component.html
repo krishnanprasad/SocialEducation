@@ -1,0 +1,34 @@
+<div class="container" style="margin-top: 85px;">
+  <span class="F22 LightBlack">Forgot Passcode</span>
+  <div class="p-2">
+    <div class="d-flex">
+      <div class="flex-grow-1">
+        <label>Step 1: Please Enter Email ID</label>
+        <input type="text" style="width: 95%;" class="form-control" [ngModel]="emailaddress" />
+      </div>
+      <div class="" style="margin-top:auto ;">
+        <input type="button" class="btn regisbutn" value="send OTP" (click)="sendOTP()" />
+      </div>
+    </div>
+
+    <div class="d-flex" style="margin-top: 25px;" *ngIf="showsteps.isOTPsent">
+      <div class="flex-grow-1">
+        <label>Step 2: Please Enter OTP recieved in email</label>
+        <input type="text" style="width: 95%;" class="form-control" [ngModel]="otp" />
+      </div>
+      <div class="" style="margin-top:auto ;">
+        <input type="button" class="btn regisbutn" value="verify OTP" (click)="verifyOTP()" />
+      </div>
+    </div>
+
+    <div *ngIf="showsteps.isOTPverified" style="margin-top: 25px;">
+      <label>Enter New 6 digit Passcode</label>
+      <input type="text" class="form-control" [ngModel]="passcodeA" />
+      <label>Re Enter New 6 digit Passcode</label>
+      <input type="text" class="form-control" [ngModel]="passcodeB" />
+      <div class="d-flex justify-content-end" style="margin-top: 10px;">
+        <input type="button" class="btn btn-success" (click)="verifypasscode()" value="Change Passcode" />
+      </div>
+    </div>
+  </div>
+</div>

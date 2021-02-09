@@ -1,0 +1,105 @@
+<div class="" style="margin-top:85px;">
+  <!-- <div class="col-md-12" style="margin-left:5px;">
+      <h5 style="color:#5c5c5c"> </h5>
+  </div> -->
+  <div style="height: 160px;background-color: white;text-align: center;padding: 10px;">
+    <h3 class="LightBlack">
+      Discover & Register Online Session</h3>
+    <p class="LightBlack F16" style="margin-top: 20px;">
+      Follow your favourite topics and influencers and never miss their sesssions online</p>
+
+    <input type="text" class="form-control col-md-8 col-offset-3" [(ngModel)]="searchinput"
+      (input)="onSearchChange($event.target.value)" placeholder="Search Webinars...."
+      style="border-radius: 0.01rem;border: 1px solid #c4c4c4;margin: auto;" />
+  </div>
+  <div class="d-flex">
+    <div class="col-md-3">
+      <div class="col-md-12">
+        <div class="card100">
+          <div class="col-md-12">
+            <span class="F14">Price</span>
+          </div>
+          <div class="col-md-12" style="margin-top: 10px;">
+            <app-dropdown-a (selectedvalue)="filterPaid($event)" [values]="PaidFilterdata"></app-dropdown-a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card100">
+          <div class="col-md-12">
+            <span class="F14">Category</span>
+          </div>
+          <div class="col-md-12" style="margin-top: 10px;">
+            <app-dropdown-a (selectedvalue)="filterPaid($event)" [values]="Categorydata"></app-dropdown-a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card100">
+          <div class="col-md-12">
+            <span class="F14" style="display: block;">Choose Date : </span>
+            <div style="margin-top: 15px;">
+              <span (click)="toggledateView()">{{selectedDate | date:'fullDate'}} <i class="far fa-bell LightBlack"></i>
+              </span>
+            </div>
+          </div>
+          <div class="col-md-12" style="margin-top: 10px;">
+            <!-- <span style="font-size: 12px;">{{selectedDate | date:'longDate'}}</span> -->
+            <dl-date-time-picker *ngIf="dateToggleV" style="font-size: 12px;" leftIconClass="fas fa-chevron-left"
+              rightIconClass="fas fa-chevron-right" startView="day" maxView="year" minView="day" minuteStep="10"
+              [(ngModel)]="selectedDate" startDate="16" (change)="toggledateView()" getStartDate="getStartDate">
+            </dl-date-time-picker>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div>
+      
+
+        <!-- <div class="d-flex flex-row card100" style="">
+                  <div class="p-2" style="text-align:center">
+                      <button class="NavButtons" [ngClass]="activetab === 'webinar' ? 'Active' : ''"
+                          (click)="changetab('webinar')">
+                          <i class="far fa-bell LightBlack"></i> webinar
+                      </button>
+                  </div>
+
+                  <div class="p-2" style="text-align:center">
+                      <button class="NavButtons" [ngClass]="activetab === 'organiser' ? 'Active' : ''"
+                          (click)="changetab('organiser')">
+                          <i class="fas fa-file-invoice LightBlack"></i> organiser
+                      </button>
+                  </div>
+              </div> -->
+     
+           
+              <div class="row" *ngIf="webinarresults">
+                <div class="col-lg-4 col-md-4"
+                  *ngFor="let webres of webinarresults | filterarray:filterfee:'webinarfee' | datearray:selectedDate:'webinardate'">
+                  <app-webinar-small-a [onlineclassdata]="webres">
+                  </app-webinar-small-a>
+                </div>
+              </div>
+            
+            <!-- <div *ngIf="organiserresults && activetab === 'organiser'">
+                          <app-institution-card-b [datafollowinglist]="organiserresults">
+                          </app-institution-card-b>
+                      </div> -->
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- 
+<ul *ngIf="searchText?.length>0">
+
+  <li *ngFor="let c of characters | filter : searchText">
+      {{c.username}} -- {{c.webinar}}
+  </li>
+</ul> -->

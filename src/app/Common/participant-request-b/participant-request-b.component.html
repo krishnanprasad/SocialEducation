@@ -1,0 +1,20 @@
+<div id="reqpart" class="d-flex mb-3" *ngFor="let st of studentinvitationlist">
+  <div class="flex-grow-1">
+    <div class="TotalHeading">
+      <span class="topic-head-small-2 tooltip2">
+        {{st.name}}
+        <div class="tooltiptext2">
+          <span style="display: block;">{{st.userid}}</span>
+          <span>{{st.email}}</span>
+        </div>
+      </span>
+      <span class="topic-desc-small-1" style="display:block">{{st.transactionid}}</span>
+    </div>
+  </div>
+
+  <div class="">
+    <div style="padding:5px 0px">
+      <span style="margin-right:5px;font-size: 10px;background-color:#28a745;padding: 2px;border-radius: 2px;color: white;">{{st.registration_title}}</span>
+    </div>
+  </div>
+</div>

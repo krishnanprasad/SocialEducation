@@ -15,7 +15,7 @@ div.circletag>img {
     max-height: 100%;
     max-width: 100%;
     margin-top: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 
 div.circletag.Active {
@@ -98,7 +98,7 @@ div.circletag.Active {
 } */
 
 .InterestedSpan {
-    padding: 5px 15px;
+    padding: 5px 14px;
     border: 1px solid #484848;
     border-radius: 20px;
     margin-right: 10px;
@@ -135,13 +135,13 @@ div.circletag.Active {
     }
     
     .selectdiv:after {
-      font: 17px "Consolas", monospace;
+      font: 16px "Consolas", monospace;
       color: #333;
       -webkit-transform: rotate(90deg);
       -moz-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
       transform: rotate(90deg);
-      right: 11px;
+      right: 10px;
       /*Adjust for position however you want*/
       
       top: 18px;

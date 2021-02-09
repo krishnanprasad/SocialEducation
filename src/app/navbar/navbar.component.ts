@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import { LoginService } from '../Service/login.service';
+import { ModalAService } from '../Modal/Modal-a/modal-a.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,80 +10,94 @@ import { LoginService } from '../Service/login.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  IsStudent: boolean = true;
+  IsParticipant: boolean = true;
   ActiveNav: string;
   ActiveLink = { Wall: false, Notification: false, Follow: false, Activity: false };
+  IsUserLoggedIn: boolean;
+  usertype: any = 'student';
+  show: boolean;
   constructor(
-    private modalService: NgbModal,
-    private router: Router, private LogSer: LoginService,
+    private modalService: ModalAService,
+    private router: Router, public loginservice: LoginService,
 
   ) { }
   private UserId;
+
   // private ActiveRouter: string;
   ngOnInit() {
-    
-    var currentUser = JSON.parse(localStorage.getItem('usertype'));
-
-    //console.log('--ISSTUDENT--' + this.IsStudent);
+   debugger
+    var currentUser = JSON.parse(sessionStorage.getItem('usertype'));
+ debugger
+    //console.log('--ISSTUDENT--' + this.IsParticipant);
     if (currentUser == null) {
-      alert('Please Login !');
-      this.router.navigate(['/Login']);
+      this.show=true;
+      //this.loginservice.signout();
+      //this.router.navigate(['']);
     }
     else {
-      this.IsStudent = currentUser.isstudent; // your token
+      this.show=false;
+      // this.loginservice.loginsuccess();
+      // if (this.loginservice.getUsertype() == 1) {
+      //   this.IsParticipant = true; // your token
+      // }
+      // else{
+      //   this.IsParticipant=false;
+      // }
     }
   }
   LogOff() {
-    localStorage.removeItem('usertype');
-    this.router.navigate(['/Login']);
+    sessionStorage.removeItem('usertype');
+    this.loginservice.signout();
+    this.router.navigate(['']);
   }
   navbarOpen = false;
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
   }
-  // GoToLink(page){
-  //   this.ActiveRouter=page;
-  // }
-
-  openVerticallyCentered(content) {
-    this.modalService.open(content, { centered: true });
-  }
   makeallactivelinkfalse() {
     this.ActiveLink = { Wall: false, Notification: false, Follow: false, Activity: false };
   }
   routenav(page) {
-    this.makeallactivelinkfalse();
-
-    this.ActiveLink[page] = true;
-
-    var usertype = JSON.parse(localStorage.getItem('usertype'));
-    if (usertype.isstudent == true) {
-      this.router.navigate(['/User/' + page]);
+  //  debugger
+    if (page == '') {
+      this.router.navigate(['']);
     }
     else {
-      this.router.navigate(['/Institution/' + page]);
+      this.makeallactivelinkfalse();
+      this.ActiveLink[page] = true;
+     // var usertype = JSON.parse(sessionStorage.getItem('usertype'));
+    
+      if (this.loginservice.Usertype == 1) {
+        this.router.navigate(['/User/' + page]);
+      }
+      else {
+        this.router.navigate(['/Institution/' + page]);
+      }
     }
-
+  }
+  register() {
+    this.router.navigate(['/SignUp']);
   }
   changeUserType(val) {
-
     let myObj
     if (val == 1) {
-      myObj = { usertype: 'std', isstudent: true };
+      myObj = { usertype: 'std', IsParticipant: true };
     }
     else {
-      myObj = { usertype: 'ins', isstudent: false };
+      myObj = { usertype: 'ins', IsParticipant: false };
     }
-    localStorage.setItem('usertype', JSON.stringify(myObj));
-
+    sessionStorage.setItem('usertype', JSON.stringify(myObj));
     this.ngOnInit();
-
   }
-
+  RegisterUser() {
+    this.closeModal('login-modal')
+    this.openModal('register-modal');
+  }
   GoToPage(Page) {
-    this.LogSer.setUserId('Institution');
-    this.UserId = this.LogSer.getUserId();
+    // debugger
+    //this.loginservice.setUserId('Institution');
+    this.UserId = this.loginservice.getUserId();
     if (Page === 'Wall') {
       this.router.navigate(['/Wall']);
     }
@@ -94,10 +109,19 @@ export class NavbarComponent implements OnInit {
         this.router.navigate(['/User/', this.UserId]);
       }
     }
-    if(Page=='Search')
-    {
+    if (Page == 'Search') {
       this.router.navigate(['/Search']);
     }
 
+  }
+
+  openModal(id: string) {
+    // debugger
+    this.modalService.open(id);
+  }
+
+  closeModal(id: string) {
+    // debugger
+    this.modalService.close(id);
   }
 }

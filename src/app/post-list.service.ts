@@ -35,7 +35,7 @@ export class PostListService {
       Message: 'Hey i am having two tickets for kaala movie in Ganga Theatre',
       CommunityFrom: 'Ceebros Imperiale',
       ImageSrc: 'assets/Image/movieticket.jpg',
-      FromTime: '22/10/2018 10:30',
+      webinar_date: '22/10/2018 10:30',
       ToLocation: 'Ganga Theatre',
       postlike: 3,
       postcomment: 10,
@@ -44,42 +44,67 @@ export class PostListService {
     }
   ];
   public PostDetails = [
-   
+    {
+      webinarid:'1',
+      webinarfee: 0,
+      webimage: 'w1.jpg',
+      platform_title: 'Jio Meet',
+      webstatus: 1,
+      heading: 'Unleash your productivity and bring Salesforce Project Management to the next level with Mission Control',
+      description: '',
+      webinardate: '2020-07-15 18:00',
+      duration: '30 Mins',
+      organiserlist: [{ name: 'Krishnan', brief: 'M.E Physics | 14 Yrs Exp in Maths', type: 'Host', orgimage: 'o2.jpg', star: 3.5 }],
+      participantcount: 20,
+      maxparticipantscount: 10,
+      topiclist: ['#maths', '#physics']
+    },
+    {
+      webinarid:'2',
+      webinarfee: 100,
+      webimage: 'w2.jpg',
+      platform_title: 'Zoom',
+      webstatus: 1,
+      heading: 'WEBINAR OWWI 2020 dengan Tema “Improve Your Creativity In Industrial Era 4.0 Based On IOT And Artifical Intellegience”',
+      description: '',
+      webinardate: '2020-07-22 18:00',
+      duration: '30 Mins',
+      organiserlist: [{ name: 'Saravanan', brief: 'M.E Physics | 14 Yrs Exp in Maths', type: 'Host', orgimage: 'o3.jpg', star: 4.7 }],
+      participantcount: 20,
+      participantavailablecount: 5,
+      topiclist: ['#maths', '#physics']
+    },
+    {
+      webinarid:'3',
+      webinarfee: 2000,
+      webimage: 'w3.jpg',
+      platform_title: 'Zoho Meetings',
+      webstatus: 1,
+      heading: 'We *Aj Unlimited* presenting you 5 days workshop on 2.0 leadership skills',
+      description: '',
+      webinardate: '2020-07-14 18:00',
+      duration: '30 Mins',
+      organiserlist: [{ name: 'Sarath Kumar', brief: 'M.E Physics | 14 Yrs Exp in Maths', type: 'Host', orgimage: 'o1.jpg', star: 4.5 }],
+      participantcount: 20,
+      participantavailablecount: 2,
+      topiclist: ['#maths', '#physics']
+    },
+    {
+      webinarid:'4',
+      webinarfee: 0,
+      webimage: 'w1.jpg',
+      platform_title: 'Google Meet',
+      webstatus: 1,
+      heading: 'Unleash your productivity and bring Salesforce Project Management to the next level with Mission Control',
+      description: '',
+      webinardate: '2020-07-15 18:00',
+      duration: '30 Mins',
+      organiserlist: [{ name: 'Krishnan', brief: 'M.E Physics | 14 Yrs Exp in Maths', type: 'Host', orgimage: 'o2.jpg', star: 3.5 }],
+      participantcount: 20,
+      participantavailablecount: 10,
+      topiclist: ['#maths', '#physics']
+    },
 
-    {
-      webinarid: 'POS0005',
-      UserImage: 'assets/Image/unknown1.jpg',
-      UserName: 'Sriram',
-      CommunityFrom: 'MCT 2014',
-      fee:0,      
-      ImageSrc: '',
-      platform:'Zoom',
-      status:1,
-     
-    },
-    {
-      webinarid: 'POS0006',
-      UserImage: 'assets/Image/unknown1.jpg',
-      UserName: 'Sriram',
-      CommunityFrom: 'MCT 2014',
-      fee:0,      
-      ImageSrc: '',
-      platform:'Hangout',
-      status:0,
-    },
-    {
-      webinarid: 'POS0007',
-      UserImage: 'assets/Image/unknown1.jpg',
-      UserName: 'Sriram',
-      CommunityFrom: 'MCT 2014',
-      fee:100,      
-      ImageSrc: '',
-      platform:'Zoom',
-      status:2,
-     
-    },
-    
-    
   ];
   public InstitutionPostDetails = [
     {
@@ -88,7 +113,7 @@ export class PostListService {
       UserImage: 'assets/Image/employee2.jpg',
       UserName: 'Institution Name',
       QuestionPaperLink: {
-        editable:false,
+        editable: false,
         QuestionPaperId: 'QP001',
         subject: 'Group 2 : General Knowledge',
         description: 'Previous Year Questions',
@@ -207,7 +232,7 @@ export class PostListService {
           }
         ]
       },
-    
+
     },
 
     {
@@ -216,7 +241,7 @@ export class PostListService {
       UserImage: 'assets/Image/employee2.jpg',
       UserName: 'Institution Name',
       QuestionPaperLink: {
-        editable:true,
+        editable: true,
         QuestionPaperId: 'QP001',
         subject: 'Group 2 : General Knowledge',
         description: 'Previous Year Questions',
@@ -337,7 +362,7 @@ export class PostListService {
       },
     },
 
-  
+
     // {
     //   PostID: 'POS0003',
     //   UserImage: 'assets/Image/employee2.jpg',
@@ -369,16 +394,16 @@ export class PostListService {
       UserImage: 'assets/Image/employee2.jpg',
       UserName: 'Institution Name',
       QuestionPaperLink: {
-        editable:false,
+        editable: false,
         QuestionPaperId: 'QP001',
         subject: 'Group 2 : General Knowledge',
         description: 'Previous Year Questions',
         totalquestion: 10,
         duration: '30 Mins',
         level: 'Hard',
-       
+
       },
-    
+
     },
 
     {
@@ -387,19 +412,19 @@ export class PostListService {
       UserImage: 'assets/Image/employee2.jpg',
       UserName: 'Institution Name',
       QuestionPaperLink: {
-        editable:true,
+        editable: true,
         QuestionPaperId: 'QP001',
         subject: 'Group 2 : General Knowledge',
         description: 'Previous Year Questions',
         totalquestion: 10,
         duration: '30 Mins',
         level: 'Hard',
-       
+
       },
     },
 
   ];
-  constructor() {}
+  constructor() { }
   getpostwalllist() {
     return this.PostDetails;
   }

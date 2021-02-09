@@ -1,127 +1,276 @@
-<div style="margin-top: 15px;
-display: flex;">
-  <div class="col-md-12" style="padding:15px;">
-    <div class="d-flex justify-content-end" style="margin-bottom: 5px;">
-      <div class="d-flex" style="margin-top: 5px;border-top: 1px solid #f8f8f8;;">
-        <!-- <div class="flex-fill">
-                <span>To Participate</span>      
-                <input type="button" value="more" class="regismore" style="width: 100%;" /> 
-              </div> -->
+<div class="">
+  <div class="card100 header-card" style="">
+    <div style="padding: 20px 20px;
+      width: 90%;
+      margin: auto;       
+      ">
+      <!-- <img src="../../../assets/Image/webinar-bg.jpg" /> -->
+      <div class="d-flex" style="margin-bottom: 14px;border-bottom: 1px solid #f7f7f7;">
+        <div class="col-lg-9 col-md-9 col-sm-12" style="display: block;padding-left: 0px !important;">
+          <span style="display: block;" class="onlineTopicHeading F20">
+            {{webinardetail.heading}}
+          </span>
+          <span style="display: block;" class="onlineTopicHeading F20">
+            {{webinardetail.webinar_type_title}}
+          </span>
+          <span class="" style="color: #0e987d;
+                      background-color: #a0dacf;border-radius: 10px;font-size: 14px;padding: 5px;"> <i
+              style="margin-right: 3px;" class="fas fa-rupee-sign"></i>
+            <span style="margin-right: 5px;">{{webinardetail.webinardate | date:'short'}}</span>
+            <!-- <i style="margin-right: 5px;"class="far fa-hourglass"></i> -->
 
-        <div class="p-2" style="padding: 10px;
-              text-align: center;    
-              margin-top: auto;
-              margin-bottom: auto;">
-          <span class="platformtag">Platform: <i class="fas fa-video"></i> {{onlineclassdata.platform}}</span>
+          </span>
+
         </div>
-        <div class="p-2" style="padding: 10px;
-                text-align: center;    
+        <div class="col-lg-2 col-md-1 col-sm-6">
+          <div style="text-align: center;margin-top: auto;margin-bottom: auto;">
+            <span class="pricetag F20" style="color: orange;"> <i
+                class="fas fa-rupee-sign"></i>{{webinardetail.webinarfee}}</span>
+          </div>
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-6">
+          <button type="button" class="regisbutn apply" value="edit" (click)="editWebinar(webinardetail.webinarid)">
+            <i class="far fa-hand-paper" style="margin-right: 5px;"></i>edit</button>
+        </div>
+
+      </div>
+      <div class="d-flex">
+        <!-- <div class="" style="text-align: center;    
+      margin-top: auto;
+      margin-bottom: auto;">
+          <span class="platformtag2" style="font-size: 14px !important;"><i class="fas fa-video"
+              style="color: orange;margin-right: 3px;"></i>
+            {{webinardetail.platform_title}}</span>
+        </div> -->
+
+        <div class="" style="    text-align: center;    
+      margin-top: auto;
+      margin-bottom: auto;">
+          <span class="platformtag2" style="font-size: 14px !important;"><i class="fas fa-chair"
+              style="color: orange;margin-right: 3px;"></i><span style="margin-left:2px ;" class="">
+            </span><span> {{webinardetail.availableseats}} out of {{webinardetail.maxparticipantscount}}
+              avail.</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex container">
+    <div class="col-lg-8 col-md-8">
+      <div class="card100">
+        <div style="padding:10px">
+          <div id="feedback">
+            <div class="card100-content">
+              <div class="col-md-12">
+                <div class="" style="text-align: left;    
                 margin-top: auto;
                 margin-bottom: auto;">
-          <span class="pricetag  free" *ngIf="onlineclassdata.fee==0">Fee: Free</span>
-          <span class="pricetag" *ngIf="onlineclassdata.fee!=0">Fee: {{onlineclassdata.fee}} <i
-              class="fas fa-rupee-sign"></i></span>
-        </div>
+                  <span class="platformtag2" style="font-size: 14px !important;"><i class="fas fa-video"
+                      style="color: orange;margin-right: 3px;"></i>
+                    {{webinardetail.platform_title}}</span>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="col-md-4">
+                  <span class="onlineSubHeading2" style="display: block;;margin-top: 10px;">URL</span>
+                  <span class="F12 LightBlack" style="display: block">
+                    {{webinardetail.webinarurl}}</span>
+                </div>
+                <div class="col-md-4">
+                  <span class="onlineSubHeading2" style="display: block;margin-top: 10px;">ID:
+                    <span class="F12 LightBlack" style="display: block">{{webinardetail.webinarmeetingid}}</span>
+                  </span>
+                </div>
+                <div class="col-md-4">
+                  <span class="onlineSubHeading2" style="display: block;margin-top: 10px;">Password:
+                    <span class="F12 LightBlack" style="display: block">{{webinardetail.webinarpasscode}}</span>
+                  </span>
+                </div>
+              </div>
 
 
-        <div class="p-2" style="padding: 10px;text-align: center;">
-          <input type="button" class="regisbutn" value="Register" (click)="openmodal()" />
-        </div>
-      </div>
-    </div>
-
-    <div class="d-flex" style="margin-bottom: 15px;">
-      <div class="p-2 mr-auto" style="display: block;padding-left: 0px !important;">
-        <span class="onlineTopicHeading">Master 'Reading Skills' for CBSE 10th Board</span>
-      </div>
-    </div>
-    <div class="card100">
-      <div class="card100-content">
 
 
-
-        <div class="d-flex" style="margin-top: 15px;">
-          <div class="flex-fill">
-            <span class="onlineSubHeading2" style="display: block;">when</span>
-            <span class="onlineSubDescription2">3-Jun 16:30 PM,30 Mins</span>
-          </div>
-          <div class="flex-fill">
-            <span class="onlineSubHeading2" style="display: block;">Participant</span>
-            <span class="onlineSubDescription2">15 out 15 available</span>
+            </div>
           </div>
         </div>
+      </div>
 
 
+      <div class="card100" style="padding:15px;background-color: transparent;">
+        <div class="d-flex" style="margin-top: 5px;line-height: 2.25;">
 
-        <div class="d-flex">
-          <div class="">
-            <div style="display: block;margin-top: 15px;
-        margin-bottom: 15px;
-        line-height: 2.25;">
-              <span class="onlineSubHeading2" style="display: block;">Course Detail</span>
-              <span class="onlineTopicDescription">
-
-                <ul style=" list-style-type: none;
-            margin: 0;
-            padding: 0;">
-                  <li style="font-size: 13px;">Understand Kirchhoff's Current Law in this Live session</li>
-                  <li style="font-size: 13px;">Learn to apply KCL and KVL in an Electrical Circuit</li>
-                  <li style="font-size: 13px;">Understand Kirchhoff's Voltage Law with some simple examples
-                  </li>
-                  <li style="font-size: 13px;">Clear your doubts with Subject Expert Hemant Sir</li>
-                </ul>
-              </span>
-            </div>
-            <div style="margin-top: 15px;">
-              <app-topic-badges-b></app-topic-badges-b>
-            </div>
-            <div style="margin-top: 15px;line-height: 2.25;">
-              <span class="onlineSubHeading2" style="display: block;">Tutor Details</span>
-              <div style="margin-top: 5px;">
-                <div class="scrollmenu">
-                  <div class="scrollitems">
-                    <div class="d-flex">
-                      <div class="p-1">
-                        <img src="../../../assets/Image/elonmusk1.jpg"
-                          style="width: 48px;height:48px;border-radius: 10px;">
-                      </div>
-                      <div class="p-1 flex-grow-1">
-                        <span class="onlineSubHeading" style="display: block;">Organiser</span>
-                        <span class="tutorname" style="display: block;">S.Bala Krishnan</span>
-                        <div style="display: block;">
-                          <span class="tutordescription">13 Yrs , M.A, B.Ed </span>
-                        </div>
-                      </div>
-                    </div>
+          <div style="margin-top: 5px;">
+            <div class="scrollmenu">
+              <div class="scrollitems">
+                <div class="d-flex">
+                  <div class="p-2">
+                    <img src="../../../assets/Image/employee1.jpg" style="width: 48px;height:48px;border-radius: 10px;">
                   </div>
-                  <div class="scrollitems">
-                    <div class="d-flex">
-                      <div class="p-1">
-                        <img src="../../../assets/Image/elonmusk1.jpg"
-                          style="width: 48px;height:48px;border-radius: 10px;">
-                      </div>
-                      <div class="p-1 flex-grow-1">
-                        <span class="onlineSubHeading" style="display: block;">Organiser</span>
-                        <span class="tutorname" style="display: block;">S.Bala Krishnan</span>
-                        <div style="display: block;">
-                          <span class="tutordescription">13 Yrs , M.A, B.Ed </span>
-                        </div>
-                      </div>
+                  <div class="p-2 flex-grow-1">
+                    <span class="tutorname" style="display: block;">S.Bala Krishnan</span>
+                    <div style="display: block;" style="line-height: 0.25;">
+                      <span class="tutordescription">
+                        <span>3.7 <i style="margin-left:3px;color: orange;" class="fas fa-star"></i></span>
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
+        </div>
+        <div class="d-flex">
+          <div style="margin-top: 14px;margin-bottom: 14px;line-height: 1.5;">
+            <span class="onlineTopicDescription">
+              {{webinardetail.description}}
+            </span>
+          </div>
 
+
+        </div>
+      </div>
+      <div class="d-flex" style="margin-top:15px;">
+        <img src="../../../assets/Image/web001.jpg" style="height: 120px;width: 160px;border-radius: 10px;"
+          class="img-fluid" alt="Responsive image">
+      </div>
+      <div style="margin-top: 15px;">
+        <app-topic-badges-b [topiclist]="webinardetail.topiclist"></app-topic-badges-b>
+      </div>
+
+      <div class="" style="background-color: transparent;margin-top: 15px;">
+        <!-- <div class="card100-heading">
+          <span class="F16 Bold LightBlack"><i class="far fa-comment-alt"
+              style="color: orange;margin-right: 10px"></i>Comments</span>
+          <input type="button" class="addcomment-btn" style="background: whitesmoke;border-radius: 10px;"
+            (click)="openModal('add-comment')" value="+ Add" />
+        </div> -->
+        <div class="card100-heading">
+          <span class="F16 Bold LightBlack"><i class="far fa-comment-alt"
+              style="color: orange;margin-right: 10px"></i>Comments</span>
+          <input type="button" class="addcomment-btn" style="background: whitesmoke;border-radius: 10px;"
+            (click)="showcomment()" value="+Add" />
+        </div>
+        <div class="d-flex" *ngIf="showCommentBox">
+          <input type="text" class="form-control" [(ngModel)]="commentdetail" />
+          <input type="button" class="addcomment-btn" style="background: whitesmoke;border-radius: 10px;"
+            (click)="addcomment()" value="add" />
+        </div>
+        <div class="card100-content">
+          <div *ngFor="let cmnts of webinarcomments" style="margin-bottom: 20px;border-bottom: 1px solid #f7f7f7;">
+            <span class="LightBlack2 F12 " style="display: block;">{{cmnts.username}} <span
+                class="White2 F8">{{cmnts.date}}</span></span>
+            <span class="LightBlack F12">{{cmnts.comment}}</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="" style="margin-top: 20px;">
-      <div class="d-flex">
-          <img src="../../../assets/Image/web001.jpg" class="img-fluid" alt="Responsive image">
+
+    <div class="col-lg-3 col-md-4">
+      <div>
+        <div class="card100" id="feedback">
+
+          <div class="card100-heading">
+            <h6 class="Black">Participant Request</h6>
+            <span class="F12 LightBlack">{{webinardetail.availableseats}} /
+              {{webinardetail.maxparticipantscount}}</span>
+          </div>
+          <div class="card100-content">
+            <app-participant-request-b [participantlist]="participantlist"></app-participant-request-b>
+            <!-- <app-participant-request-a [participantlist]="participantlist"></app-participant-request-a> -->
+          </div>
+        </div>
+
       </div>
-  </div>
+
+    </div>
   </div>
 </div>
+
+
+<modal-a id="edit-webinar">
+  <!-- Modal content -->
+  <div class="">
+    <div>
+      <h5 style="color: #2A8CB7;">Edit Webinar</h5>
+
+      <div style="display: block;">
+        <span class="onlineTopicHeading">Master 'Reading Skills' for CBSE 10th Board</span>
+      </div>
+      <div class="d-flex" style="margin-top: 14px;">
+        <div class="p-1" style="padding: 10px;
+      text-align: center;    
+      margin-top: auto;
+      margin-bottom: auto;
+      border:1px solid #e9e9e9;
+      margin-right: 5px;
+      ">
+          <span class="platformtag"><i class="fas fa-video"></i> platform</span>
+        </div>
+        <div class="p-1" style="padding: 10px;
+        text-align: center;    
+        margin-top: auto;
+        margin-bottom: auto;
+        border:1px solid #e9e9e9;
+        ">
+          <span class="pricetag"> <i class="fas fa-rupee-sign"></i>100 Rs</span>
+
+        </div>
+      </div>
+      <div class="d-flex flex-column" style="margin-top: 5px;">
+        <div class="p-1">
+          <span class="onlineSubHeading2" style="display: block;">when</span>
+          <span class="onlineSubDescription2">3-Jun 16:30 PM,30 Mins</span>
+        </div>
+        <div class="p-1">
+
+          <span class="onlineSubHeading2" style="display: block;">Participant</span>
+          <span class="onlineSubDescription2">15 out 15 available</span>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center" style="margin-top: 14px;">
+      <div style="margin-right: 5px;">
+        <input type="button" class="regisbutn-cancel-small" value="Cancel" (click)="closeModal('edit-webinar')" />
+
+      </div>
+      <div style="margin-left: 5px;">
+        <input type="button" class="regisbutn-small" (click)="savewebinar()" value="pay" />
+      </div>
+    </div>
+
+
+  </div>
+
+</modal-a>
+
+
+<modal-a id="add-comment">
+  <!-- Modal content -->
+  <div class="">
+    <div>
+      <h5 style="color: #2A8CB7;">Add Comment</h5>
+
+      <div style="display: block;">
+        <div class="form-group">
+          <label for="entercomment">Enter Comment:</label>
+          <input type="text" [(ngModel)]="commenttxt" class="form-control" id="entercomment">
+        </div>
+      </div>
+
+    </div>
+    <div class="d-flex justify-content-center" style="margin-top: 14px;">
+      <div style="margin-right: 5px;">
+        <input type="button" class="regisbutn-cancel-small" value="Cancel" (click)="closeModal('add-comment')" />
+
+      </div>
+      <div style="margin-left: 5px;">
+        <input type="button" class="regisbutn-small" (click)="addcomment()" value="Add" />
+      </div>
+    </div>
+
+
+  </div>
+
+</modal-a>

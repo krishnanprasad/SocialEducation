@@ -1,0 +1,70 @@
+loader-a {
+    display: none;
+}
+
+loader-a .loader-a {
+    position: fixed;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: auto;
+}
+
+loader-a .loader-a .loader-a-body {
+    padding: 20px;
+    background: #fff;
+    /* margin: 40px; */
+    width: 60%;
+    margin: auto;
+}
+
+.loader-a-body {
+    top: 0%;
+    position: absolute;
+    height: 100%;
+    /* right: 35%; */
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    margin: auto;
+    opacity: .75;
+}
+
+.loader-a-body span {
+    font-size: 80px;
+    /* opacity: .7; */
+    color: #fe0000;
+    /* right: 32%; */
+    -webkit-animation: bounce 0.3s ease;
+    /* text-align: center; */
+    margin: auto;
+    top: 35%;
+    position: absolute;
+    left: 30%;
+}
+/* ANIMATION */
+@-webkit-keyframes bounce {
+    100% {
+      top: -20px;
+      text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+        0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+        0 50px 25px rgba(0, 0, 0, 0.2);
+    }
+  }
+loader-a .loader-a-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.75;
+    z-index: 900;
+}
+
+.loader-a-open {
+    overflow: hidden;
+}

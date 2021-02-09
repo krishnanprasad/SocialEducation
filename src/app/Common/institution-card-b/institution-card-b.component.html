@@ -1,28 +1,38 @@
-<div class="" style="margin-bottom:5px;margin-top: 15px;padding: 5px;justify-content: center;">
+<!-- <div class="" style="margin-bottom:5px;margin-top: 14px;padding: 5px;justify-content: center;">
     <input style="border: none;
     border-radius: 0px;
     border-bottom: 1px solid #247ba0;
     width: 90%;
     margin-right: auto;
-    margin-left: auto;" type="text" placeholder="Search here..." class="form-control" [(ngModel)]="SearchFollowers" />
-</div>
+    margin-left: auto;" type="text" placeholder="Search here..." class="form-control" [(ngModel)]="SearchFriends">
+</div> -->
 <div class="row" style="margin-top: 20px;">
-    <div class="col-sm-12 col-md-4 col-lg-3"
-        *ngFor="let PremInstList of Institution | search:'InstitutionName':SearchFollowers" style="margin-bottom:5px">
-        <div class="boxshadowcard">
-            <div class="flex-column" style="text-align: center;">
-                <div class="p-2">
-                    <span style="display: block;">Topic Name</span>
-                    <span class="topicfollowercount"> Followers: {{PremInstList.UsersCount}}</span>
+    <div class="col-sm-12 col-md-6 col-lg-3" *ngFor="let orglist of organiserlist">
+        <div class="boxshadowcard" style="text-align: center;">
+            <div class="d-flex flex-column">
+                <div style="margin-top: 20px;margin: auto;margin-bottom: 10px;">
+                    <img src="../../../assets/Image/{{orglist.organiserimage}}"
+                        (click)="GoToOrganiser(orglist.organiserid)" style="height: 72px;width: 72px;"
+                        class="iconDetails" alt="name">
                 </div>
+                <div class="">
+                    <div style="margin-top: 10px;display: block;" (click)="GoToOrganiser(orglist.organiserid)">
+                        <span class="F14 Black">{{orglist.organisername}}</span>
+                    </div>
 
-                <div class="p-2">
-                    <button type="button" value="" class="unlike-small">
-                        <i class="far fa-thumbs-down"></i></button>
+                    <div style="display: block;">
+                        <span style="font-size: 10px;" class="F12 LightBlack">{{orglist.organiserfollowerscount}}
+                            Followers</span>
+                    </div>
                 </div>
-
+                <div style="display: block;margin-bottom: 10px;">
+                    <button type="button" class="unlike-small" (click)="followProfile(orglist.organiserid,1)">
+                        <i class="far fa-thumbs-up" style="margin-right: 3px;"></i>Subscribe</button>
+                </div>
             </div>
+
 
         </div>
     </div>
+
 </div>

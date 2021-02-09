@@ -1,0 +1,21 @@
+<div class="card100">
+  <div style="padding: 1.5rem;border-bottom: none;">
+    <span class="F16 Bold LightBlack"><i class="fas fa-exchange-alt"
+      style="color: #247ba0;;margin-right: 10px"></i>Transactions</span>
+  </div>
+  <div class="card100-body">
+    <!--<div class="col-md-8"> -->
+    <table class="table">
+      <tr *ngFor="let transdet of transactiondetails">     
+        <td>
+          <span class="F12 LightBlack" style="display: block;">{{transdet.user_name}}</span>
+        </td>
+        <td>
+          <span class="F12 LightBlack"><i class="fas fa-rupee-sign"></i> {{transdet.transaction_amount}}</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<!-- <app-ipost [data]="post"></app-ipost> -->
+<!-- </div> -->

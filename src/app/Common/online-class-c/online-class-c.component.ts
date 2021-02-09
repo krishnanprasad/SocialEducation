@@ -18,4 +18,7 @@ export class OnlineClassCComponent implements OnInit {
   GoToWebinarDetail(id) {
     this.router.navigate(['/User/WebinarDetails', id]);
   }
+  GoToOrganiser(val){
+    this.router.navigate(['/User/oragniser/' + val]);
+  }
 }

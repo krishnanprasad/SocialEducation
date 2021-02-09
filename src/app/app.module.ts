@@ -53,7 +53,7 @@ import { InstBadgesCardComponent } from './Institution/Card/inst-badges-card/ins
 import { PerformancePageComponent } from './Institution/Page/performance-page/performance-page.component';
 import { CreatePostComponent } from './Common/create-post/create-post.component';
 import { FollowPageComponent } from './Institution/Page/follow-page/follow-page.component';
-import { ForgotPasswordComponent } from './Common/Page/forgot-password/forgot-password.component';
+import { ForgotPasscodeComponent } from './Common/Page/forgot-passcode/forgot-passcode.component';
 import { SignUpComponent } from './Common/sign-up/sign-up.component';
 import { EditProfileComponent } from './User/EditProfile/edit-profile.component';
 import { ProjectComponent } from './Editable/Component/project/project.component';
@@ -93,6 +93,32 @@ import { OnlineClassEComponent } from './Common/online-class-e/online-class-e.co
 import { ModalAComponent } from './Modal/Modal-a/modal-a.component';
 import { SuggestInsBComponent } from './Common/suggest-ins-b/suggest-ins-b.component';
 import { InsWallAnalyticsAComponent } from './Common/ins-wall-analytics-a/ins-wall-analytics-a.component';
+import { PaymentPageAComponent } from './Common/payment-page-a/payment-page-a.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { WebinarSmallAComponent } from './Common/webinar-small-a/webinar-small-a.component';
+import { TopicBadgeCComponent } from './Common/topic-badge-c/topic-badge-c.component';
+import { FollowTutorAComponent } from './Common/follow-tutor-a/follow-tutor-a.component';
+import { WelcomeSearchComponent } from './Common/welcome-search/welcome-search.component';
+import { NavbarAComponent } from './navbar-a/navbar-a.component';
+import { LoginContentComponent } from './Common/login-content/login-content.component';
+import { OrganiserdetailsComponent } from './User/organiserdetails/organiserdetails.component';
+import { PartOrgProfileAComponent } from './Common/part-org-profile-a/part-org-profile-a.component';
+import { FeedbackBComponent } from './Common/feedback-b/feedback-b.component';
+import { WebinarpageNotloginComponent } from './webinarpage-notlogin/webinarpage-notlogin.component';
+import { PartPaymentRecieptAComponent } from './Common/part-payment-reciept-a/part-payment-reciept-a.component';
+import { InstTransactionSuccessAComponent } from './Common/inst-transaction-success-a/inst-transaction-success-a.component';
+import { ParticipantRequestBComponent } from './Common/participant-request-b/participant-request-b.component';
+import { ChangePasscodeComponent } from './Common/Page/change-passcode/change-passcode.component';
+import { UserRegistrationComponent } from './Common/Page/user-registration/user-registration.component';
+import { BannerBComponent } from './Institution/Card/banner-b/banner-b.component';
+import { LoaderAComponent } from './Modal/loader-a/loader-a.component';
+import { SuccessAComponent } from './Modal/success-a/success-a.component';
+import { EditPostComponent } from './Common/edit-post/edit-post.component';
+import { FilterArrayPipe } from './pipe/FilterArrayPipe.pipe';
+import { DateArrayPipe } from './pipe/DateArrayPipe.pipe';
+import { UploadImageComponent } from './Common/upload-image/upload-image.component';
+import { HomepagetwoComponent } from './test/homepagetwo/homepagetwo.component';
+import { InsAboutComponent } from './Page/ins-about/ins-about.component';
 
 @NgModule({
   declarations: [
@@ -125,6 +151,8 @@ import { InsWallAnalyticsAComponent } from './Common/ins-wall-analytics-a/ins-wa
     MessengerComponent,
     UserDetailAComponent,
     SearchFilterPipe,
+    FilterArrayPipe,
+    DateArrayPipe,
     InstitutionCardBComponent,
     NotificationComponent,
     NotificatioCardAComponent,
@@ -141,7 +169,7 @@ import { InsWallAnalyticsAComponent } from './Common/ins-wall-analytics-a/ins-wa
     PerformancePageComponent,
     CreatePostComponent,
     FollowPageComponent,
-    ForgotPasswordComponent,
+    ForgotPasscodeComponent,
     SignUpComponent,
     EditProfileComponent,
     ProjectComponent,
@@ -180,11 +208,35 @@ import { InsWallAnalyticsAComponent } from './Common/ins-wall-analytics-a/ins-wa
     ModalAComponent,
     SuggestInsBComponent,
     InsWallAnalyticsAComponent,
+    PaymentPageAComponent,
+    HomePageComponent,
+    WebinarSmallAComponent,
+    TopicBadgeCComponent,
+    FollowTutorAComponent,
+    WelcomeSearchComponent,
+    NavbarAComponent,
+    LoginContentComponent,
+    OrganiserdetailsComponent,
+    PartOrgProfileAComponent,
+    FeedbackBComponent,
+    WebinarpageNotloginComponent,
+    PartPaymentRecieptAComponent,
+    InstTransactionSuccessAComponent,
+    ParticipantRequestBComponent,
+    ChangePasscodeComponent,
+    UserRegistrationComponent,
+    BannerBComponent,
+    LoaderAComponent,
+    SuccessAComponent,
+    EditPostComponent,
+    UploadImageComponent,
+    HomepagetwoComponent,
+    InsAboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-   
+    FormsModule, 
     NgbModule,
     BrowserAnimationsModule,
     FormsModule,

@@ -1,30 +1,86 @@
-<div class="container hero-image">
-    <div class="hero-text">
-    <div>
-      <h4 style="font-size:30px">Smart Minds Coaching</h4>
-      </div>
-      <div>
-      <span>NEET | JEE</span>
-      </div>
-      <div class="d-flex justify-content-around">
-  
-        <div class="p-2 ml-auto ">
-            <span class="F16">1.2k Following</span>
+<div class="hero-image">
+  <div class="d-flex" style="position: inherit;
+  top: 10%;">
+    <div class="col-md-2" style="text-align: center;">
+      <img src="../../../../assets/Image/employee1.jpg" style="height: 148px;
+      width: 148px;
+      border-radius: 50%;" />
+    </div>
+    <div class="col-md-10">
+      <div class="hero-text">
+        <div style="display: block;">
+          <span style="font-size:30px">{{organiserProfileBasic.pagename}}</span>
         </div>
-      
-      </div>
-      <div class="d-flex justify-content-around  mb-3" style="margin-top:-10px;">
-          <div class="p-2">
-              <span class="F16">Location</span>
-          </div> 
-          <div class="p-2">
-              <span class="F16">| Email</span>
-          </div>  
-        <div class="p-2  ml-auto ">
-              <button style="color: #000000;
-              background-color: #ffc107;padding:5px 25px">Follow</button>
+        <div style="display: block;">
+          <span class="F14">{{organiserProfileBasic.contact}}</span>
+        </div>
+        <div style="display: block;">
+          <span class="F14">{{organiserProfileBasic.shortname}}</span>
+        </div>
+        <div>
+          <span class="F14">{{organiserProfileBasic.description}}</span>
+        </div>
+
+        <!-- <app-topic-badges-b></app-topic-badges-b> -->
+        <div class="d-flex justify-content-between" style="margin-top: 10px;">
+          <div class="">
+            <app-topic-badges-b></app-topic-badges-b>
           </div>
-        
+
+          <div class="ml-auto" *ngIf="organiserProfileBasic">
+            <button (click)="editProfile()" *ngIf="organiserProfileBasic.isadmin==1"
+              style="color: #3d3d3d;background-color: #c1c1c1;padding:5px 25px">edit</button>
+            <button (click)="followProfile(1)"
+              *ngIf="organiserProfileBasic.followid=='NA' && organiserProfileBasic.isadmin==0"
+              style="color: #3d3d3d;background-color: #c1c1c1;padding:5px 25px">follow</button>
+            <button (click)="followProfile(2)"
+              *ngIf="organiserProfileBasic.followid!='NA' && organiserProfileBasic.isadmin==0"
+              style="color: #3d3d3d;background-color: #c1c1c1;padding:5px 25px">Unfollow</button>
+          </div>
+
         </div>
+      </div>
     </div>
   </div>
+
+</div>
+
+<modal-a id="edit-organiser-profile">
+
+  <div class="d-flex justify-content-between">
+    <div class="p-2">
+      <h5>Edit Profile</h5>
+    </div>
+    <div class="p-2" style="z-index: 920;
+    position: sticky;float:right">
+      <input type="button" class="btn" (click)="closeModal('edit-organiser-profile')" value="x" />
+      <!-- <input type="button" class="btn" (click)="closeModal('login-modal')" value="x" /> -->
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="editname">Name:</label>
+    <input *ngIf="organiserProfileBasic" type="text" class="form-control" id="editname"
+      [(ngModel)]="editUserDetailsBasic.name">
+  </div>
+  <div class="form-group">
+    <label for="editphonenumber">phone:</label>
+    <input *ngIf="organiserProfileBasic" type="text" class="form-control" id="editphonenumber"
+      [(ngModel)]="editUserDetailsBasic.phone">
+  </div>
+  <div class="form-group">
+    <label for="editdescription">Description:</label>
+    <input *ngIf="organiserProfileBasic" type="text" class="form-control" id="editdescription"
+      [(ngModel)]="editUserDetailsBasic.description">
+  </div>
+  <div class="form-group">
+    <label for="editaddress">Address:</label>
+    <input *ngIf="organiserProfileBasic" type="text" class="form-control" id="editaddress"
+      [(ngModel)]="editUserDetailsBasic.address">
+  </div>
+  <div class="d-flex justify-content-end">
+    <input type="button" class="btn" (click)="saveprofile()" value="save" />
+  </div>
+
+
+
+</modal-a>

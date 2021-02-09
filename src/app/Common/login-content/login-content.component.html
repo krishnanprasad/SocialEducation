@@ -1,0 +1,38 @@
+<div>
+  <div class="SideDiv d-flex flex-column">
+    <span class="F22 Black" style="display: block;"><span class="PrimaryColor">Login !</span> Welcome Back! Hope you are
+      doing great!</span>
+    <span class="F16 LightBlack" style="display: block;margin-top: 15px;">so you are a?</span>
+    <div>
+      <div class="box ">
+        <label>
+          <input type="radio" name="chooseuser" value="1" [(ngModel)]="chooseuserval">
+          <span>Participant</span>
+        </label>
+        <label>
+          <input type="radio" name="chooseuser" value="2" [(ngModel)]="chooseuserval">
+          <span>Organiser</span>
+        </label>
+      </div>
+    </div>
+    <span *ngIf="errormessage_wrongpasscode" class="F12 PrimaryRed" style="display: block;font-style: italic;">Wrong Email or Passcode</span>
+    <div *ngIf="chooseuserval" style="margin-top: 10px;margin-bottom: 10px;">
+      <div class="form-group" style="display: block;" style="margin-bottom: 14px;">
+        <input type="text" class="form-control" [(ngModel)]="email" placeholder="Enter Email" required="required">
+      </div>
+      <div class="form-group" style="display: block;" style="margin-bottom: 14px;">
+        <input type="text" class="form-control" [(ngModel)]="passcode" placeholder="Enter Passcode" required="required">
+      </div>
+    </div>
+
+
+    <!-- <div *ngIf="chooseuserval=='part'" style="display: block;margin-bottom: 14px;">
+          <input type="button" value="Send OTP" (click)="send_OTP()" class="btn btn-signup">
+      </div> -->
+    <div class="d-flex flex-row-reverse" *ngIf="chooseuserval">
+      <div class="p-2"> <input type="button" value="Sign In" (click)="verifypasscode()" class="btn btn-signin"></div>
+      <div class="p-2"> <a style="font-size: 12px;" (click)="forgotpasscode()">Forgot passcode</a></div>
+      <div class="p-2"> <a style="font-size: 12px;" (click)="register()">Register</a></div>
+    </div>
+  </div>
+</div>

@@ -1,26 +1,27 @@
-<div class="ani-from-bottom" style="margin-top:20px;">
-
-
-    <app-ins-wall-analytics-a></app-ins-wall-analytics-a>
-
-    <!-- <app-banner></app-banner> -->
+<div class="ani-from-bottom" style="margin-top:20px;">    
+    <app-ins-wall-analytics-a></app-ins-wall-analytics-a>     
     <div class="row">
         <!-- <div class="col-md-3">
       <app-iwallprofilecount></app-iwallprofilecount></div> -->
-        <div class="col-md-9">
+        <div class="col-md-12 col-lg-6">
             <app-inst-post-list-b [walldata]="PostDetails"></app-inst-post-list-b>
+
             <!-- <app-profile></app-profile>
       <app-follow-page></app-follow-page>
       <app-notification></app-notification>
       <app-performance-page></app-performance-page> -->
 
         </div>
-        <div class="col-md-3">
+        <div class="col-md-6 col-lg-3">
+            <app-inst-transaction-success-a></app-inst-transaction-success-a>
+        </div>
+        <div class="col-md-6 col-lg-3">
             <app-inst-badges-card></app-inst-badges-card>
 
             <div class="card100" id="">
                 <div class="card100-heading">
-                    <span class="F16 Bold LightBlack"><i class="fas fa-star-half-alt" style="color: #247ba0;;margin-right: 10px"></i>Feedback</span>
+                    <span class="F16 Bold LightBlack"><i class="fas fa-star-half-alt"
+                            style="color: #247ba0;;margin-right: 10px"></i>Feedback</span>
                 </div>
                 <div class="card100-content">
                     <app-feedback-a></app-feedback-a>

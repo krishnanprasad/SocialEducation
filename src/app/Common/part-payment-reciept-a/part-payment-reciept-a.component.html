@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-6 col-lg-4" *ngFor="let payment of paymentlist">
+    <div class="card100">
+      <div class="card100-content">
+        <div class="" style="display: block;">
+          <span class="F10 badge badge-success">Status</span>
+        </div>
+        <span class="LightBlack F12" style="display: block;">Reciept Number:{{payment.transactionid}}</span>
+        <span class="White2 F10" style="display: block;font-style: italic;">Date & Time :
+          {{payment.transcationdate | date: 'dd/MM/yyyy hh:mm a'}}</span>
+        <div style="display: block;">
+          <span class="PrimaryColor"> <i style="margin-right: 5px;"
+              class="fas fa-rupee-sign"></i>{{payment.transactionamount}}</span>
+        </div>
+        <div class="" style="display: block;margin-top: 10px;">
+          <span class="LightBlack F14">{{payment.heading}}</span>
+        </div>
+
+        <div class="d-flex flex-row-reverse" style="margin-top: 10px;">
+          <div>
+            <span class="LightBlack F10" style="display: block;"><i class="fas fa-envelope"></i> Share Reciept</span>
+          </div>
+          <div style="margin-right: 10px;">
+            <span class="PrimaryColor F10" style="display: block;"><i class="far fa-flag"></i> Claim</span>
+          </div>
+          <div style="margin-right: 10px;">
+            <span class="LightBlack F10" style="display: block;"><i class="fas fa-download"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

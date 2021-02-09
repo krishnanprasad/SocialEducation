@@ -1,11 +1,10 @@
 <div #tableToMeasure style="max-width: 340px;">
-  <div style="border: 1px solid #e7e7e7;padding: 5px;" (click)="toggle()">
-    <span class="F12" style="display: block">{{Selected}} <i class="far fa-calendar-alt"
+  <div style="border: 1px solid #e7e7e7;padding: 0.55rem 0.75rem;" (click)="toggle()">
+    <span class="F12" style="display: block">{{Selected}} <i class="fas fa-chevron-down"
         style="float: right;"></i></span>
   </div>
   <div #dropdownvalues *ngIf="IsShow" class="dropdownvaldivclass" [style.width.px]="childwidth">
     <span *ngFor="let c of values | filter : searchText" class="dropdownvalclass" (click)="Select(c)">
       {{c.detail}}</span>
-
   </div>
 </div>

@@ -8,7 +8,7 @@ import { QuestionPaperComponent } from './Page/question-paper/question-paper.com
 import { LoginPageComponent } from './login-page/login-page.component';
 import { InsWallComponent } from './Institution/Page/ins-wall/ins-wall.component';
 import { CreatePostComponent } from './Common/create-post/create-post.component';
-import { ForgotPasswordComponent } from './Common/Page/forgot-password/forgot-password.component';
+import { ForgotPasscodeComponent } from './Common/Page/forgot-passcode/forgot-passcode.component';
 import { SignUpComponent } from './Common/sign-up/sign-up.component';
 import { EditProfileComponent } from './User/EditProfile/edit-profile.component';
 import { FollowComponent } from './User/follow/follow.component';
@@ -23,24 +23,109 @@ import { SearchPageComponent } from './User/search-page/search-page.component';
 import { OnlineClassDetailsBComponent } from './Common/online-class-details-b/online-class-details-b.component';
 import { InsNotificationComponent } from './Institution/Page/ins-notification/ins-notification.component';
 import { InsActivityPageComponent } from './Institution/Page/activity-page/activity-page.component';
-
+import { PaymentPageAComponent } from './Common/payment-page-a/payment-page-a.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { OrganiserdetailsComponent } from './User/organiserdetails/organiserdetails.component';
+import { WebinarpageNotloginComponent } from './webinarpage-notlogin/webinarpage-notlogin.component';
+import { UserRegistrationComponent } from './Common/Page/user-registration/user-registration.component';
+import { ChangePasscodeComponent } from './Common/Page/change-passcode/change-passcode.component';
+import { EditPostComponent } from './Common/edit-post/edit-post.component';
+import { UploadImageComponent } from './Common/upload-image/upload-image.component';
+import { HomepagetwoComponent } from './test/homepagetwo/homepagetwo.component';
+import { InsAboutComponent } from './Page/ins-about/ins-about.component';
 const routes: Routes = [
   {
+    path: 'Message',
+    component: MessengerComponent
+  },
+  {
+    path: 'ForgotPasscode',
+    component: ForgotPasscodeComponent
+  },
+  {
+    path: 'SignUp',
+    component: UserRegistrationComponent
+  },
+  {
+    path: 'ChangePasscode',
+    component: ChangePasscodeComponent
+  },
+  {
+    path: '',
+    component: HomePageComponent
+  },
+  {
+    path: 'testhome',
+    component: HomepagetwoComponent
+  },
+  {
     path: 'Login',
-    component : LoginPageComponent,
+    component: LoginPageComponent,
   },
   {
     path: 'Search',
     component: SearchPageComponent
   },
   {
+    path: 'Webinar/:id',
+    component: WebinarpageNotloginComponent
+  },
+  {
+    path: 'oragniser/:id',
+    component: OrganiserdetailsComponent
+  },
+  {
+    path: 'wall',
+    component: WallComponent,
+  },
+  {
+    path: 'activity',
+    component: ActivityComponent,
+  },
+  {
+    path: 'notification',
+    component: NotificationComponent
+  },
+  {
+    path: 'follow',
+    component: FollowComponent
+  },
+  {
+    path: ':pageid',
+    component: InstitutionMainPageComponent,   
+    children: [
+      {
+        path: '',
+        component: InsWallComponent
+      },
+      {
+        path: 'about',
+        component: InsAboutComponent
+      },      
+      {
+        path: 'activity',
+        component: InsActivityPageComponent
+      },
+      {
+        path: 'notification',
+        component: InsNotificationComponent
+      },
+      {
+        path: 'payment',
+        component: PaymentPageAComponent
+      },
+      {
+        path: 'create',
+        component: CreatePostComponent
+      }
+    ]
+  },
+  
+  {
     path: 'User',
     component: UserMainPageComponent,
     children: [
-      {
-        path: 'Wall',
-        component: WallComponent,
-      },
+
       {
         path: 'Follow',
         component: FollowComponent
@@ -57,10 +142,10 @@ const routes: Routes = [
         path: 'PostDetails',
         component: PostDetailsComponent
       },
-    
+
       {
-        path: 'WebinarDetails/:CourseID',
-        component: OnlineClassDetailsAComponent
+        path: 'WebinarDetails/:id',
+        component: OnlineClassDetailsBComponent
       },
       {
         path: 'Profile/EditProfile',
@@ -70,32 +155,24 @@ const routes: Routes = [
         path: 'Profile',
         component: ProfileComponent
       },
-     
-    ]
-  },
-  {
-    path: 'Message',
-    component: MessengerComponent
-  },
-  {
-    path: 'ForgotPassword',
-    component: ForgotPasswordComponent
-  },
-  {
-    path: 'SignUp',
-    component: SignUpComponent
-  },
-  {
-    path: 'Institution',
-    component:InstitutionMainPageComponent,
-    children: [
       {
-        path: 'Wall',
-        component: InsWallComponent
+        path: 'Payment/:id',
+        component: PaymentPageAComponent
       },
       {
-        path: '',
-        component: InsWallComponent
+        path: 'oragniser/:id',
+        component: OrganiserdetailsComponent
+      }
+    ]
+  },
+
+  {
+    path: 'Institution',
+    component: InstitutionMainPageComponent,
+    children: [
+      {
+        path: 'imageuploadtest',
+        component: UploadImageComponent
       },
       {
         path: 'Notification',
@@ -118,23 +195,27 @@ const routes: Routes = [
       }
       ,
       {
+        path: 'editPost/:id',
+        component: EditPostComponent
+      }
+      ,
+      {
         path: 'Detail',
         component: DetailsComponent
       },
       {
-        path: 'WebinarDetails/:CourseID',
-        component: OnlineClassDetailsBComponent
+        path: 'WebinarDetails/:id',
+        component: OnlineClassDetailsAComponent
       },
       {
         path: 'Follow',
         component: FollowPageComponent
       },
+      {
+        path: 'Payment',
+        component: PaymentPageAComponent
+      }
     ]
-  },
-  {
-    path: '',
-    redirectTo: 'Login',
-    pathMatch: 'full'
   }
 ];
 
@@ -142,4 +223,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

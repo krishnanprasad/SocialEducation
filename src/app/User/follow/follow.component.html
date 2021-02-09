@@ -1,5 +1,5 @@
 <div>
-  
+  <span>Follow Page</span>
   <!-- <div class="d-flex">
       <div class="p-2 flex-fill card boxshadowcard" style="text-align:center">
         <span class="F30"> 2011 </span>
@@ -19,11 +19,11 @@
   <div class="col-md-12">
     <div class="" style="padding:10px;">
       <div class="d-flex flex-row card100" style="">
-        <div class="p-2" style="text-align:center">
+        <!-- <div class="p-2" style="text-align:center">
           <button class="NavButtons" [ngClass]="value === 'Topics' ? 'Active' : ''" (click)="value = 'Topics'">
             Topics
           </button>
-        </div>
+        </div> -->
 
         <div class="p-2" style="text-align:center">
           <button class="NavButtons" [ngClass]="value === 'Followers' ? 'Active' : ''" (click)="value = 'Followers'">
@@ -33,11 +33,11 @@
       </div>
       <div class="card100" [ngSwitch]="value">
 
-        <div *ngSwitchCase="'Topics'">
+        <!-- <div *ngSwitchCase="'Topics'">
           <app-institution-card-b [dataInstitution]="UserPremiumInstitutionList"></app-institution-card-b>
-        </div>
-        <div *ngSwitchCase="'Followers'">
-          <app-user-detail-a [UserFriendList]="UserFriendList"></app-user-detail-a>
+        </div> -->
+        <div *ngSwitchCase="'Followers'" >
+          <app-institution-card-b *ngIf="followinglist" [datafollowinglist]="followinglist"></app-institution-card-b>
         </div>
         <div *ngSwitchDefault>Default Template</div>
       </div>

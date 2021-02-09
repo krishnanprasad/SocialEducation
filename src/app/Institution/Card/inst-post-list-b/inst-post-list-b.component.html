@@ -1,31 +1,26 @@
 <div class="card100">
     <div style="padding: 1.5rem;border-bottom: none;">
-        <h5 class="Black">Today Webinars</h5>
+        <span class="F16 Bold LightBlack"><i class="fas fa-video" style="color: #247ba0;;margin-right: 5px"></i>Today's
+        </span>
     </div>
     <div class="card100-body">
         <!--<div class="col-md-8"> -->
         <table class="table">
             <tr *ngFor="let post of PostDetails" (click)="GoToWebuinar(1)">
                 <td>
-                    <span class="F12" style="display: block;">06:45AM</span>
-                    <!-- <span class="F12">12-Aug-20</span> -->
+                    <span class="F10 PrimaryColor" style="display: block;font-style: italic;">06:45AM</span>
+                    <span class="F12 LightBlack" style="display: block;">WEB123689</span>
+                    <span class="F12 LightBlack" style="display: block;">Thermodynamics and Heat Explanation</span>
+                    <span class="F12 LightBlack"> <i class="fas fa-video"></i> Zoom</span>
                 </td>
                 <td>
-                    <span class="F12" style="display: block;">WEB123689</span>
-                    <span class="F12" style="display: block;">Thermodynamics and Heat Explanation</span>
-                    <span class="F12">DR.Rathore M.B.B.S</span>
+                    <span class="F12 LightBlack" style="display: block;"> <i class="far fa-smile"></i> 5/20</span>
                 </td>
                 <td>
-                    <span class="F12" style="display: block;">5 Open</span>
-                    <span class="F12">20 Seats</span>
+                    <span class="F12"><i class="fas fa-rupee-sign"></i> 4200</span>
+                    <span style="display: block;" class="F12 LightBlack"><i class="fas fa-rupee-sign"></i> 2 /
+                        unit</span>
                 </td>
-                <td>
-                    <span class="F12">Free</span>
-                </td>
-                <td>
-                    <span class="F12">Zoom</span>
-                </td>
-
             </tr>
         </table>
     </div>

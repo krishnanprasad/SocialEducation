@@ -1,0 +1,39 @@
+#reqpart {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+  .tooltip2 {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+   
+  }
+  
+  .tooltip2 .tooltiptext2 {
+    visibility: hidden;
+    width: 140px;
+    background-color: #b1b1b1;
+    color: #5c5c5c;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 25px;
+    left: 0px;
+  }
+  
+  .tooltip2:hover .tooltiptext2 {
+    visibility: visible;
+  }

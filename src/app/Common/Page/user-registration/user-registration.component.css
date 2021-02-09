@@ -1,0 +1,112 @@
+/* Radio Button CSS */
+
+.box {
+    /* text-align: center; */
+    float: left;
+    margin-top: 14px;
+}
+
+.box:before,
+.box:after {
+    color: blue;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(250px);
+}
+
+.box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    transform: skewX(-3deg);
+    pointer-events: none;
+}
+
+.box label {
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.box label input {
+    display: none;
+}
+
+.box label span {
+    position: relative;
+    /* display: inline-block; */
+    /* margin: 20px 10px; */
+    font-size: 14px;
+    padding: 10px 20px;
+    /* width: 150px; */
+    background: white;
+    border: 1px solid #5c5c5c;
+    color: #5c5c5c;
+    border-radius: 4px;
+    display: inline-flex;
+}
+
+.box label input:checked~span {
+    color: #fff;
+    border: 1px solid #227396;
+}
+
+.box label input:checked~span:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #227396;
+    z-index: -1;
+}
+
+.box label input:checked~span:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #227396;
+    z-index: -1;
+}
+
+.box label input:checked~span {
+    color: #227396;
+    border-color: #227396;
+    font-weight: bold;
+}
+
+.box label input:checked~span:before,
+.box label input:checked~span:after {
+    background: #227396;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .RegistrationCenter {
+      width:100%;
+      padding: 10px;
+      margin: auto;
+    }
+  }
+
+  @media (min-width: 600px) and (max-width: 1920px) {
+    .RegistrationCenter {
+        width:66%;
+        padding: 10px;
+        margin: auto;
+    }
+  }

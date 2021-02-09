@@ -1,0 +1,151 @@
+<div class="card100-a1">
+    <div class="d-flex">
+        <img *ngIf="webinardata.webinarimage" (click)="GoToWebinarDetail(webinardata.webinarid)"
+            src="../../../assets/Image/{{webinardata.webinarimage}}" class="img-fluid" style="min-height:160px;max-height: 160px;
+    min-width: 100%;" alt="Responsive image" />
+
+    </div>
+    <div class="card100-content-al" style="margin-top: 5px;">
+
+        <div class="d-flex flex-row" style="margin-top: 5px;">
+            <div class="">
+                <!-- <span class="" style="color: #0e987d;
+        font-size: 14px;font-weight: 600;padding: 5px;"> <i style="margin-right: 3px;" class="fas fa-rupee-sign"></i>
+                  <span *ngIf="webinardata.webinarfee==0">Free</span>
+                  <span *ngIf="webinardata.webinarfee!=0" style="margin-right: 5px;">
+                      Fee: {{webinardata.webinarfee}}</span>
+                   <i style="margin-right: 5px;"class="far fa-hourglass"></i>
+
+              </span> -->
+
+            </div>
+        </div>
+        <div class="d-flex flex-row" style="margin-top: 5px;">
+            <!-- <div class="">
+              <span class="platformtag3"><i class="fas fa-video" style="color: #9e9e9e;margin-right: 3px;"></i>
+                  {{webinardata.platform_title}}</span>
+          </div>
+
+          <div class="">
+
+              <span class="platformtag3"><i class="fas fa-chair" style="color: #9e9e9e;margin-right: 3px;"></i>
+                  {{webinardata.participantavailablecount}} </span>
+          </div>
+          <div>
+              <span class="platformtag3"><i class="far fa-hourglass"
+                      style="color: #9e9e9e;margin-right: 3px;"></i>{{webinardata.duration}}</span>
+          </div> -->
+            <span class="platformtag3" *ngIf="webinardata.webinar_type_title=='Live'">
+                <i class="far fa-hourglass" style="color: whitesmoke;margin-right: 3px;"></i>Live</span>
+            <span class="platformtag3" *ngIf="webinardata.webinar_type_title=='One-One'">
+                <i class="far fa-hourglass" style="color: whitesmoke;margin-right: 3px;"></i>One-One</span>
+            <span class="platformtag3" *ngIf="webinardata.webinar_type_title=='Recorded Video'">
+                <i class="far fa-hourglass" style="color: whitesmoke;margin-right: 3px;"></i>Recorded</span>
+
+        </div>
+
+        <div class="d-flex" style="padding-top: 5px;">
+            <div style="display: block;">
+                <span class="onlineTopicHeading" style="word-break: break-word !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 1 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;"
+                    (click)="GoToWebinarDetail(webinardata.webinarid)">{{webinardata.heading}}</span>
+            </div>
+        </div>
+        <div class="d-flex" style="padding-top: 5px;">
+            <div style="display: block;">
+                <span class="F10" style="word-break: break-word !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 1 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;"
+                    (click)="GoToWebinarDetail(webinardata.webinarid)">{{webinardata.description}}</span>
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class='d-flex' style="border:none;margin-top: 10px;margin-bottom: 10px;"
+                *ngFor="let orglist of webinardata.organiserlist">
+                <div>
+                    <img (click)="viewOrganiser(1)" src="../../assets/Image/{{orglist.orgimage}}" class="iconDetails"
+                        alt="" style=" border-radius: 50%;">
+                </div>
+                <div class="" style="margin-left: 5px;">
+                    <span class="tutorname2" (click)="viewOrganiser(1)" style="display: block;">{{orglist.name}}</span>
+                    <div style="display: block;" style="line-height: 0.25;">
+                        <span class="tutordescription">
+                            <span>{{orglist.star}} <i style="margin-left:2px;color: orange;"
+                                    class="fas fa-star"></i></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 5px;">
+            <span class="" style="color: #acacac;
+        font-size: 12px;font-weight: 400;padding: 5px;"> <i style="margin-right: 3px;" class="fas fa-rupee-sign"></i>
+                <span *ngIf="webinardata.webinarfee==0">Free</span>
+                <span *ngIf="webinardata.webinarfee!=0" style="margin-right: 5px;">
+                    {{webinardata.webinarfee}}</span>
+                <!-- <i style="margin-right: 5px;"class="far fa-hourglass"></i> -->
+
+            </span>
+            <!-- <app-topic-badges-b></app-topic-badges-b> -->
+        </div>
+
+        <div class="d-flex justify-content-end" style="margin-bottom: 5px;">
+            <!-- <div class="flex-fill">
+      <span>To Participate</span>      
+      <input type="button" value="more" class="regismore" style="width: 100%;" /> 
+    </div> -->
+
+
+
+            <div class="p-1" style="
+      text-align: center;    
+      margin-top: auto;
+      margin-bottom: auto;
+      top:5%;
+      right: 7%;
+      position: absolute;
+      ">
+
+                <span class="pricetag-opp"> <i class="far fa-clock"></i>{{webinardata.webinardate |
+                    date:'short'}} ,<span>{{webinardata.duration}}</span></span>
+            </div>
+
+            <!-- 
+      <div class="p-1" style="padding: 10px;text-align: center;display: inline-block;">
+        <button type="button" class="regisbutn apply" value="Apply" (click)="openmodal()"> <i
+            class="far fa-hand-paper"></i></button>
+      </div> -->
+        </div>
+        <div class="d-flex">
+            <div>
+                <div class="scrollmenu">
+                    <div class="scrollitems">
+                        <div class="d-flex" (click)="GoToPage(webinardata.organiserid)">
+                            <div class="p-2">
+                                <img src="../../../assets/Image/{{webinardata.organiserimage}}"
+                                    style="width: 32px;height:32px;border-radius: 50%;">
+                            </div>
+                            <div class="p-2 flex-grow-1">
+                                <span class="tutorname" style="display: block;">{{webinardata.organisername}}</span>
+                                <div style="display: block;" style="line-height: 0.25;">
+                                    <span class="tutordescription">
+                                        <span>3.7 <i style="margin-left:3px;color: orange;"
+                                                class="fas fa-star"></i></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

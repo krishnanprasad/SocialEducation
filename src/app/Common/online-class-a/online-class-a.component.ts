@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalAService } from 'src/app/Modal/Modal-a/modal-a.service';
+import { LoginService } from 'src/app/Service/login.service';
 
 @Component({
   selector: 'app-online-class-a',
@@ -7,26 +9,42 @@ import { Router } from '@angular/router';
   styleUrls: ['./online-class-a.component.css']
 })
 export class OnlineClassAComponent implements OnInit {
-  modal: string = "modal modal-close";
-  isOpen: boolean = false;
+  webinardata: any;
+
+  constructor(private router: Router, private modalService: ModalAService, private loginservice: LoginService) { }
   @Input() onlineclassdata;
-  public QuesPapLink;
-  constructor(private router: Router) { }
-
-  ngOnInit() {
-    this.modal = "modal modal-close";
-    this.QuesPapLink = this.onlineclassdata;
+  ngOnInit() {   
+    this.webinardata = this.onlineclassdata;
+  debugger
   }
+
   GoToWebinarDetail(id) {
-    this.router.navigate(['/User/WebinarDetails', id]);
+
+    if (this.loginservice.IsLoggedIn) {
+      this.router.navigate(['/User/WebinarDetails', id]);
+    }
+    else {
+      this.router.navigate(['/Webinar', id]);
+
+    }
+  }
+  viewOrganiser(val) {
+    //  if (this.loginservice.IsLoggedIn) {
+    this.router.navigate(['/O', val]);
+    // }
+    //  else {
+    //   this.openModal('login-modal')
+    // }
   }
 
-  closemodal() {
-    this.modal = "modal modal-close";
-    this.isOpen = false;
+
+
+
+  openModal(id: string) {
+    this.modalService.open(id);
   }
-  openmodal() {
-    this.isOpen = true;
-    this.modal = "modal modal-open";
+
+  closeModal(id: string) {
+    this.modalService.close(id);
   }
 }

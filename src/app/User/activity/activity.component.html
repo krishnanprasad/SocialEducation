@@ -7,22 +7,23 @@
         <div class="row" style="margin-bottom: 5px;">
             <div class="col-md-3">
                 <div class="boxshadowcard2" style="background-color: white;">
-                    <span class="ResultSpan">24</span>
-                    <span class="F12 LightBlack" style="display: block;">Attended Web.</span>
+                    <span class="ResultSpan">{{activitydata[0].activity_total_count}}</span>
+                    <span class="F12 LightBlack" style="display: block;">Attended Webinars</span>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="boxshadowcard2" style="background-color: white;">
-                    <span class="ResultSpan">3</span>
-                    <span class="F12 LightBlack" style="display: block;">Scheduled Web.</span>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="boxshadowcard2" style="background-color: white;">
-                    <span class="ResultSpan">12</span>
+                    <span class="ResultSpan">{{activitydata[0].count_registration_status}}</span>
                     <span class="F12 LightBlack" style="display: block;">Pending Request</span>
                 </div>
             </div>
+            <div class="col-md-3">
+                <div class="boxshadowcard2" style="background-color: white;">
+                    <span class="ResultSpan">{{activitydata[1].count_registration_status}}</span>
+                    <span class="F12 LightBlack" style="display: block;">Confirmed Webinars</span>
+                </div>
+            </div>
+
             <!-- <div class="col-md-3">
               <div class="boxshadowcard2">
                 <span class="ResultSpan">1300</span>
@@ -35,11 +36,11 @@
 
     </div>
     <div class="row">
-        <div class="col-md-8">
-            <app-online-class-c *ngFor="let data of PostDetails" [onlineclassdata]="data"></app-online-class-c>
+        <div class="col-md-4 col-lg-3" *ngFor="let data of activityList">
+            <app-online-class-a [onlineclassdata]="data"></app-online-class-a>
             <!-- <app-logs-card-a [UserLogsList]="UserLogsList"></app-logs-card-a> -->
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
             <div id="scheduleofwebinar">
                 <div class="card100">
                     <div class="card100-heading">
@@ -51,8 +52,8 @@
                 </div>
 
             </div>
-            <!-- <app-logs-card-a [UserLogsList]="UserLogsList"></app-logs-card-a> -->
-        </div>
+            <app-logs-card-a [UserLogsList]="UserLogsList"></app-logs-card-a> 
+        </div> -->
     </div>
 
 

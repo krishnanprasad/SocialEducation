@@ -16,7 +16,8 @@ export class DropdownAComponent implements OnInit {
   childwidth: number;
   constructor(private renderer: Renderer2) {
     this.renderer.listen('window', 'click', (e: Event) => {
-     
+      var a =e.target;
+     if(this.dropdownvalues!=undefined)
       /**
        * Only run when toggleButton is not clicked
        * If we don't check this, all clicks (even on the toggle button) gets into this

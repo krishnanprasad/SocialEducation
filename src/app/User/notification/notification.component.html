@@ -1,6 +1,4 @@
-
-    
-   <!-- <div class="d-flex">
+<!-- <div class="d-flex">
          <div class="p-2 flex-fill" style="text-align:center">
             <button class="NavButtons" [ngClass]="value === 'Request' ? 'Active' : ''" (click)="value = 'Request'">
         Request
@@ -22,19 +20,45 @@
          </div> 
     </div>-->
 
-    <!-- Tab panes -->
-    <!-- <div [ngSwitch]="value">
+<!-- Tab panes -->
+<!-- <div [ngSwitch]="value">
         <div *ngSwitchCase="'Notifications'">
             <app-notificatio-card-a [UserNotificationList]="UserNotificationList"></app-notificatio-card-a>
         </div>
         
     </div> -->
-    <div class="card100">
-      <div class="card100-heading">
-        <h5 class="LightBlack">Notifications</h5>
+
+<div class="col-md-12">
+  <div class="" style="padding:10px;">
+    <div class="d-flex flex-row card100" style="">
+      <div class="p-2" style="text-align:center">
+        <button class="NavButtons" [ngClass]="value === 'notfication' ? 'Active' : ''" (click)="value = 'notfication'">
+          <i class="far fa-bell LightBlack"></i> notification
+        </button>
       </div>
-      <div class="card100-content">
-        <app-notificatio-card-a [UserNotificationList]="UserNotificationList"></app-notificatio-card-a>
+
+      <div class="p-2" style="text-align:center">
+        <button class="NavButtons" [ngClass]="value === 'payment' ? 'Active' : ''" (click)="value = 'payment'">
+          <i class="fas fa-file-invoice LightBlack"></i> payments
+        </button>
       </div>
     </div>
-   
+    <div [ngSwitch]="value">
+
+      <div *ngSwitchCase="'notfication'">
+        <div class="card100">
+          <div class="card100-heading">
+            <h5 class="LightBlack">Notifications</h5>
+          </div>
+          <div class="card100-content">
+            <app-notificatio-card-a [UserNotificationList]="UserNotificationList"></app-notificatio-card-a>
+          </div>
+        </div>
+      </div>
+      <div *ngSwitchCase="'payment'">
+        <app-part-payment-reciept-a [paymentlistdata]="paymentlist"></app-part-payment-reciept-a>
+      </div>
+      <div *ngSwitchDefault>Default Template</div>
+    </div>
+  </div>
+</div>

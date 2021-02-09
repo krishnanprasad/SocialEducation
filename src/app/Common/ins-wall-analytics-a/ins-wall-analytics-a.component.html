@@ -1,20 +1,31 @@
+<h6 class="LightBlack" style="margin-bottom: 10px;">Last 15 Days</h6>
 <div class="row" style="margin-bottom: 5px;">
-  <div class="col-md-3">
+  <div class="col-md-6 col-lg-3">
     <div class="boxshadowcard2" style="background-color: white;">
-      <span class="ResultSpan">24</span>
-      <span class="F12 LightBlack" style="display: block;">Followers</span>
+      <span class="ResultSpan">{{dashboarddata.followercount}}</span>
+      <span class="F12 LightBlack" style="display: block;"><i class="fas fa-users" style="margin-right: 2px;"></i>
+        Followers</span>
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-6 col-lg-3">
     <div class="boxshadowcard2" style="background-color: white;">
-      <span class="ResultSpan">3</span>
-      <span class="F12 LightBlack" style="display: block;">Webinars</span>
+      <span class="ResultSpan">{{dashboarddata.webinarcount}}</span>
+      <span class="F12 LightBlack" style="display: block;"><i class="fas fa-video" style="margin-right: 2px;"></i>
+        Webinars</span>
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-6 col-lg-3">
     <div class="boxshadowcard2" style="background-color: white;">
-      <span class="ResultSpan">12</span>
-      <span class="F12 LightBlack" style="display: block;">Request</span>
+      <span class="ResultSpan"> {{dashboarddata.earned}}</span>
+      <span class="F12 LightBlack" style="display: block;"><i class="fas fa-rupee-sign" style="margin-right: 2px;"></i>
+        Earned</span>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-3">
+    <div class="boxshadowcard2" style="background-color: white;">
+      <span class="ResultSpan">{{dashboarddata.totalviews}}</span>
+      <span class="F12 LightBlack" style="display: block;"><i class="fas fa-eye"
+          style="margin-right: 2px;"></i>Participants</span>
     </div>
   </div>
   <!-- <div class="col-md-3">

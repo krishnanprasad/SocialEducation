@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-6 col-lg-4" style="" *ngFor="let rat of rating">
+      <div class="card100">
+          <div class="row" style="margin-left:0px;margin-right: 0px;">
+              <div class="card100-content">
+                  <span class="topic-head-small-2 wordbreak" style="word-break: break-word !important;
+              display: -webkit-box !important;
+              -webkit-line-clamp: 1 !important;
+              -webkit-box-orient: vertical !important;
+              overflow: hidden !important;
+              text-overflow: ellipsis !important; ">{{rat.web_name}}</span>
+                  <span class="topic-desc-small-1" style="display:block"> {{rat.web_rating}} <i
+                          class="far fa-star"></i></span>
+                  <span class="topic-desc-small-1" style="display:block;font-style: italic;"> -
+                      {{rat.user_name}}</span>
+              </div>
+
+          </div>
+
+      </div>
+
+  </div>
+</div>

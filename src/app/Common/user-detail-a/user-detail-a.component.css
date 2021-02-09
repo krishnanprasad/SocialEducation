@@ -5,7 +5,7 @@
 }
 
 .postfrom {
-    font-size: 15px;
+    font-size: 14px;
     color: #404040;
     font-weight: 400;
     font-family: PostMessageFont1;
@@ -53,7 +53,7 @@
     color: #bbb;
     width: 190px;
     display: block;
-    font-size: 11px;
+    font-size: 10px;
     padding: 5px 10px;
     border-radius: 3px;
     text-align: center;

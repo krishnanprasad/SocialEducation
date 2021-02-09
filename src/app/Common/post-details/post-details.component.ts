@@ -50,6 +50,6 @@ export class PostDetailsComponent implements OnInit {
   constructor(private _QPData: SingleQuestionPaperDataService) {}
 
   ngOnInit() {
-    this.PostDetails = this._QPData.getQuestionPaper();
+   // this.PostDetails = this._QPData.getQuestionPaper();
   }
 }

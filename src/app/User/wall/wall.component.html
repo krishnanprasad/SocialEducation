@@ -1,81 +1,57 @@
 <div class="">
-  <div class="row">
+  <div class="d-flex">
     <!-- <div class="col-md-3">
       <app-wall-profile [Editable]="Editable" [UserWallData]="UserWallData"></app-wall-profile>
 
        <app-institution-card-a [dataType]="'Premium'" [dataInstitution]="UserPremiumInstitutionList"></app-institution-card-a>
       <app-institution-card-a [dataType]="'Non Premium'" [dataInstitution]="UserNonPremiumInstitutionList"></app-institution-card-a> 
     </div> -->
-    <div class="col-md-8 col-lg-9" style="padding:5px;">
-      <!-- <div class="d-flex" style="padding: 0px 0px 30px 0px;">
-        <div class="p-2 flex-fill">
-          <div
-            style="margin: auto;text-align: center"
-            (click)="ChangeFilter('Wall')"
-            class="circletag "
-            id="nay"
-            [ngClass]="CurrentComponent === 'Wall' ? 'Active' : ''"
-          >
-            <img src="assets/Image/Icons/Wall.png" />
-            <span class="IconSpan" (click)="ChangeFilter('Wall')" [ngClass]="CurrentComponent === 'Wall' ? 'Active' : ''">Wall!</span>
-          </div>
-        </div>
-        <div class="p-2 flex-fill">
-          <div
-            style="margin: auto;text-align: center"
-            (click)="ChangeFilter('Profile')"
-            class="circletag"
-            id="nay"
-            [ngClass]="CurrentComponent === 'Profile' ? 'Active' : ''"
-          >
-            <img src="assets/Image/Icons/Profile.png" />
-            <span class="IconSpan" (click)="ChangeFilter('Profile')" [ngClass]="CurrentComponent === 'Profile' ? 'Active' : ''">Profile!</span>
-          </div>
-        </div>
-        <div class="p-2 flex-fill">
-          <div
-            style="margin: auto;text-align: center"
-            (click)="ChangeFilter('Follow')"
-            class="circletag"
-            id="nay"
-            [ngClass]="CurrentComponent === 'Follow' ? 'Active' : ''"
-          >
-            <img src="assets/Image/Icons/Follow.png" />
-            <span class="IconSpan" (click)="ChangeFilter('Follow')"   [ngClass]="CurrentComponent === 'Follow' ? 'Active' : ''">Institutions!</span>
-          </div>
-        </div>
-        <div class="p-2 flex-fill">
-          <div
-            style="margin: auto;text-align: center"
-            (click)="ChangeFilter('Notification')"
-            class="circletag"
-            id="nay"
-            [ngClass]="CurrentComponent === 'Notification' ? 'Active' : ''"
-          >
-            <img src="assets/Image/Icons/Notification.png" />
-            <span class="IconSpan" (click)="ChangeFilter('Notification')" [ngClass]="CurrentComponent === 'Notification' ? 'Active' : ''">Notification!</span>
-          </div>
-        </div>
-      </div> -->
-      <!--
-        <button (click)="ChangeFilter('Profile')">Profile!</button>
-        <button (click)="ChangeFilter('Follow')">Follow!</button>
-        <button (click)="ChangeFilter('Notification')">Notification!</button>
-      -->
-      <!-- <wall-modules-navigation-bar></wall-modules-navigation-bar> -->
-      <!-- <div *ngIf="FilterPage === 'Wall'"> -->
-
-      <!-- <app-wall-post [walldata]="PostDetails"></app-wall-post> -->
-
-      <div class="row" style="padding-right: 1px !important;
+    <div class="col-lg-3" style="margin-top: 10px;">
+      <div style="padding: 15px;background-color: lightgray;margin-bottom: 10px;"
+      (click)="GoToOrganiser(pagelist.pageid)"
+      *ngFor="let pagelist of UserPageList">
+        <span>{{pagelist.pagename}}</span>
+        <span style="float: right;">1</span>
+      </div>
+    </div>
+    <div class="col-md-9 col-lg-9" style="padding:5px;">
+      <div>
+        <h6>Your Webinars</h6>
+        <div class="row" style="padding-right: 1px !important;
         padding-left: 1px !important;">
-        <!-- <app-post [data]="members"></app-post> -->
-        <!-- <app-online-class-a [onlineclassdata]="members"></app-online-class-a> -->
-        <div class="col-lg-6 col-md-12" *ngFor="let data of PostDetails">
-          <app-online-class-d [onlineclassdata]="data"></app-online-class-d>
+          <!-- <app-post [data]="members"></app-post> -->
+          <!-- <app-online-class-a [onlineclassdata]="members"></app-online-class-a> -->
+          <div class="col-lg-4 col-md-4" *ngFor="let data of webinarlist">
+            <app-webinar-small-a [onlineclassdata]="data"></app-webinar-small-a>
+          </div>
         </div>
       </div>
 
+
+      <div style="margin-top: 15px;">
+        <h6>Following</h6>
+        <div class="row" style="padding-right: 1px !important;
+        padding-left: 1px !important;">
+          <!-- <app-post [data]="members"></app-post> -->
+          <!-- <app-online-class-a [onlineclassdata]="members"></app-online-class-a> -->
+          <div class="col-lg-3 col-md-4" *ngFor="let data of webinarlist">
+            <app-webinar-small-a [onlineclassdata]="data"></app-webinar-small-a>
+          </div>
+        </div>
+      </div>
+
+
+      <div style="margin-top: 15px;">
+        <h6>Topics</h6>
+        <div class="row" style="padding-right: 1px !important;
+        padding-left: 1px !important;">
+          <!-- <app-post [data]="members"></app-post> -->
+          <!-- <app-online-class-a [onlineclassdata]="members"></app-online-class-a> -->
+          <div class="col-lg-3 col-md-4" *ngFor="let data of webinarlist">
+            <app-webinar-small-a [onlineclassdata]="data"></app-webinar-small-a>
+          </div>
+        </div>
+      </div>
       <!-- </div> -->
 
       <!-- <div *ngIf="FilterPage === 'Profile'"> -->
@@ -89,9 +65,14 @@
       <!-- <app-notification></app-notification> -->
       <!-- </div> -->
     </div>
-    <div class="col-md-4 col-lg-3">
-
-      <app-wall-suggestion></app-wall-suggestion>
-    </div>
+    <!--<div class="col-md-3 col-lg-2" style="    padding-right: 0px !important;
+    position: fixed;
+    background-color: white;
+    right: 0;
+    height: 100%;">
+      <h6>Currently happening</h6>
+      <span style="display: block;">Name</span>
+       <app-wall-suggestion></app-wall-suggestion>
+    </div>-->
   </div>
 </div>

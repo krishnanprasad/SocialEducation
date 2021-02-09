@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-lg-4 col-md-6" *ngFor="let top of topiclist">
+    <div class="card100">
+      <div class="">
+        <div class="d-flex">
+          <div class="p-1 flex-grow-1">
+            <div class='container2' style="border:none">           
+              <div style='margin-left:20px;'>
+                <span class="postfrom">{{top}} </span>
+                <div style="float:right;"></div>
+                <div style="font-size:.6em">
+                  <span class="posttime">600 followers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-1" style="padding: 2px;text-align: center;margin-top: auto;margin-bottom: auto;">
+            <button type="button" class="apply2" value="" (click)="openmodal()"> <i
+                class="far fa-thumbs-up"></i><span>like</span> </button>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+</div>

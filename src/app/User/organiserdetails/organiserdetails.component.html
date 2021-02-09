@@ -1,0 +1,35 @@
+<div class="container" style="margin-top: 65px;">
+  <!-- <app-part-org-profile-a></app-part-org-profile-a> -->
+  <app-banner></app-banner>
+  <div class="col-md-12">
+    <div class="" style="padding:10px;">
+      <div class="d-flex flex-row card100">
+        <div class="p-2" style="text-align:center">
+          <button class="NavButtons" [ngClass]="value === 'Post' ? 'Active' : ''" (click)="value = 'Post'">
+            Post
+          </button>
+        </div>
+
+        <div class="p-2" style="text-align:center">
+          <button class="NavButtons" [ngClass]="value === 'Review' ? 'Active' : ''" (click)="value = 'Review'">
+            Review
+          </button>
+        </div>
+      </div>
+      <div class="" [ngSwitch]="value">
+
+        <div *ngSwitchCase="'Post'">
+          <div class="row">
+            <div class="col-lg-4 col-md-12" *ngFor="let data of PostDetails">
+              <app-webinar-small-a [onlineclassdata]="data"></app-webinar-small-a>
+            </div>
+          </div>
+        </div>
+        <div *ngSwitchCase="'Review'">
+          <app-feedback-b></app-feedback-b>
+        </div>
+        <div *ngSwitchDefault>Default Template</div>
+      </div>
+    </div>
+  </div>
+</div>

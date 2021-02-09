@@ -72,7 +72,7 @@ export class QuestionPaperComponent implements OnInit {
 
   ngOnInit() {
     this.qpid = this.route.snapshot.params['QuestionPaperId'];
-    this.QuesPap = this._SingQP.getQuestionPaper();
+    //this.QuesPap = this._SingQP.getQuestionPaper();
     // this.QuesPap=this.QuesPapFinal.filter(e=>e.QuestionPaperId===qpid);
     this.Question = this.QuesPap.QuestionPaper.Question[this.QuestionShowing];
   }

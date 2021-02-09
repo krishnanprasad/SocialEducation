@@ -1,6 +1,67 @@
 <!--<div class="col-md-8"> -->
-<div class="d-flex" style="margin-bottom: 5px;" *ngFor="let top of topiclist">
-    <span class="LightBlack F14" style="padding:2px 0px;">{{top}}</span>
-</div>
+
 <!-- <app-ipost [data]="post"></app-ipost> -->
 <!-- </div> -->
+
+<div class="card100" id="">
+    <div class="card100-heading">
+        <span class="F16 Bold LightBlack"><i class="fas fa-hashtag" style="color: #247ba0;;margin-right: 10px"></i>Your
+            topics <input type="button" class="btn" (click)="openModal('add-profile-topic')" value="edit" /></span>
+    </div>
+    <div class="card100-content" *ngIf="topiclist">
+        <div class="d-flex justify-content-between" style="margin-bottom: 5px;" *ngFor="let topic of topiclist">
+            <span class="LightBlack F14" style="padding:2px 0px;">{{topic}}</span>
+            <!-- <span class="White2 F10"><i (click)="removetopic(topic)" class="far fa-trash-alt"></i></span> -->
+        </div>
+    </div>
+
+</div>
+
+<modal-a id="add-profile-topic">
+
+    <div class="d-flex justify-content-between">
+        <div class="p-2">
+            <h5>Edit Topics</h5>
+        </div>
+        <div class="p-2" style="z-index: 920;
+      position: sticky;float:right">
+            <input type="button" class="btn" (click)="closeModal('add-profile-topic')" value="x" />
+            <!-- <input type="button" class="btn" (click)="closeModal('login-modal')" value="x" /> -->
+        </div>
+    </div>
+
+
+    <div class="col-md-10">
+        <div style="display: flex;">
+            <input type="text" class="form-control" [(ngModel)]="searchinput" placeholder="Search.." style="border: none;
+                border-radius: 20px;
+                box-shadow: 0px 1px 20px 1px #eeeeee;
+                height: 50px;" />
+        </div>
+        <div>
+            <div *ngIf="searchinput?.length>2"
+                style="background-color: #fafafa;top: 38px;width: 92%;position: absolute;z-index: 10;">
+                <div class="d-flex" *ngFor="let c of searchtopics " style="padding: 5px 10px;
+                border-bottom: 5px;margin-top: 10px;border-bottom: 1px solid #e5e5e5;">
+                    <div class="flex-grow-1">
+                        <span class="onlineTopicHeading" style="display: block;" (click)="addtopic(c)">
+                            {{c}}</span>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="p-4">
+        <div class="" style="margin-bottom: 5px;">
+            <span class="LightBlack F14" *ngFor="let topic of topiclist" style="padding:2px 0px;">{{topic}} <span
+                    class="White2 F10"><i (click)="removetopic(topic)" class="far fa-trash-alt"></i></span></span>
+
+        </div>
+    </div>
+    <div class="d-flex flex-row-reverse">
+        <input type="button" class="btn btn-success" (click)="savetopic()" value="save" />
+    </div>
+</modal-a>

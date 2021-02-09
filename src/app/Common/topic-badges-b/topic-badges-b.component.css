@@ -42,8 +42,7 @@ a.AddMemmber {
 }
 
 .topiclist {
-    background-color: #f7f7f7;
-    padding: 5px 15px;
-    color: #5c5c5c;
-    border-radius: 15px;
+    background-color: #d8d8d8;
+    padding: 4px 10px;
+    color: #525252;   
 }

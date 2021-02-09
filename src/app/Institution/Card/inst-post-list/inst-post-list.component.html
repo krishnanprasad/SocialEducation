@@ -5,28 +5,39 @@
     <div class="card100-content">
       
         <table class="table">
-            <tr *ngFor="let post of PostDetails" (click)="valueChanged()">
-                <td>
-                    <span class="F12" style="display: block;">06:45AM</span>
-                    <span class="F12">12-Aug-20</span>
-                </td>
-                <td>
-                    <span class="F12" style="display: block;">WEB123689</span>
-                    <span class="F12" style="display: block;">Thermodynamics and Heat Explanation</span>
+            <tr *ngFor="let webdata of webinardata" >
+              
+                <td  class="" style="width: 50%;">
+                    <span class="F12" style="display: block;" (click)="gotoWebinar(webdata.webinarid)">{{webdata.webinarid}}</span>
+                    <span class="F12">{{webdata.webinardate | date:'short'}}</span>
+                    <span class="F12" style="display: block;">{{webdata.heading}}</span>
                     <span class="F12">DR.Rathore M.B.B.S</span>
                 </td>
-                <td>
-                    <span class="F12" style="display: block;">5 Open</span>
-                    <span class="F12">20 Seats</span>
+                <td  class="w-20" style="width: 10%;">
+                    <span class="F12" style="display: block;">5/{{webdata.maxparticipantscount}}</span>                   
                 </td>
-                <td>
-                    <span class="F12">Free</span>
+                <td  class="col-md-2" style="width: 10%;">
+                    <span class="" style="color: #0e987d;
+                    background-color: #a0dacf;border-radius: 10px;font-size: 9px;padding: 5px;"> <i style="margin-right: 3px;"
+                        class="fas fa-rupee-sign"></i>
+                      <span *ngIf="webinardata.webinarfee==0">Free</span>
+                      <span *ngIf="webinardata.webinarfee!=0" style="margin-right: 5px;">{{webdata.webinarfee}}</span>
+                      <!-- <i style="margin-right: 5px;"class="far fa-hourglass"></i> -->
+            
+                    </span>
                 </td>
-                <td>
-                    <span class="F12">Zoom</span>
+                <td  class="w-20" style="width: 20%;">
+                    <div class="" style="text-align: center;    
+                    margin-top: auto;
+                    margin-bottom: auto;">
+                                <span class="platformtag2" style="font-size: 14px !important;"><i class="fas fa-video"
+                                        style="color: orange;margin-right: 3px;"></i>
+                                    {{webdata.platform_title}}</span>
+                            </div>
+                    <!-- <span class="F12">Zoom</span> -->
                 </td>
-                <td>
-                    <i class="fas fa-chevron-circle-right PrimaryColor2"></i>
+                <td  class="w-20" style="width: 10%;">
+                    <i (click)="valueChanged(webdata.webinarid)" class="fas fa-chevron-circle-right PrimaryColor2"></i>
                 </td>
             </tr>
         </table>

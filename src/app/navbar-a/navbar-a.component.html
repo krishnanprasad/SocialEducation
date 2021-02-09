@@ -1,0 +1,139 @@
+<nav class="navbar navbar-expand-md navbar-light navbar-right fixed-top" style="z-index:1;border-bottom: 0px solid #247ba0;
+  color: white;height: 70px;background-color: white;">
+  <div class="container-fluid">
+
+    <a style="font-family: 'Pacifico', cursive;color:#247ba0;font-size: xx-large;text-decoration:none"
+      (click)="routenav('')">edpicker</a>
+    <span class="SearchText" *ngIf="loginservice.IsLoggedIn" (click)="GoToPage('Search')">Search <i
+        style="margin-left: 15px;" class="fas fa-search"></i></span>
+
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" style="margin-top: auto;" id="navbarSupportedContent"
+      [ngClass]="{ 'show': navbarOpen }">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item" *ngIf="!IsParticipant && loginservice.IsLoggedIn">
+          <!-- <a class="nav-link" id="addpost" (click)="openVerticaksllyCentered(content)"  data-target=".bd-example-modal-sm" style="color:white;background-color:#d24200" data-toggle="modal" >ADD Post</a> -->
+          -->
+          <input *ngIf="!IsParticipant" type="button" class="btn regisbutn-small" value="Create Webinar" (click)="GoToPage('AddPost')" />
+        </li>
+        <li class="nav-item" *ngIf="loginservice.IsLoggedIn">
+          <a class="nav-link" [class.YesActive]="ActiveLink.Wall" style="line-height: 35px;"
+            (click)="routenav('wall')">Personalized</a>
+
+        </li>
+        <li class="nav-item" *ngIf="loginservice.IsLoggedIn">
+          <a class="nav-link" [class.YesActive]="ActiveLink.Activity" style="line-height: 35px;"
+            (click)="routenav('activity')">Activity</a>
+        </li>
+
+        <li class="nav-item" *ngIf="loginservice.IsLoggedIn">
+          <a class="nav-link" [class.YesActive]="ActiveLink.Follow" style="line-height: 35px;"
+            (click)="routenav('follow')"><span *ngIf="IsParticipant">Following</span><span
+              *ngIf="!IsParticipant">Followers</span></a>
+        </li>
+        <li class="nav-item" *ngIf="loginservice.IsLoggedIn">
+          <a class="nav-link" [class.YesActive]="ActiveLink.Notification" (click)="routenav('notification')"
+            style="line-height: 35px;" routerLink="/notification">Notification</a>
+        </li>
+
+        <!-- <li class="nav-item">
+                  <div ngbDropdown class="d-inline-block">
+                    <img src="assets/Image/elonmusk1.jpg" id="dropdownBasic1"  ngbDropdownToggle style="height:40px;width:40px;border-radius:50%">
+                    <button class="btn btn-outline-primary">Name</button> 
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" x-placement="right-bottom">
+                      <button class="dropdown-item">Profile</button>
+                      <button class="dropdown-item">Settings</button>
+                      <button class="dropdown-item">Sign Out</button>
+                    </div>
+                  </div>
+              </li> -->
+        <li class="nav-item" *ngIf="loginservice.IsLoggedIn">
+          <img src="assets/Image/elonmusk1.jpg" id="dropdownBasic1" style="height:40px;width:40px;border-radius:50%">
+          <ul class="dropdown">
+            <li class="dropname"><a href="/User/Profile" style="color:#247ba0">Name</a></li>
+            <!-- <li>
+              <a style="color:#6b6b6b" href="#">Manage</a>
+              <ul class="managedropdown">
+                <li style="color:#6b6b6b" (click)="changeUserType(1)">As Student</li>
+                <li style="color:#6b6b6b" (click)="changeUserType(2)">AS Institution</li>
+              </ul>
+            </li> -->
+            <li style="color:#6b6b6b"><a (click)="LogOff()" style="color:#6b6b6b" href="#">Sign Out</a></li>
+          </ul>
+        </li>
+        <li class="nav-item" *ngIf="!loginservice.IsLoggedIn">
+          <a class="nav-link" style="line-height: 35px;" (click)="register()">register</a>
+        </li>
+        <li class="nav-item" *ngIf="!loginservice.IsLoggedIn">
+          <a class="nav-link" style="line-height: 35px;" (click)="openModal('login-modal')">login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<modal-a id="login-modal">
+
+  <div class="d-flex" style="float: right;">
+    <div class="p-2" style="z-index: 920;
+    position: sticky;float:right">
+      <input type="button" class="btn" (click)="closeModal('login-modal')" value="x" />
+      <!-- <input type="button" class="btn" (click)="closeModal('login-modal')" value="x" /> -->
+    </div>
+  </div>
+  <app-login-content></app-login-content>
+
+</modal-a>
+<modal-a id="register-modal">
+
+  <div class="d-flex">
+    <div class="mr-auto p-2">
+      <span class="LightBlack">Join Edpicker Network</span>
+    </div>
+    <div class="p-2" style="z-index: 1000;
+    position: sticky;">
+      <input type="button" class="btn" (click)="closeModal('login-modal')" value="x" />
+      <!-- <input type="button" class="btn" (click)="closeModal('login-modal')" value="x" /> -->
+    </div>
+  </div>
+  
+  <div class="d-flex">
+    <label>Please Enter your Email</label>
+    <div class="form-group" style="display: block;" style="margin-bottom: 14px;">
+      <input type="text" class="form-control" [(ngModel)]="email" placeholder="Enter Email" required="required">
+    </div>
+  </div>
+  
+<div class="d-flex flex-row-reverse">
+  <div class="p-2">
+    <input type="button" href="/SignUp" value="SEND OTP" class="btn btn-signup">
+  </div> 
+</div>
+
+</modal-a>
+<!-- <ng-template #popContent let-greeting="greeting">
+  <li>Name</li>
+  <li>Settings</li>
+  <li>SignOut</li>
+
+</ng-template>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>One fine body&hellip;</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template> -->

@@ -1,13 +1,35 @@
-<app-navbar></app-navbar>
 <!-- <div class="container" style="margin-top:85px;"> -->
 <div class="" style="margin-top:85px;">
-    <div class="row">
-        <div class="col-md-3" style="padding:5px 12px;margin-left: 10px;">
-            <app-ins-wall-profile-side [Editable]="" [UserWallData]="UserWallData"></app-ins-wall-profile-side>
-        </div>
-        <div class="col-md-9">
-            <router-outlet></router-outlet>
+    <div class="d-flex">
+        <div class="col-md-12">
+            <div class="">
+                <app-banner></app-banner>
+                <div class="d-flex flex-row card100" style="">
+                    <div class="p-2" style="text-align:center">
+                        <button class="NavButtons" (click)="goto('about')">
+                            About
+                        </button>
+                        <button class="NavButtons" (click)="goto('activity')">
+                            Activity
+                        </button>
+                        <button class="NavButtons" *ngIf="ISADMIN" (click)="goto('notification')">
+                            Notification
+                        </button>
+                        <button class="NavButtons" *ngIf="ISADMIN" (click)="goto('payment')">
+                            Payment
+                        </button>
+                        <button class="NavButtons" *ngIf="ISADMIN" (click)="goto('create')">
+                            Create Post
+                        </button>
+                    </div>
+                </div>
+
+                <span>About</span>
+                <span></span>
+                <span>Transactions</span>
+                <span>Rating</span>
+                <router-outlet></router-outlet>
+            </div>
         </div>
     </div>
 </div>
-<!-- <router-outlet></router-outlet> -->

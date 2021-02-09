@@ -1,0 +1,19 @@
+.AddMemmber {
+    float: left;
+    font-size: 12px;
+    background-color: #dcdcdc;
+    border: 1px solid #dcdcdc;
+    padding: 1px 10px;
+    color: #808080;
+    border-radius: 5px;
+}
+
+.rate-small {
+    float: left;
+    font-size: 12px;
+    background-color: #d24956;
+    border: 1px solid #d24956;
+    padding: 1px 10px;
+    color: white;
+    border-radius: 5px;
+}
