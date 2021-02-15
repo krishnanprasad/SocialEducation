@@ -12,7 +12,9 @@
             <div class="d-flex flex-column">
                 <div style="margin-top: 20px;margin: auto;margin-bottom: 10px;">
                     <img src="../../../assets/Image/{{orglist.organiserimage}}"
-                        (click)="GoToOrganiser(orglist.organiserid)" style="height: 72px;width: 72px;"
+                        (click)="GoToOrganiser(orglist.organiserid)" 
+                        style="height: 72px;width: 72px;"
+                        (error)="onImgError($event)"
                         class="iconDetails" alt="name">
                 </div>
                 <div class="">

@@ -1,27 +1,21 @@
 <div class="">
-  <div class="d-flex">
+
+  <div class="d-flex" style="margin: auto;width: 95%;">
     <!-- <div class="col-md-3">
       <app-wall-profile [Editable]="Editable" [UserWallData]="UserWallData"></app-wall-profile>
 
        <app-institution-card-a [dataType]="'Premium'" [dataInstitution]="UserPremiumInstitutionList"></app-institution-card-a>
       <app-institution-card-a [dataType]="'Non Premium'" [dataInstitution]="UserNonPremiumInstitutionList"></app-institution-card-a> 
     </div> -->
-    <div class="col-lg-3" style="margin-top: 10px;">
-      <div style="padding: 15px;background-color: lightgray;margin-bottom: 10px;"
-      (click)="GoToOrganiser(pagelist.pageid)"
-      *ngFor="let pagelist of UserPageList">
-        <span>{{pagelist.pagename}}</span>
-        <span style="float: right;">1</span>
-      </div>
-    </div>
-    <div class="col-md-9 col-lg-9" style="padding:5px;">
+
+    <div class="col-md-10 col-lg-10" style="padding:5px;">
       <div>
         <h6>Your Webinars</h6>
         <div class="row" style="padding-right: 1px !important;
         padding-left: 1px !important;">
           <!-- <app-post [data]="members"></app-post> -->
           <!-- <app-online-class-a [onlineclassdata]="members"></app-online-class-a> -->
-          <div class="col-lg-4 col-md-4" *ngFor="let data of webinarlist">
+          <div class="col-lg-3 col-md-4" *ngFor="let data of webinarlist">
             <app-webinar-small-a [onlineclassdata]="data"></app-webinar-small-a>
           </div>
         </div>
@@ -64,6 +58,16 @@
       <!-- <div *ngIf="FilterPage === 'Notification'"> -->
       <!-- <app-notification></app-notification> -->
       <!-- </div> -->
+    </div>
+    <div class="col-lg-2" style="margin-top: 10px;">
+      <div>
+        <input type="button" class="btn btn-primary btn-small" value="Create Page" />
+      </div>
+      <div style="padding: 15px;background-color: lightgray;margin-bottom: 10px;"
+        (click)="GoToOrganiser(pagelist.pageid)" *ngFor="let pagelist of UserPageList">
+        <span>{{pagelist.pagename}}</span>
+        <span style="float: right;">1</span>
+      </div>
     </div>
     <!--<div class="col-md-3 col-lg-2" style="    padding-right: 0px !important;
     position: fixed;

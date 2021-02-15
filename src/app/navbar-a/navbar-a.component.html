@@ -17,7 +17,12 @@
         <li class="nav-item" *ngIf="!IsParticipant && loginservice.IsLoggedIn">
           <!-- <a class="nav-link" id="addpost" (click)="openVerticaksllyCentered(content)"  data-target=".bd-example-modal-sm" style="color:white;background-color:#d24200" data-toggle="modal" >ADD Post</a> -->
           -->
-          <input *ngIf="!IsParticipant" type="button" class="btn regisbutn-small" value="Create Webinar" (click)="GoToPage('AddPost')" />
+          <input *ngIf="!IsParticipant" type="button" class="btn regisbutn-small" value="Create Webinar"
+            (click)="GoToPage('AddPost')" />
+        </li>
+        <li class="nav-item" *ngIf="loginservice.IsLoggedIn">
+          <a class="nav-link" style="line-height: 35px;" (click)="routenav('createpage')">Create Page</a>
+
         </li>
         <li class="nav-item" *ngIf="loginservice.IsLoggedIn">
           <a class="nav-link" [class.YesActive]="ActiveLink.Wall" style="line-height: 35px;"
@@ -102,19 +107,19 @@
       <!-- <input type="button" class="btn" (click)="closeModal('login-modal')" value="x" /> -->
     </div>
   </div>
-  
+
   <div class="d-flex">
     <label>Please Enter your Email</label>
     <div class="form-group" style="display: block;" style="margin-bottom: 14px;">
       <input type="text" class="form-control" [(ngModel)]="email" placeholder="Enter Email" required="required">
     </div>
   </div>
-  
-<div class="d-flex flex-row-reverse">
-  <div class="p-2">
-    <input type="button" href="/SignUp" value="SEND OTP" class="btn btn-signup">
-  </div> 
-</div>
+
+  <div class="d-flex flex-row-reverse">
+    <div class="p-2">
+      <input type="button" href="/SignUp" value="SEND OTP" class="btn btn-signup">
+    </div>
+  </div>
 
 </modal-a>
 <!-- <ng-template #popContent let-greeting="greeting">

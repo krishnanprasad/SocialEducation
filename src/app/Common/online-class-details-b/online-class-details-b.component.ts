@@ -59,7 +59,7 @@ export class OnlineClassDetailsBComponent implements OnInit {
     this.loaderService.close();
   }
   GoToOrganiser(val) {
-    this.router.navigate([val+'/home']);
+    this.router.navigate([val+'/about']);
   }
   getWebinarDetails() {
     //debugger

@@ -12,10 +12,10 @@ export class WebinarSmallAComponent implements OnInit {
 
   constructor(private router: Router, private modalService: ModalAService, private loginservice: LoginService) { }
   @Input() onlineclassdata;
-  ngOnInit() { 
+  ngOnInit() {
     debugger
     this.webinardata = this.onlineclassdata;
-  
+
   }
 
   GoToWebinarDetail(id) {
@@ -28,18 +28,24 @@ export class WebinarSmallAComponent implements OnInit {
 
     // }
   }
- 
+
   GoToPage(val) {
     //  if (this.loginservice.IsLoggedIn) {
-      this.router.navigate([val+'/about']);
+    this.router.navigate([val + '/about']);
     // }
     //  else {
     //   this.openModal('login-modal')
     // }
   }
 
-
-
+  onImgError(event) {
+    event.target.src = '../../../assets/Image/employee1.jpg'
+    //Do other stuff with the event.target
+  }
+  onImgErrorWebinar(event) {
+    event.target.src = '../../../assets/Image/default_image_webinar.jpg'
+    //Do other stuff with the event.target
+  }
 
   openModal(id: string) {
     this.modalService.open(id);

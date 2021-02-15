@@ -1,7 +1,7 @@
 <div class="card100-a1">
     <div class="d-flex">
         <img *ngIf="webinardata.webinarimage" (click)="GoToWebinarDetail(webinardata.webinarid)"
-            src="../../../assets/Image/{{webinardata.webinarimage}}" class="img-fluid" style="min-height:160px;max-height: 160px;
+            src="../../../assets/Image/{{webinardata.webinarimage}}" (error)="onImgErrorWebinar($event)" class="img-fluid" style="min-height:160px;max-height: 160px;
     min-width: 100%;" alt="Responsive image" />
 
     </div>
@@ -130,7 +130,7 @@
                         <div class="d-flex" (click)="GoToPage(webinardata.organiserid)">
                             <div class="p-2">
                                 <img src="../../../assets/Image/{{webinardata.organiserimage}}"
-                                    style="width: 32px;height:32px;border-radius: 50%;">
+                                    (error)="onImgError($event)" style="width: 32px;height:32px;border-radius: 50%;">
                             </div>
                             <div class="p-2 flex-grow-1">
                                 <span class="tutorname" style="display: block;">{{webinardata.organisername}}</span>

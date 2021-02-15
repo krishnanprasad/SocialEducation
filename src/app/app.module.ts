@@ -119,6 +119,7 @@ import { DateArrayPipe } from './pipe/DateArrayPipe.pipe';
 import { UploadImageComponent } from './Common/upload-image/upload-image.component';
 import { HomepagetwoComponent } from './test/homepagetwo/homepagetwo.component';
 import { InsAboutComponent } from './Page/ins-about/ins-about.component';
+import { CreatePageComponent } from './Institution/create-page/create-page.component';
 
 @NgModule({
   declarations: [
@@ -231,7 +232,8 @@ import { InsAboutComponent } from './Page/ins-about/ins-about.component';
     EditPostComponent,
     UploadImageComponent,
     HomepagetwoComponent,
-    InsAboutComponent
+    InsAboutComponent,
+    CreatePageComponent
   ],
   imports: [
     BrowserModule,

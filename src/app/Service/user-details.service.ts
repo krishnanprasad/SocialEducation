@@ -69,7 +69,7 @@ export class UserDetailsService {
     return this.http.get("http://localhost:51181/api/webinar/getweinaruserrecommended", { params: { "userid": userid } });
   }
   follow_organiser(userid, organiserid, followtype): Observable<any> {
-    var follow_api = JSON.stringify({ "userid": userid, "organiserid": organiserid, "followtype": followtype });
+    var follow_api = JSON.stringify({ "userid": userid, "pageid": organiserid, "followtype": followtype });
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     }

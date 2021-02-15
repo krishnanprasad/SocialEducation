@@ -27,6 +27,10 @@ export class InstitutionCardBComponent implements OnInit {
     this.organiserlist = this.dataorganiserlist;
 
   }
+  onImgError(event){
+    event.target.src = '../../../assets/Image/default_image_webinar.jpg'
+   //Do other stuff with the event.target
+   }
   GoToOrganiser(val) {
     this.router.navigate([val+'/about']);
   }

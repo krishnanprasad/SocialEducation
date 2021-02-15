@@ -33,6 +33,7 @@ import { EditPostComponent } from './Common/edit-post/edit-post.component';
 import { UploadImageComponent } from './Common/upload-image/upload-image.component';
 import { HomepagetwoComponent } from './test/homepagetwo/homepagetwo.component';
 import { InsAboutComponent } from './Page/ins-about/ins-about.component';
+import { CreatePageComponent } from './Institution/create-page/create-page.component';
 const routes: Routes = [
   {
     path: 'Message',
@@ -89,6 +90,10 @@ const routes: Routes = [
   {
     path: 'follow',
     component: FollowComponent
+  },
+  {
+    path: 'createpage',
+    component: CreatePageComponent
   },
   {
     path: ':pageid',

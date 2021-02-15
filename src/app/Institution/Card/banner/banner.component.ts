@@ -29,8 +29,8 @@ export class BannerComponent implements OnInit {
     this.openModal('edit-organiser-profile');
   }
   followProfile(val) {
-    // debugger
-    this.userService.follow_organiser(this.loginService.getUserId(), this.organiserid, val).subscribe(data => {
+     debugger
+    this.userService.follow_organiser(this.loginService.getUserId(), this.pageid, val).subscribe(data => {
       if (data["status"] == 100) {
         debugger;
         this.closeModal('edit-organiser-profile');
